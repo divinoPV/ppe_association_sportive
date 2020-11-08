@@ -5,7 +5,7 @@ INSTALLATION
 
 	- git clone https://github.com/divinoPV/ppe_association_sportive.git
 	
-CONTEXT
+CONTEXTE
 
 	Développement d'une application pour la gestion de l'association sportive du lycée Saint-Vincent.
 	
