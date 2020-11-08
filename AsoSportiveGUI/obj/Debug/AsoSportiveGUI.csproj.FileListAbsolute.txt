@@ -1,0 +1,9 @@
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveGUI.exe.config
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveGUI.exe
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveGUI.pdb
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csprojAssemblyReference.cache
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmConnexion.resources
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.Properties.Resources.resources
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.GenerateResource.cache
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.exe
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.pdb

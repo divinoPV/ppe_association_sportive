@@ -1,0 +1,4 @@
+D:\BTS2\ppe\AsoSportive\AsoSportiveDAL\bin\Debug\AsoSportiveDAL.dll
+D:\BTS2\ppe\AsoSportive\AsoSportiveDAL\bin\Debug\AsoSportiveDAL.pdb
+D:\BTS2\ppe\AsoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.dll
+D:\BTS2\ppe\AsoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.pdb
