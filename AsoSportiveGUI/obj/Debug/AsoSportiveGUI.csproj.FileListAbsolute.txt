@@ -7,3 +7,11 @@ D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.Properties.Resou
 D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.GenerateResource.cache
 D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.exe
 D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.pdb
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveBLL.dll
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveBO.dll
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveDAL.dll
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveBLL.pdb
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveBO.pdb
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveDAL.pdb
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.CopyComplete
+D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmRedirection.resources

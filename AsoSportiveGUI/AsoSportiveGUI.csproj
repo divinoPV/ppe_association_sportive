@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmRedirection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRedirection.Designer.cs">
+      <DependentUpon>FrmRedirection.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +61,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmRedirection.resx">
+      <DependentUpon>FrmRedirection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConnexion.resx">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,6 +88,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AsoSportiveBLL\AsoSportiveBLL.csproj">
+      <Project>{7fe9474a-76f5-4d8a-a9e0-ede261374033}</Project>
+      <Name>AsoSportiveBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AsoSportiveBO\AsoSportiveBO.csproj">
+      <Project>{42d5064f-c5b2-4133-b185-f2ed17bd2584}</Project>
+      <Name>AsoSportiveBO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

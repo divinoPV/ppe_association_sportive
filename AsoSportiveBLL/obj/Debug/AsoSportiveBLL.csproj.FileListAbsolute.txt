@@ -2,3 +2,9 @@ D:\BTS2\ppe\AsoSportive\AsoSportiveBLL\bin\Debug\AsoSportiveBLL.dll
 D:\BTS2\ppe\AsoSportive\AsoSportiveBLL\bin\Debug\AsoSportiveBLL.pdb
 D:\BTS2\ppe\AsoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.dll
 D:\BTS2\ppe\AsoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.pdb
+D:\BTS2\ppe\AsoSportive\AsoSportiveBLL\bin\Debug\AsoSportiveBO.dll
+D:\BTS2\ppe\AsoSportive\AsoSportiveBLL\bin\Debug\AsoSportiveDAL.dll
+D:\BTS2\ppe\AsoSportive\AsoSportiveBLL\bin\Debug\AsoSportiveBO.pdb
+D:\BTS2\ppe\AsoSportive\AsoSportiveBLL\bin\Debug\AsoSportiveDAL.pdb
+D:\BTS2\ppe\AsoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csprojAssemblyReference.cache
+D:\BTS2\ppe\AsoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CopyComplete
