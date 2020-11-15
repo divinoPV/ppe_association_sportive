@@ -11,7 +11,9 @@ namespace AsoSportiveBO
         private int id_utilisateur;
         private string login_utilisateur;
         private string pass_utilisateur;
+        private char role_utilisateur;
 
+        public Utilisateur() { }
         public Utilisateur(int id, string login)
         {
             this.id_utilisateur = id;
@@ -23,7 +25,12 @@ namespace AsoSportiveBO
             this.login_utilisateur = login;
             this.pass_utilisateur = pass;
         }
-
+        public Utilisateur(int id, string login, char role)
+        {
+            this.id_utilisateur = id;
+            this.login_utilisateur = login;
+            this.role_utilisateur = role;
+        }
         public Utilisateur(int id, string login, string pass)
         {
             this.id_utilisateur = id;
@@ -47,6 +54,10 @@ namespace AsoSportiveBO
         {
             get => this.pass_utilisateur;
             set => this.pass_utilisateur = value;
+        }
+        public char Role { 
+            get => role_utilisateur; 
+            set => role_utilisateur = value; 
         }
     }
 }

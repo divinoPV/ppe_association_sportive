@@ -14,6 +14,11 @@ namespace AsoSportiveBLL
         private int id_utilisateur;
         private string login_utilisateur;
 
+        // variable de stockage de l'utilisateur connecté
+        private static int idUtilisateurLog;
+        private static string loginUtilisateurLog;
+        private static char roleUtilisateurLog;
+
         public GestionUtilisateurs()
         { }
 
@@ -27,7 +32,7 @@ namespace AsoSportiveBLL
             this.id_utilisateur = id;
             this.login_utilisateur = login;
         }
-
+        
         public int Id
         {
             get => this.id_utilisateur;
@@ -37,6 +42,19 @@ namespace AsoSportiveBLL
         {
             get => this.login_utilisateur;
             set => this.login_utilisateur = value;
+        }
+        // méthode pour récupérer les données stocker de l'utilisateur connecté
+        public static int IdUtilisateurLog { 
+            get => idUtilisateurLog; 
+            set => idUtilisateurLog = value; 
+        }
+        public static string LoginUtilisateurLog { 
+            get => loginUtilisateurLog; 
+            set => loginUtilisateurLog = value; 
+        }
+        public static char RoleUtilisateurLog { 
+            get => roleUtilisateurLog; 
+            set => roleUtilisateurLog = value; 
         }
 
         private static GestionUtilisateurs uneGestionUtilisateurs; // objet BLL
@@ -66,10 +84,25 @@ namespace AsoSportiveBLL
         {
             return UtilisateurDAO.GetUtilisateurs();
         }
-
+        // méthode qui va vérifier l'existance de les identifiants de l'utilisateur (login / password) dans la bdd
+        // retourne un boolean
         public static bool ConnexionUtilisateur(string login, string pass)
         {
             return UtilisateurDAO.ConnexionUtilisateur(login, pass);
+        }
+
+        // Méthode qui va récuperer et stocker les données de l'utilisateur lors de la connection
+        // stockage de l'id / login / role
+        // la méthode GetUtilisateurLog() de la DAL
+        public static void logUtilisateur(string login)
+        {
+            Utilisateur utilisateur;
+            utilisateur = UtilisateurDAO.GetUtilisateurLog(login);
+
+            IdUtilisateurLog = utilisateur.Id;
+            LoginUtilisateurLog = utilisateur.Login;
+            RoleUtilisateurLog = utilisateur.Role;
+
         }
 
         // Méthode qui renvoi l’objet Utilisateur en l'ajoutant à la

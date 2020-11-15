@@ -5,6 +5,7 @@ using System.Text;
 using AsoSportiveBO; // Référence la couche BO
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace AsoSportiveDAL
 {
@@ -40,7 +41,7 @@ namespace AsoSportiveDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "SELECT * FROM ADMINISTRATEUR";
+            cmd.CommandText = "SELECT * FROM ADMINISTRATEUR UNION SELECT * FROM COMPTABLE";
 
             SqlDataReader monReader = cmd.ExecuteReader();
 
@@ -65,7 +66,49 @@ namespace AsoSportiveDAL
             // Fermeture de la connexion
             maConnexion.Close();
 
+
             return lesUtilisateurs;
+        }
+        // Cette méthode permet de récupérer les données d'un utilisateur (id/login/role)
+        // retourne un utilisateur
+        public static Utilisateur GetUtilisateurLog(string login)
+        {
+            int id;
+            char role;
+            Utilisateur utilisateur = new Utilisateur();
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM ADMINISTRATEUR WHERE login_utilisateur = @login UNION SELECT * FROM COMPTABLE WHERE login_utilisateur = @login";
+
+            cmd.Parameters.Add(new SqlParameter("@login", SqlDbType.NVarChar));
+            cmd.Parameters["@login"].Value = login;
+
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            while (monReader.Read())
+            {
+                id = Int32.Parse(monReader["id_utilisateur"].ToString());
+
+                if (monReader["id_utilisateur"] == DBNull.Value)
+                {
+                    role = default(char);
+                }
+                else
+                {
+                    role = Convert.ToChar(monReader["role_utilisateur"]);
+                }
+
+                utilisateur = new Utilisateur(id, login, role);
+            }
+            
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            return utilisateur;
         }
 
         // Cette méthode permet la connexion d'un utilisateur

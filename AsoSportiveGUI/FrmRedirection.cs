@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AsoSportiveBLL;
+using AsoSportiveBO;
 
 namespace AsoSportiveGUI
 {
@@ -15,6 +17,11 @@ namespace AsoSportiveGUI
         public FrmRedirection()
         {
             InitializeComponent();
+
+            // affiche les données de l'utilisateur connecté
+            idLabel.Text = Convert.ToString(GestionUtilisateurs.IdUtilisateurLog);
+            loginLabel.Text = GestionUtilisateurs.LoginUtilisateurLog;
+            roleLabel.Text = Convert.ToString(GestionUtilisateurs.RoleUtilisateurLog);
         }
     }
 }

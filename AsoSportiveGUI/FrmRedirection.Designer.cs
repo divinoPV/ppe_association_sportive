@@ -28,25 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.idLabel = new System.Windows.Forms.Label();
+            this.loginLabel = new System.Windows.Forms.Label();
+            this.roleLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // idLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Connexion réussi";
+            this.idLabel.AutoSize = true;
+            this.idLabel.Location = new System.Drawing.Point(51, 60);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(87, 13);
+            this.idLabel.TabIndex = 0;
+            this.idLabel.Text = "Connexion réussi";
             // 
-            // Form1
+            // loginLabel
+            // 
+            this.loginLabel.AutoSize = true;
+            this.loginLabel.Location = new System.Drawing.Point(51, 96);
+            this.loginLabel.Name = "loginLabel";
+            this.loginLabel.Size = new System.Drawing.Size(87, 13);
+            this.loginLabel.TabIndex = 1;
+            this.loginLabel.Text = "Connexion réussi";
+            // 
+            // roleLabel
+            // 
+            this.roleLabel.AutoSize = true;
+            this.roleLabel.Location = new System.Drawing.Point(51, 132);
+            this.roleLabel.Name = "roleLabel";
+            this.roleLabel.Size = new System.Drawing.Size(87, 13);
+            this.roleLabel.TabIndex = 2;
+            this.roleLabel.Text = "Connexion réussi";
+            // 
+            // FrmRedirection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(120, 63);
-            this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(188, 187);
+            this.Controls.Add(this.roleLabel);
+            this.Controls.Add(this.loginLabel);
+            this.Controls.Add(this.idLabel);
+            this.Name = "FrmRedirection";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -55,6 +77,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label idLabel;
+        private System.Windows.Forms.Label loginLabel;
+        private System.Windows.Forms.Label roleLabel;
     }
 }

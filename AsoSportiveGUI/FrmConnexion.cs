@@ -25,6 +25,7 @@ namespace AsoSportiveGUI
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (GestionUtilisateurs.ConnexionUtilisateur(txtId.Text, txtPass.Text) == true) {
+                GestionUtilisateurs.logUtilisateur(txtId.Text); //sauvegarde des données de l'utilisateur connecté
                 this.Hide(); // fermeture du formulaire actuel
                 FrmRedirection frmRedirection = new FrmRedirection();
                 frmRedirection.Show(); // ouverture du formulaire

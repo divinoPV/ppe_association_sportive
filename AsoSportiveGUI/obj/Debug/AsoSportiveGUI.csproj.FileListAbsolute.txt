@@ -15,3 +15,20 @@ D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveBO.pdb
 D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveDAL.pdb
 D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.CopyComplete
 D:\BTS2\ppe\AsoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmRedirection.resources
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\bin\Debug\AsoSportiveGUI.exe.config
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\bin\Debug\AsoSportiveGUI.exe
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\bin\Debug\AsoSportiveGUI.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\bin\Debug\AsoSportiveBLL.dll
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\bin\Debug\AsoSportiveBO.dll
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\bin\Debug\AsoSportiveDAL.dll
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\bin\Debug\AsoSportiveBLL.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\bin\Debug\AsoSportiveBO.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\bin\Debug\AsoSportiveDAL.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csprojAssemblyReference.cache
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmRedirection.resources
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmConnexion.resources
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.Properties.Resources.resources
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.GenerateResource.cache
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.CopyComplete
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.exe
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.pdb
