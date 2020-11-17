@@ -8,56 +8,56 @@ namespace AsoSportiveBO
 {
     public class Utilisateur
     {
-        private int id_utilisateur;
-        private string login_utilisateur;
-        private string pass_utilisateur;
-        private char role_utilisateur;
+        private int id;
+        private string login;
+        private string pass;
+        private char role;
 
         public Utilisateur() { }
         public Utilisateur(int id, string login)
         {
-            this.id_utilisateur = id;
-            this.login_utilisateur = login;
+            this.id = id;
+            this.login = login;
         }
 
         public Utilisateur(string login, string pass)
         {
-            this.login_utilisateur = login;
-            this.pass_utilisateur = pass;
+            this.login = login;
+            this.pass = pass;
         }
         public Utilisateur(int id, string login, char role)
         {
-            this.id_utilisateur = id;
-            this.login_utilisateur = login;
-            this.role_utilisateur = role;
+            this.id = id;
+            this.login = login;
+            this.role = role;
         }
         public Utilisateur(int id, string login, string pass)
         {
-            this.id_utilisateur = id;
-            this.login_utilisateur = login;
-            this.pass_utilisateur = pass;
+            this.id = id;
+            this.login = login;
+            this.pass = pass;
         }
 
         public int Id
         {
-            get => this.id_utilisateur;
-            set => this.id_utilisateur = value;
+            get => this.id;
+            set => this.id = value;
         }
 
         public string Login
         {
-            get => this.login_utilisateur;
-            set => this.login_utilisateur = value;
+            get => this.login;
+            set => this.login = value;
         }
 
         public string Pass
         {
-            get => this.pass_utilisateur;
-            set => this.pass_utilisateur = value;
+            get => this.pass;
+            set => this.pass = value;
         }
         public char Role { 
-            get => role_utilisateur; 
-            set => role_utilisateur = value; 
+            get => role; 
+            set => role = value; 
         }
     }
 }

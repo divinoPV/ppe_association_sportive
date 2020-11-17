@@ -19,9 +19,9 @@ namespace AsoSportiveGUI
             InitializeComponent();
 
             // affiche les données de l'utilisateur connecté
-            idLabel.Text = Convert.ToString(GestionUtilisateurs.IdUtilisateurLog);
-            loginLabel.Text = GestionUtilisateurs.LoginUtilisateurLog;
-            roleLabel.Text = Convert.ToString(GestionUtilisateurs.RoleUtilisateurLog);
+            idLabel.Text = Convert.ToString(GestionUtilisateurs.IdLog);
+            loginLabel.Text = GestionUtilisateurs.LoginLog;
+            roleLabel.Text = Convert.ToString(GestionUtilisateurs.RoleLog);
         }
     }
 }

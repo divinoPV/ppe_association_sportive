@@ -11,50 +11,50 @@ namespace AsoSportiveBLL
 {
     public class GestionUtilisateurs
     {
-        private int id_utilisateur;
-        private string login_utilisateur;
+        private int id;
+        private string login;
 
         // variable de stockage de l'utilisateur connecté
-        private static int idUtilisateurLog;
-        private static string loginUtilisateurLog;
-        private static char roleUtilisateurLog;
+        private static int idLog;
+        private static string loginLog;
+        private static char roleLog;
 
         public GestionUtilisateurs()
         { }
 
         public GestionUtilisateurs(string login)
         {
-            this.login_utilisateur = login;
+            this.login = login;
         }
 
         public GestionUtilisateurs(int id, string login)
         {
-            this.id_utilisateur = id;
-            this.login_utilisateur = login;
+            this.id = id;
+            this.login = login;
         }
         
         public int Id
         {
-            get => this.id_utilisateur;
-            set => this.id_utilisateur = value;
+            get => this.id;
+            set => this.id = value;
         }
         public string Login
         {
-            get => this.login_utilisateur;
-            set => this.login_utilisateur = value;
+            get => this.login;
+            set => this.login = value;
         }
         // méthode pour récupérer les données stocker de l'utilisateur connecté
-        public static int IdUtilisateurLog { 
-            get => idUtilisateurLog; 
-            set => idUtilisateurLog = value; 
+        public static int IdLog { 
+            get => idLog; 
+            set => idLog = value; 
         }
-        public static string LoginUtilisateurLog { 
-            get => loginUtilisateurLog; 
-            set => loginUtilisateurLog = value; 
+        public static string LoginLog { 
+            get => loginLog; 
+            set => loginLog = value; 
         }
-        public static char RoleUtilisateurLog { 
-            get => roleUtilisateurLog; 
-            set => roleUtilisateurLog = value; 
+        public static char RoleLog { 
+            get => roleLog; 
+            set => roleLog = value; 
         }
 
         private static GestionUtilisateurs uneGestionUtilisateurs; // objet BLL
@@ -99,9 +99,9 @@ namespace AsoSportiveBLL
             Utilisateur utilisateur;
             utilisateur = UtilisateurDAO.GetUtilisateurLog(login);
 
-            IdUtilisateurLog = utilisateur.Id;
-            LoginUtilisateurLog = utilisateur.Login;
-            RoleUtilisateurLog = utilisateur.Role;
+            IdLog = utilisateur.Id;
+            LoginLog = utilisateur.Login;
+            RoleLog = utilisateur.Role;
 
         }
 
