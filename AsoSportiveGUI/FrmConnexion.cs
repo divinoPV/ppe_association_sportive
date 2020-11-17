@@ -19,7 +19,7 @@ namespace AsoSportiveGUI
         {
             InitializeComponent();
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
-            GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Local"]);
+            GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["utilisateur"]);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
