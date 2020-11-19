@@ -44,8 +44,8 @@ C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\bin\Debug\AsoSportiv
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csprojAssemblyReference.cache
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmRedirection.resources
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmConnexion.resources
-C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.Properties.Resources.resources
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.GenerateResource.cache
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.CopyComplete
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.exe
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmLanding.resources

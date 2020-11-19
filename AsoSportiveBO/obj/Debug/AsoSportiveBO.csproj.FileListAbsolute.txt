@@ -7,3 +7,7 @@ C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveBO\bin\Debug\AsoSportiveB
 C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveBO\obj\Debug\AsoSportiveBO.dll
 C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveBO\obj\Debug\AsoSportiveBO.pdb
 D:\BTS2\ppe\AsoSportive\AsoSportiveBO\obj\Debug\AsoSportiveBO.csprojAssemblyReference.cache
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBO\bin\Debug\AsoSportiveBO.dll
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBO\bin\Debug\AsoSportiveBO.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBO\obj\Debug\AsoSportiveBO.dll
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBO\obj\Debug\AsoSportiveBO.pdb
