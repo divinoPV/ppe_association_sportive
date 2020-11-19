@@ -18,6 +18,7 @@ C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveBLL\obj\Debug\AsoSportive
 C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CopyComplete
 C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.dll
 C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.pdb
+<<<<<<< HEAD
 D:\BTS2\ppe\Nouveau dossier\AsoSportiveBLL\bin\Debug\AsoSportiveBLL.dll
 D:\BTS2\ppe\Nouveau dossier\AsoSportiveBLL\bin\Debug\AsoSportiveBLL.pdb
 D:\BTS2\ppe\Nouveau dossier\AsoSportiveBLL\bin\Debug\AsoSportiveBO.dll
@@ -28,3 +29,15 @@ D:\BTS2\ppe\Nouveau dossier\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csprojAssemb
 D:\BTS2\ppe\Nouveau dossier\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CopyComplete
 D:\BTS2\ppe\Nouveau dossier\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.dll
 D:\BTS2\ppe\Nouveau dossier\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.pdb
+=======
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\bin\Debug\AsoSportiveBLL.dll
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\bin\Debug\AsoSportiveBLL.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\bin\Debug\AsoSportiveBO.dll
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\bin\Debug\AsoSportiveDAL.dll
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\bin\Debug\AsoSportiveBO.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\bin\Debug\AsoSportiveDAL.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csprojAssemblyReference.cache
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CopyComplete
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.dll
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.pdb
+>>>>>>> 9ca547695f9f7380e2fefbb5ad4824c89e70651a
