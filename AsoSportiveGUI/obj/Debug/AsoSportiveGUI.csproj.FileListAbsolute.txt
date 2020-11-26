@@ -84,3 +84,4 @@ D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.Generate
 D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.CopyComplete
 D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.exe
 D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.CoreCompileInputs.cache

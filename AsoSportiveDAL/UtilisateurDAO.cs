@@ -41,24 +41,24 @@ namespace AsoSportiveDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "SELECT * FROM ADMINISTRATEUR UNION SELECT * FROM COMPTABLE";
+            cmd.CommandText = "SELECT * FROM utilisateur";
 
             SqlDataReader monReader = cmd.ExecuteReader();
 
             // Remplissage de la liste
             while (monReader.Read())
             {
-                id = Int32.Parse(monReader["id_utilisateur"].ToString());
+                id = Int32.Parse(monReader["id"].ToString());
 
-                if (monReader["id_utilisateur"] == DBNull.Value)
+                if (monReader["id"] == DBNull.Value)
                 {
                     login = default(string);
                     pass = default(string);
                 }
                 else
                 {
-                    login = monReader["login_utilisateur"].ToString();
-                    pass = monReader["mot_de_passe_utilisateur"].ToString();
+                    login = monReader["login"].ToString();
+                    pass = monReader["mdp"].ToString();
                 }
                 unUtilisateur = new Utilisateur(id, login, pass);
                 lesUtilisateurs.Add(unUtilisateur);
@@ -82,7 +82,7 @@ namespace AsoSportiveDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "SELECT * FROM ADMINISTRATEUR WHERE login_utilisateur = @login UNION SELECT * FROM COMPTABLE WHERE login_utilisateur = @login";
+            cmd.CommandText = "SELECT * FROM utilisateur WHERE login = @login";
 
             cmd.Parameters.Add(new SqlParameter("@login", SqlDbType.NVarChar));
             cmd.Parameters["@login"].Value = login;
@@ -91,15 +91,15 @@ namespace AsoSportiveDAL
 
             while (monReader.Read())
             {
-                id = Int32.Parse(monReader["id_utilisateur"].ToString());
+                id = Int32.Parse(monReader["id"].ToString());
 
-                if (monReader["id_utilisateur"] == DBNull.Value)
+                if (monReader["id"] == DBNull.Value)
                 {
                     role = default(char);
                 }
                 else
                 {
-                    role = Convert.ToChar(monReader["role_utilisateur"]);
+                    role = Convert.ToChar(monReader["droit"]);
                 }
 
                 utilisateur = new Utilisateur(id, login, role);

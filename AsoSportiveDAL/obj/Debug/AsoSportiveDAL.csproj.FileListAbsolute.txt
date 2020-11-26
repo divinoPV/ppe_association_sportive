@@ -30,3 +30,4 @@ D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csprojAssemblyR
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csproj.CopyComplete
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.dll
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csproj.CoreCompileInputs.cache

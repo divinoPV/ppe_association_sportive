@@ -49,3 +49,4 @@ D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csprojAssemblyR
 D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CopyComplete
 D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.dll
 D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CoreCompileInputs.cache
