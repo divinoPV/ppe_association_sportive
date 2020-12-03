@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using AsoSportiveBLL; // Référence la couche BLL
 using AsoSportiveBO; // Référence la couche BO
+using System.Data.SqlClient;
 
 namespace AsoSportiveGUI
 {
@@ -19,7 +20,7 @@ namespace AsoSportiveGUI
         {
             InitializeComponent();
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
-            GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Local"]);
+            GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Utilisateur"]);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

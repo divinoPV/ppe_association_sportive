@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 using System.Data.SqlClient;
 
 namespace AsoSportiveDAL
@@ -45,7 +46,16 @@ namespace AsoSportiveDAL
 
             if (maConnexion.State == System.Data.ConnectionState.Closed)
             {
-                maConnexion.Open();
+                try {
+                    maConnexion.Open();
+                }
+                catch (SqlException)
+                {
+                    maConnexion.ConnectionString = ConfigurationManager.ConnectionStrings["Local"].ConnectionString;
+                    SetChaineConnexion(maConnexion.ConnectionString);
+
+                    maConnexion.Open();
+                }
             }
 
             return maConnexion;
