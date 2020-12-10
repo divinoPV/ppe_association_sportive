@@ -28,8 +28,8 @@ namespace AsoSportiveGUI
             if (GestionUtilisateurs.ConnexionUtilisateur(txtId.Text, txtPass.Text) == true) {
                 GestionUtilisateurs.logUtilisateur(txtId.Text); //sauvegarde des données de l'utilisateur connecté
                 this.Hide(); // fermeture du formulaire actuel
-                FrmRedirection frmRedirection = new FrmRedirection();
-                frmRedirection.Show(); // ouverture du formulaire
+                FrmDetailsEleve frmDetailsEleve = new FrmDetailsEleve();
+                frmDetailsEleve.Show(); // ouverture du formulaire
             } else {
                 MessageBox.Show("Identifiants incorrects.");
                 txtId.Clear();

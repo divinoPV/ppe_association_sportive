@@ -14,6 +14,8 @@ namespace AsoSportiveDAL
         private static ConnexionBD uneConnexionBD;
         private string chaineConnexion;
 
+        private ConnexionBD() { }
+
         public string GetChaineConnexion()
         {
             return chaineConnexion;
@@ -33,8 +35,6 @@ namespace AsoSportiveDAL
 
             return uneConnexionBD;
         }
-
-        private ConnexionBD() { }
 
         public SqlConnection GetSqlConnection()
         {

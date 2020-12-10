@@ -104,26 +104,5 @@ namespace AsoSportiveBLL
             RoleLog = utilisateur.Role;
 
         }
-
-        // Méthode qui renvoi l’objet Utilisateur en l'ajoutant à la
-        // BD avec la méthode AjoutUtilisateur de la DAL
-        public static int CreerUtilisateur(Utilisateur ut)
-        {
-            return UtilisateurDAO.AjoutUtilisateur(ut);
-        }
-
-        // Méthode qui modifie un nouvel Utilisateur avec la méthode
-        // UpdateUtilisateur de la DAL
-        public static int ModifierUtilisateur(Utilisateur ut)
-        {
-            return UtilisateurDAO.UpdateUtilisateur(ut);
-        }
-
-        // Méthode qui supprime un Utilisateur avec la méthode
-        // DeleteUtilisateur de la DAL
-        public static int SupprimerUtilisateur(int id)
-        {
-            return UtilisateurDAO.DeleteUtilisateur(id);
-        }
     }
 }

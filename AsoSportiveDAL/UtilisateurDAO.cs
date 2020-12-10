@@ -11,19 +11,6 @@ namespace AsoSportiveDAL
 {
     public class UtilisateurDAO
     {
-        private static UtilisateurDAO unUtilisateurDAO;
-
-        // Accesseur en lecture, renvoi une instance
-        public static UtilisateurDAO GetUnUtilisateurDAO()
-        {
-            if (unUtilisateurDAO == null)
-            {
-                unUtilisateurDAO = new UtilisateurDAO();
-            }
-
-            return unUtilisateurDAO;
-        }
-
         // Cette méthode retourne une List contenant les objets Utilisateurs
         // contenus dans la table Identification
         public static List<Utilisateur> GetUtilisateurs()
@@ -66,9 +53,9 @@ namespace AsoSportiveDAL
             // Fermeture de la connexion
             maConnexion.Close();
 
-
             return lesUtilisateurs;
         }
+
         // Cette méthode permet de récupérer les données d'un utilisateur (id/login/role)
         // retourne un utilisateur
         public static Utilisateur GetUtilisateurLog(string login)
@@ -157,27 +144,6 @@ namespace AsoSportiveDAL
             cmd.Connection = maConnexion;
             cmd.CommandText = "UPDATE ELEVE SET login_utilisateur = '" +
                 unUtilisateur.Login + "' WHERE id_utilisateur = " + unUtilisateur.Id;
-
-            nbEnr = cmd.ExecuteNonQuery();
-
-            // Fermeture de la connexion
-            maConnexion.Close();
-
-            return nbEnr;
-        }
-
-        // Cette méthode supprime de la BD un utilisateur dont l'id est 
-        // passé en paramètre
-        public static int DeleteUtilisateur(int id)
-        {
-            int nbEnr;
-
-            // Connexion à la BD
-            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = maConnexion;
-            cmd.CommandText = "DELETE FROM ELEVE WHERE id_utilisateur = " + id;
 
             nbEnr = cmd.ExecuteNonQuery();
 
