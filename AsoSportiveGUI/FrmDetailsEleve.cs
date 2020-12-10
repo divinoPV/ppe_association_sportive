@@ -20,12 +20,12 @@ namespace AsoSportiveGUI
             InitializeComponent();
 
             GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Utilisateur"]);
-            List<Adherent> utilisateurs = GestionUtilisateurs.GetAdherent();
+            List<Adherent> utilisateurs = GestionAdherent.GetAdherent();
 
             int x = 20;
             int y = 20;
 
-            foreach (Utilisateur utilisateur in utilisateurs)
+            foreach (Adherent utilisateur in utilisateurs)
             {
                 y += 20;
                 Label lblLogin = new Label();

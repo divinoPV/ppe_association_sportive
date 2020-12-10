@@ -26,10 +26,18 @@ namespace AsoSportiveGUI
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (GestionUtilisateurs.ConnexionUtilisateur(txtId.Text, txtPass.Text) == true) {
-                GestionUtilisateurs.logUtilisateur(txtId.Text); //sauvegarde des données de l'utilisateur connecté
+                Utilisateur utilisateurLog;
+
+                utilisateurLog = GestionUtilisateurs.logUtilisateur(txtId.Text); //fonction qui récupère un objet utilisateur connecté
+
+                //sauvegarde des données de l'utilisateur connecté
+                Utilisateur.IdLog = utilisateurLog.Id;
+                Utilisateur.LoginLog = utilisateurLog.Login;
+                Utilisateur.RoleLog = utilisateurLog.Role;
+
                 this.Hide(); // fermeture du formulaire actuel
-                FrmDetailsEleve frmDetailsEleve = new FrmDetailsEleve();
-                frmDetailsEleve.Show(); // ouverture du formulaire
+                FrmRedirection frmRedirection = new FrmRedirection();
+                frmRedirection.Show(); // ouverture du formulaire
             } else {
                 MessageBox.Show("Identifiants incorrects.");
                 txtId.Clear();

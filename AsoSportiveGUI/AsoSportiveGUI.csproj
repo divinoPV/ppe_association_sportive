@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAjoutEleve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjoutEleve.designer.cs">
+      <DependentUpon>FrmAjoutEleve.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDetailsEleve.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,31 +65,37 @@
     <Compile Include="FrmLanding.Designer.cs">
       <DependentUpon>FrmLanding.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRedirection.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmRedirection.Designer.cs">
-      <DependentUpon>FrmRedirection.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmConnexion.Designer.cs">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRedirection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRedirection.Designer.cs">
+      <DependentUpon>FrmRedirection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAjoutEleve.aa-DJ.resx">
+      <DependentUpon>FrmAjoutEleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAjoutEleve.resx">
+      <DependentUpon>FrmAjoutEleve.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDetailsEleve.resx">
       <DependentUpon>FrmDetailsEleve.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLanding.resx">
       <DependentUpon>FrmLanding.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRedirection.resx">
-      <DependentUpon>FrmRedirection.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmConnexion.resx">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRedirection.resx">
+      <DependentUpon>FrmRedirection.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
