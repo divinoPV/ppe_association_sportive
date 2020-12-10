@@ -18,10 +18,22 @@ namespace AsoSportiveGUI
         {
             InitializeComponent();
 
+            string id = Convert.ToString(GestionUtilisateurs.IdLog);
+            string login = GestionUtilisateurs.LoginLog;
+            string role = Convert.ToString(GestionUtilisateurs.RoleLog);
+
             // affiche les données de l'utilisateur connecté
-            idLabel.Text = Convert.ToString(GestionUtilisateurs.IdLog);
-            loginLabel.Text = GestionUtilisateurs.LoginLog;
-            roleLabel.Text = Convert.ToString(GestionUtilisateurs.RoleLog);
+            idLabel.Text = "Votre identifiant est : " + id;
+            loginLabel.Text = "bonjour, " + login;  
+            if(role == "a")
+            {
+                roleLabel.Text = "L'utilisateur est un administrateur";
+            }
+            else
+            {
+                roleLabel.Text = "L'utilisateur est un comptable";
+            }
+            
         }
     }
 }

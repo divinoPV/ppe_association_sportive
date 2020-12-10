@@ -36,7 +36,7 @@
             // idLabel
             // 
             this.idLabel.AutoSize = true;
-            this.idLabel.Location = new System.Drawing.Point(51, 60);
+            this.idLabel.Location = new System.Drawing.Point(51, 80);
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(87, 13);
             this.idLabel.TabIndex = 0;
@@ -45,7 +45,7 @@
             // loginLabel
             // 
             this.loginLabel.AutoSize = true;
-            this.loginLabel.Location = new System.Drawing.Point(51, 96);
+            this.loginLabel.Location = new System.Drawing.Point(51, 118);
             this.loginLabel.Name = "loginLabel";
             this.loginLabel.Size = new System.Drawing.Size(87, 13);
             this.loginLabel.TabIndex = 1;
@@ -54,7 +54,7 @@
             // roleLabel
             // 
             this.roleLabel.AutoSize = true;
-            this.roleLabel.Location = new System.Drawing.Point(51, 132);
+            this.roleLabel.Location = new System.Drawing.Point(51, 41);
             this.roleLabel.Name = "roleLabel";
             this.roleLabel.Size = new System.Drawing.Size(87, 13);
             this.roleLabel.TabIndex = 2;
@@ -64,12 +64,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(188, 187);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(198, 185);
             this.Controls.Add(this.roleLabel);
             this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.idLabel);
             this.Name = "FrmRedirection";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "menu";
             this.ResumeLayout(false);
             this.PerformLayout();
 
