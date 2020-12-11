@@ -31,6 +31,7 @@ namespace AsoSportiveGUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAjoutEleve));
             this.pnlAjoutEleve = new System.Windows.Forms.Panel();
+            this.btnAjoutEleve = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbMail = new System.Windows.Forms.Label();
             this.lbTelParent = new System.Windows.Forms.Label();
@@ -49,13 +50,10 @@ namespace AsoSportiveGUI
             this.txtNom = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.checkPrelevement = new System.Windows.Forms.CheckBox();
-            this.checkSweat = new System.Windows.Forms.CheckBox();
             this.lbPrelevement = new System.Windows.Forms.Label();
-            this.lbSweat = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbAjoutEleve = new System.Windows.Forms.Label();
             this.btnAnnulerAjoutEleve = new System.Windows.Forms.Button();
-            this.btnAjoutEleve = new System.Windows.Forms.Button();
             this.pnlAjoutEleve.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,6 +70,18 @@ namespace AsoSportiveGUI
             this.pnlAjoutEleve.Controls.Add(this.panel2);
             resources.ApplyResources(this.pnlAjoutEleve, "pnlAjoutEleve");
             this.pnlAjoutEleve.Name = "pnlAjoutEleve";
+            // 
+            // btnAjoutEleve
+            // 
+            this.btnAjoutEleve.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAjoutEleve.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAjoutEleve.FlatAppearance.BorderSize = 0;
+            this.btnAjoutEleve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            resources.ApplyResources(this.btnAjoutEleve, "btnAjoutEleve");
+            this.btnAjoutEleve.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAjoutEleve.Name = "btnAjoutEleve";
+            this.btnAjoutEleve.UseVisualStyleBackColor = false;
+            this.btnAjoutEleve.Click += new System.EventHandler(this.btnAjoutEleve_Click);
             // 
             // panel4
             // 
@@ -178,9 +188,7 @@ namespace AsoSportiveGUI
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.checkPrelevement);
-            this.panel2.Controls.Add(this.checkSweat);
             this.panel2.Controls.Add(this.lbPrelevement);
-            this.panel2.Controls.Add(this.lbSweat);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
@@ -190,21 +198,10 @@ namespace AsoSportiveGUI
             this.checkPrelevement.Name = "checkPrelevement";
             this.checkPrelevement.UseVisualStyleBackColor = true;
             // 
-            // checkSweat
-            // 
-            resources.ApplyResources(this.checkSweat, "checkSweat");
-            this.checkSweat.Name = "checkSweat";
-            this.checkSweat.UseVisualStyleBackColor = true;
-            // 
             // lbPrelevement
             // 
             resources.ApplyResources(this.lbPrelevement, "lbPrelevement");
             this.lbPrelevement.Name = "lbPrelevement";
-            // 
-            // lbSweat
-            // 
-            resources.ApplyResources(this.lbSweat, "lbSweat");
-            this.lbSweat.Name = "lbSweat";
             // 
             // pictureBox1
             // 
@@ -228,18 +225,6 @@ namespace AsoSportiveGUI
             this.btnAnnulerAjoutEleve.Name = "btnAnnulerAjoutEleve";
             this.btnAnnulerAjoutEleve.UseVisualStyleBackColor = false;
             this.btnAnnulerAjoutEleve.Click += new System.EventHandler(this.btnAnnulerAjoutEleve_Click);
-            // 
-            // btnAjoutEleve
-            // 
-            this.btnAjoutEleve.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnAjoutEleve.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAjoutEleve.FlatAppearance.BorderSize = 0;
-            this.btnAjoutEleve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            resources.ApplyResources(this.btnAjoutEleve, "btnAjoutEleve");
-            this.btnAjoutEleve.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAjoutEleve.Name = "btnAjoutEleve";
-            this.btnAjoutEleve.UseVisualStyleBackColor = false;
-            this.btnAjoutEleve.Click += new System.EventHandler(this.btnAjoutEleve_Click);
             // 
             // FrmAjoutEleve
             // 
@@ -288,9 +273,7 @@ namespace AsoSportiveGUI
         private System.Windows.Forms.TextBox txtTelParent;
         private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.CheckBox checkPrelevement;
-        private System.Windows.Forms.CheckBox checkSweat;
         private System.Windows.Forms.Label lbPrelevement;
-        private System.Windows.Forms.Label lbSweat;
         private System.Windows.Forms.Button btnAjoutEleve;
     }
 }

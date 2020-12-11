@@ -129,7 +129,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnAjoutEleve.Location" type="System.Drawing.Point, System.Drawing">
-    <value>590, 350</value>
+    <value>592, 322</value>
   </data>
   <data name="btnAjoutEleve.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 48</value>
@@ -595,6 +595,21 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="checkPrelevement.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkPrelevement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkPrelevement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 26</value>
+  </data>
+  <data name="checkPrelevement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 14</value>
+  </data>
+  <data name="checkPrelevement.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
   <data name="&gt;&gt;checkPrelevement.Name" xml:space="preserve">
     <value>checkPrelevement</value>
   </data>
@@ -607,17 +622,26 @@
   <data name="&gt;&gt;checkPrelevement.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;checkSweat.Name" xml:space="preserve">
-    <value>checkSweat</value>
+  <data name="lbPrelevement.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;checkSweat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbPrelevement.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="&gt;&gt;checkSweat.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="lbPrelevement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;checkSweat.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="lbPrelevement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 21</value>
+  </data>
+  <data name="lbPrelevement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 20</value>
+  </data>
+  <data name="lbPrelevement.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lbPrelevement.Text" xml:space="preserve">
+    <value>Prélèvement</value>
   </data>
   <data name="&gt;&gt;lbPrelevement.Name" xml:space="preserve">
     <value>lbPrelevement</value>
@@ -629,25 +653,13 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;lbPrelevement.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lbSweat.Name" xml:space="preserve">
-    <value>lbSweat</value>
-  </data>
-  <data name="&gt;&gt;lbSweat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbSweat.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;lbSweat.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>511, 32</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 127</value>
+    <value>286, 62</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -683,123 +695,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlAjoutEleve.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="checkPrelevement.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkPrelevement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkPrelevement.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 85</value>
-  </data>
-  <data name="checkPrelevement.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 14</value>
-  </data>
-  <data name="checkPrelevement.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;checkPrelevement.Name" xml:space="preserve">
-    <value>checkPrelevement</value>
-  </data>
-  <data name="&gt;&gt;checkPrelevement.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkPrelevement.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;checkPrelevement.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="checkSweat.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkSweat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 29</value>
-  </data>
-  <data name="checkSweat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 14</value>
-  </data>
-  <data name="checkSweat.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;checkSweat.Name" xml:space="preserve">
-    <value>checkSweat</value>
-  </data>
-  <data name="&gt;&gt;checkSweat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkSweat.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;checkSweat.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbPrelevement.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbPrelevement.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbPrelevement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbPrelevement.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 80</value>
-  </data>
-  <data name="lbPrelevement.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 20</value>
-  </data>
-  <data name="lbPrelevement.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="lbPrelevement.Text" xml:space="preserve">
-    <value>Prélèvement</value>
-  </data>
-  <data name="&gt;&gt;lbPrelevement.Name" xml:space="preserve">
-    <value>lbPrelevement</value>
-  </data>
-  <data name="&gt;&gt;lbPrelevement.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbPrelevement.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;lbPrelevement.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbSweat.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbSweat.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbSweat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbSweat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 24</value>
-  </data>
-  <data name="lbSweat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
-  <data name="lbSweat.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lbSweat.Text" xml:space="preserve">
-    <value>Sweat</value>
-  </data>
-  <data name="&gt;&gt;lbSweat.Name" xml:space="preserve">
-    <value>lbSweat</value>
-  </data>
-  <data name="&gt;&gt;lbSweat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbSweat.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;lbSweat.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -37,5 +37,12 @@ namespace AsoSportiveGUI
             }
 
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // fermeture du formulaire actuel
+            FrmAjoutEleve frmAjoutEleve = new FrmAjoutEleve();
+            frmAjoutEleve.Show(); // ouverture du formulaire
+        }
     }
 }
