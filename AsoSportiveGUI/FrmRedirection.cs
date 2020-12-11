@@ -18,9 +18,9 @@ namespace AsoSportiveGUI
         {
             InitializeComponent();
 
-            string id = Convert.ToString(GestionUtilisateurs.IdLog);
-            string login = GestionUtilisateurs.LoginLog;
-            string role = Convert.ToString(GestionUtilisateurs.RoleLog);
+            string id = Convert.ToString(Utilisateur.IdLog);
+            string login = Utilisateur.LoginLog;
+            string role = Convert.ToString(Utilisateur.RoleLog);
 
             // affiche les données de l'utilisateur connecté
             idLabel.Text = "Votre identifiant est : " + id;
@@ -34,6 +34,13 @@ namespace AsoSportiveGUI
                 roleLabel.Text = "L'utilisateur est un comptable";
             }
             
+        }
+
+        private void btnFrmAjout_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // fermeture du formulaire actuel
+            FrmAjoutEleve frmAjoutEleve = new FrmAjoutEleve();
+            frmAjoutEleve.Show(); // ouverture du formulaire
         }
     }
 }
