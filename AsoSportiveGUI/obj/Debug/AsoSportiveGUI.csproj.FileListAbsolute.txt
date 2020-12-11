@@ -91,3 +91,7 @@ C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiv
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmAjoutEleve.aa-DJ.resources
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\bin\Debug\aa-DJ\AsoSportiveGUI.resources.dll
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\aa-DJ\AsoSportiveGUI.resources.dll
+D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmAjoutEleve.resources
+D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmAjoutEleve.aa-DJ.resources
+D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\bin\Debug\aa-DJ\AsoSportiveGUI.resources.dll
+D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\aa-DJ\AsoSportiveGUI.resources.dll

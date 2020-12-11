@@ -19,22 +19,13 @@ namespace AsoSportiveGUI
         {
             InitializeComponent();
 
-<<<<<<< HEAD
-            GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Local"]);
-            List<Adherent> adherents = GestionAdherent.GetAdherent();
-=======
             GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Utilisateur"]);
-            List<Adherent> utilisateurs = GestionAdherent.GetAdherent();
->>>>>>> f811a05efd9b631a99b8ddc5d7e3dba171b262d0
+            List<Adherent> adherents = GestionAdherent.GetAdherent();
 
             int x = 20;
             int y = 20;
 
-<<<<<<< HEAD
             foreach (Adherent adherent in adherents)
-=======
-            foreach (Adherent utilisateur in utilisateurs)
->>>>>>> f811a05efd9b631a99b8ddc5d7e3dba171b262d0
             {
                 y += 20;
 

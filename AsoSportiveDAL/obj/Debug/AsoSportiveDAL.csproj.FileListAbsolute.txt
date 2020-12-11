@@ -29,8 +29,4 @@ D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csproj.CopyComp
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.dll
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.pdb
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csproj.CoreCompileInputs.cache
-<<<<<<< HEAD
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csprojAssemblyReference.cache
-=======
-C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csprojAssemblyReference.cache
->>>>>>> f811a05efd9b631a99b8ddc5d7e3dba171b262d0
