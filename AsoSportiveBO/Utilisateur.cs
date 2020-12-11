@@ -14,6 +14,10 @@ namespace AsoSportiveBO
         private char role;
 
         public Utilisateur() { }
+        public Utilisateur(int id)
+        {
+            this.id = id;
+        }
         public Utilisateur(int id, string login)
         {
             this.id = id;

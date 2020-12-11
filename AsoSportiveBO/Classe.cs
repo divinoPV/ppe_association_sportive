@@ -12,6 +12,10 @@ namespace AsoSportiveBO
         private string libelle;
 
         public Classe() { }
+        public Classe(int id)
+        {
+            this.id = id;
+        }
         public Classe(int id, string libelle)
         {
             this.id = id;

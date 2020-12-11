@@ -77,6 +77,7 @@
             this.Controls.Add(this.picBoxStVincent);
             this.Controls.Add(this.btnLanding);
             this.Controls.Add(this.picBoxAs);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FrmLanding";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLanding";

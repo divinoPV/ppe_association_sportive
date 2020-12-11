@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace AsoSportiveDAL
 {
@@ -44,7 +45,7 @@ namespace AsoSportiveDAL
             }
             maConnexion.ConnectionString = chaineConnexion;
 
-            if (maConnexion.State == System.Data.ConnectionState.Closed)
+            if (maConnexion.State == ConnectionState.Closed)
             {
                 try {
                     maConnexion.Open();
