@@ -95,3 +95,4 @@ D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmAjoutEleve.r
 D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmAjoutEleve.aa-DJ.resources
 D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\bin\Debug\aa-DJ\AsoSportiveGUI.resources.dll
 D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\aa-DJ\AsoSportiveGUI.resources.dll
+D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.Properties.Resources.resources

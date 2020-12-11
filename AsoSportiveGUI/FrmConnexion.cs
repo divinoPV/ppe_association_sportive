@@ -20,7 +20,7 @@ namespace AsoSportiveGUI
         {
             InitializeComponent();
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
-            GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Utilisateur"]);
+            GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Local"]);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -35,11 +35,12 @@ namespace AsoSportiveGUI
                 Utilisateur.LoginLog = utilisateurLog.Login;
                 Utilisateur.RoleLog = utilisateurLog.Role;
 
-                this.Hide(); // fermeture du formulaire actuel
+                this.Hide();
 
                 FrmDetailsEleve frmDetailsEleve = new FrmDetailsEleve();
-                frmDetailsEleve.Show(); // ouverture du formulaire
-                //frmDetailsEleve.ShowDialog(); // ouverture du formulaire
+                frmDetailsEleve.ShowDialog(); // ouverture du formulaire
+
+                this.Show();
 
             } else {
                 MessageBox.Show("Identifiants incorrects.");
