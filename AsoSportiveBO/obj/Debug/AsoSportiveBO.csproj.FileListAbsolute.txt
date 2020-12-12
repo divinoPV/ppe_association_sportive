@@ -16,5 +16,8 @@ D:\BTS2\ppe\AssoSportive\AsoSportiveBO\bin\Debug\AsoSportiveBO.pdb
 D:\BTS2\ppe\AssoSportive\AsoSportiveBO\obj\Debug\AsoSportiveBO.dll
 D:\BTS2\ppe\AssoSportive\AsoSportiveBO\obj\Debug\AsoSportiveBO.pdb
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBO\obj\Debug\AsoSportiveBO.csproj.CoreCompileInputs.cache
+<<<<<<< HEAD
 D:\BTS2\ppe\AssoSportive\AsoSportiveBO\obj\Debug\AsoSportiveBO.csprojAssemblyReference.cache
 =======
+=======
+>>>>>>> 71ee7630328bd88ed3b0469bedb0e1dd298ab2dd

@@ -50,7 +50,7 @@
             this.btnFrmAjout.Name = "btnFrmAjout";
             this.btnFrmAjout.Size = new System.Drawing.Size(108, 23);
             this.btnFrmAjout.TabIndex = 3;
-            this.btnFrmAjout.Text = "Ajouter un élève";
+            this.btnFrmAjout.Text = "Détails éléves";
             this.btnFrmAjout.UseVisualStyleBackColor = false;
             this.btnFrmAjout.Click += new System.EventHandler(this.btnFrmAjout_Click);
             // 

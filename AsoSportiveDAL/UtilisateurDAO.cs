@@ -98,6 +98,47 @@ namespace AsoSportiveDAL
             return utilisateur;
         }
 
+        // Cette méthode permet de récupérer les données d'un utilisateur
+        // retourne un utilisateur
+        public static Utilisateur GetUtilisateur(int id)
+        {
+            string login;
+
+            Utilisateur utilisateur = new Utilisateur();
+
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
+            
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM utilisateur WHERE id = @id";
+
+            cmd.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
+            cmd.Parameters["@id"].Value = id;
+
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            while (monReader.Read())
+            {
+                id = (int)monReader["id"];
+
+                if (monReader["id"] == DBNull.Value)
+                {
+                    login = default(string);
+                }
+                else
+                {
+                    login = monReader["login"].ToString();
+                }
+
+                utilisateur = new Utilisateur(id, login);
+            }
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            return utilisateur;
+        }
+
         // Cette méthode permet la connexion d'un utilisateur
         public static bool ConnexionUtilisateur(string login, string pass)
         {
@@ -109,48 +150,6 @@ namespace AsoSportiveDAL
             }
 
             return false;
-        }
-
-        // Cette méthode insert un nouvel utilisateur passé en paramètre
-        // dans la BD
-        public static int AjoutUtilisateur(Utilisateur unUtilisateur)
-        {
-            int nbEnr;
-
-            // Connexion à la BD
-            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = maConnexion;
-            cmd.CommandText = "INSERT INTO ELEVE values('" + unUtilisateur.Login + "')";
-
-            nbEnr = cmd.ExecuteNonQuery();
-
-            // Fermeture de la connexion
-            maConnexion.Close();
-
-            return nbEnr;
-        }
-
-        // Cette méthode modifie un utilisateur passé en paramètre dans la BD
-        public static int UpdateUtilisateur(Utilisateur unUtilisateur)
-        {
-            int nbEnr;
-
-            // Connexion à la BD
-            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE ELEVE SET login_utilisateur = '" +
-                unUtilisateur.Login + "' WHERE id_utilisateur = " + unUtilisateur.Id;
-
-            nbEnr = cmd.ExecuteNonQuery();
-
-            // Fermeture de la connexion
-            maConnexion.Close();
-
-            return nbEnr;
         }
     }
 }

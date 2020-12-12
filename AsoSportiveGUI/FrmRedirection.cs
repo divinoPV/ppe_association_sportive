@@ -31,8 +31,8 @@ namespace AsoSportiveGUI
         private void btnFrmAjout_Click(object sender, EventArgs e)
         {
             this.Hide(); // fermeture du formulaire actuel
-            FrmAjoutEleve frmAjoutEleve = new FrmAjoutEleve();
-            frmAjoutEleve.Show(); // ouverture du formulaire
+            FrmDetailsEleve frmDetailsEleve = new FrmDetailsEleve();
+            frmDetailsEleve.Show(); // ouverture du formulaire
         }
     }
 }

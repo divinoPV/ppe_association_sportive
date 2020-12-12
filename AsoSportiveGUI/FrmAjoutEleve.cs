@@ -21,8 +21,8 @@ namespace AsoSportiveGUI
         private void btnAnnulerAjoutEleve_Click(object sender, EventArgs e)
         {
             this.Hide(); // fermeture du formulaire actuel
-            FrmRedirection frmRedirection = new FrmRedirection();
-            frmRedirection.Show(); // ouverture du formulaire
+            FrmDetailsEleve frmDetailsEleve = new FrmDetailsEleve();
+            frmDetailsEleve.Show(); // ouverture du formulaire
         }
 
         private void btnAjoutEleve_Click(object sender, EventArgs e)

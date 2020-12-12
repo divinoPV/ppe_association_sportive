@@ -58,16 +58,24 @@
             // 
             // pnl
             // 
-            this.pnl.ColumnCount = 1;
-            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.253095F));
-            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.7469F));
-            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
-            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.pnl.AutoSize = true;
+            this.pnl.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.pnl.ColumnCount = 11;
+            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.pnl.Location = new System.Drawing.Point(16, 56);
             this.pnl.Name = "pnl";
             this.pnl.RowCount = 1;
-            this.pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnl.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.pnl.Size = new System.Drawing.Size(768, 376);
             this.pnl.TabIndex = 2;
             // 
@@ -75,13 +83,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnl);
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.btnAdd);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FrmDetailsEleve";
             this.Text = "Détails Elève";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

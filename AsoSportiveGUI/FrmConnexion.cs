@@ -37,7 +37,8 @@ namespace AsoSportiveGUI
 
                 this.Hide(); // fermeture du formulaire actuel
                 FrmRedirection frmRedirection = new FrmRedirection();
-                frmRedirection.Show(); // ouverture du formulaire
+                frmRedirection.Show();
+             
             } else {
                 MessageBox.Show("Identifiants incorrects.");
                 txtId.Clear();

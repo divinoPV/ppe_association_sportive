@@ -235,6 +235,7 @@ namespace AsoSportiveGUI
             this.Controls.Add(this.lbAjoutEleve);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnlAjoutEleve);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FrmAjoutEleve";
             this.pnlAjoutEleve.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

@@ -37,7 +37,7 @@ namespace AsoSportiveDAL
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
 
             // Création d'une liste vide d'objets Utilisateurs
-            List<Adherent> lesunAdherents = new List<Adherent>();
+            List<Adherent> lesAdherents = new List<Adherent>();
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
@@ -75,24 +75,30 @@ namespace AsoSportiveDAL
                     ddn = (DateTime)monReader["ddn"];
                     numtel = monReader["numtel"].ToString();
                     email = monReader["email"].ToString();
-                    numparnt = monReader["numparnt"].ToString();
+                    numparnt = monReader["numparent"].ToString();
                     autprelev = (bool)monReader["autprelev"];
                     sexe = monReader["sexe"].ToString()[0];
                     login = monReader["login"].ToString();
                     mdp = monReader["mdp"].ToString();
                     datemaj = (DateTime)monReader["datemaj"];
                     archive = (bool)monReader["archive"];
-                    utilisateur = (Utilisateur)monReader["utilisateur"];
-                    classe = (Classe)monReader["classe"];
+                    utilisateur = new Utilisateur((int)monReader["utilisateur"]);
+                    classe = new Classe((int)monReader["classe"]);
                 }
                 unAdherent = new Adherent(id, nom, prenom, ddn, numtel, email, numparnt, autprelev, sexe, login,
                                         mdp, datemaj, archive, utilisateur, classe);
-                lesunAdherents.Add(unAdherent);
+                lesAdherents.Add(unAdherent);
             }
             // Fermeture de la connexion
             maConnexion.Close();
 
-            return lesunAdherents;
+            foreach (Adherent adherent in lesAdherents)
+            {
+                adherent.Utilisateur = UtilisateurDAO.GetUtilisateur(adherent.Utilisateur.Id);
+                adherent.Classe = ClasseDAO.GetClasse(adherent.Classe.Id);
+            }
+
+            return lesAdherents;
         }
 
         // Cette méthode insert un nouvel utilisateur passé en paramètre
