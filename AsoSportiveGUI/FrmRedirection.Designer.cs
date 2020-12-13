@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRedirection));
-            this.btnFrmAjout = new System.Windows.Forms.Button();
+            this.btnFrmDetailsEleve = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnFrmAjout
+            // btnFrmDetailsEleve
             // 
-            this.btnFrmAjout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnFrmDetailsEleve.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFrmAjout.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnFrmAjout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFrmAjout.FlatAppearance.BorderSize = 0;
-            this.btnFrmAjout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btnFrmAjout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFrmAjout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFrmAjout.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnFrmAjout.Location = new System.Drawing.Point(93, 24);
-            this.btnFrmAjout.Name = "btnFrmAjout";
-            this.btnFrmAjout.Size = new System.Drawing.Size(108, 23);
-            this.btnFrmAjout.TabIndex = 3;
-            this.btnFrmAjout.Text = "Détails éléves";
-            this.btnFrmAjout.UseVisualStyleBackColor = false;
-            this.btnFrmAjout.Click += new System.EventHandler(this.btnFrmAjout_Click);
+            this.btnFrmDetailsEleve.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnFrmDetailsEleve.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFrmDetailsEleve.FlatAppearance.BorderSize = 0;
+            this.btnFrmDetailsEleve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnFrmDetailsEleve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFrmDetailsEleve.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFrmDetailsEleve.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnFrmDetailsEleve.Location = new System.Drawing.Point(93, 24);
+            this.btnFrmDetailsEleve.Name = "btnFrmDetailsEleve";
+            this.btnFrmDetailsEleve.Size = new System.Drawing.Size(108, 23);
+            this.btnFrmDetailsEleve.TabIndex = 3;
+            this.btnFrmDetailsEleve.Text = "Détails éléves";
+            this.btnFrmDetailsEleve.UseVisualStyleBackColor = false;
+            this.btnFrmDetailsEleve.Click += new System.EventHandler(this.btnFrmDetailsEleve_Click);
             // 
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.pnlMenu.Controls.Add(this.btnFrmAjout);
+            this.pnlMenu.Controls.Add(this.btnFrmDetailsEleve);
             this.pnlMenu.Location = new System.Drawing.Point(34, 12);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(294, 368);
@@ -80,7 +80,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnFrmAjout;
+        private System.Windows.Forms.Button btnFrmDetailsEleve;
         private System.Windows.Forms.Panel pnlMenu;
     }
 }

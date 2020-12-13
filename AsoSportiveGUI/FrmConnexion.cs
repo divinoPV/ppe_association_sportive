@@ -35,10 +35,10 @@ namespace AsoSportiveGUI
                 Utilisateur.LoginLog = utilisateurLog.Login;
                 Utilisateur.RoleLog = utilisateurLog.Role;
 
-                this.Hide(); // fermeture du formulaire actuel
+                this.Hide();
                 FrmRedirection frmRedirection = new FrmRedirection();
-                frmRedirection.Show();
-             
+                frmRedirection.Show(); // ouverture du formulaire
+
             } else {
                 MessageBox.Show("Identifiants incorrects.");
                 txtId.Clear();

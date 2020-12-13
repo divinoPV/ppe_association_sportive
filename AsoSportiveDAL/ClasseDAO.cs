@@ -50,5 +50,39 @@ namespace AsoSportiveDAL
 
             return classe;
         }
+        public static List<Classe> GetLesClasses()
+        {
+            int id;
+            string libelle;
+            List<Classe> LesClasses = new List<Classe>();
+
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM classe";
+
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            while (monReader.Read())
+            {
+                id = Int32.Parse(monReader["id"].ToString());
+
+                if (monReader["id"] == DBNull.Value)
+                {
+                    libelle = default(string);
+                }
+                else
+                {
+                    libelle = monReader["libelle"].ToString();
+                }
+                Classe classe = new Classe(id, libelle);
+                LesClasses.Add(classe);
+            }
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            return LesClasses;
+        }
     }
 }

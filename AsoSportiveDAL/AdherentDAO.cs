@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AsoSportiveBO; // Référence la couche BO
 using System.Data.SqlClient;
 using System.Data;
+using System.Text.RegularExpressions;
 
 namespace AsoSportiveDAL
 {
@@ -162,6 +163,16 @@ namespace AsoSportiveDAL
             maConnexion.Close();
 
             return nbEnr;
+        }
+
+        // Cette méthode vérifie que le string passé en paramètre correspond
+        // au regex
+        // retourne une valeur booléenne
+        public static bool GetRegexString(string value, string regex)
+        {
+            Regex regexString = new Regex(regex);
+
+            return regexString.IsMatch(value);
         }
     }
 }

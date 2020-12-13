@@ -19,20 +19,20 @@ namespace AsoSportiveGUI
             InitializeComponent();
 
             string role = Convert.ToString(Utilisateur.RoleLog);
-            btnFrmAjout.Visible = false;
+            btnFrmDetailsEleve.Visible = false;
             // affiche les données de l'utilisateur connecté 
             if(role == "a")
             {
-                btnFrmAjout.Visible = true;
+                btnFrmDetailsEleve.Visible = true;
             }
             
         }
 
-        private void btnFrmAjout_Click(object sender, EventArgs e)
-        {
+        private void btnFrmDetailsEleve_Click(object sender, EventArgs e)
+        {        
             this.Hide(); // fermeture du formulaire actuel
             FrmDetailsEleve frmDetailsEleve = new FrmDetailsEleve();
-            frmDetailsEleve.Show(); // ouverture du formulaire
+            frmDetailsEleve.Show(); // ouverture du formulaire   
         }
     }
 }

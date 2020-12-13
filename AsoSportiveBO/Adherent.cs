@@ -8,6 +8,9 @@ namespace AsoSportiveBO
 {
     public class Adherent
     {
+        private const string REGEX_STRING = "^[A-Za-z]{3,20}$";
+        private const string REGEX_DIGIT = "^[0-9]{10}$";
+
         private int id;
         private string nom;
         private string prenom;
@@ -57,6 +60,10 @@ namespace AsoSportiveBO
             this.utilisateur = utilisateur;
             this.classe = classe;
         }
+
+        public static string REGEX_STRING1 => REGEX_STRING;
+
+        public static string REGEX_DIGIT1 => REGEX_DIGIT;
 
         public int Id
         {

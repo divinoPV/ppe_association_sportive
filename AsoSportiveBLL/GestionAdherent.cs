@@ -21,9 +21,14 @@ namespace AsoSportiveBLL
             string chaine = chset.ConnectionString;
             ConnexionBD.GetConnexionBD().SetChaineConnexion(chaine);
         }
-
-        // Méthode qui renvoit une List d'objets Utilisateur en faisant appel à
-        // la méthode GetUtilisateurs() de la DAL
+        // Méthode qui renvoit une valeur booléen en faisant appel à
+        // la méthode GetRegexString() de la DAL
+        public static bool GetRegexString(string value, string regex)
+        {
+            return AdherentDAO.GetRegexString(value, regex);
+        }
+        // Méthode qui renvoit une List d'objets Adherent en faisant appel à
+        // la méthode GetAdherent()() de la DAL
         public static List<Adherent> GetAdherent()
         {
             return AdherentDAO.GetAdherent();

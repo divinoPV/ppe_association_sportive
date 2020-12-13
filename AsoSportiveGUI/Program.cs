@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace AsoSportiveGUI
 {
@@ -16,7 +17,14 @@ namespace AsoSportiveGUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLanding());
+            Thread thread = new Thread(Main2);
+            Application.Run(new FrmLanding(thread));
+        }
+        static void Main2()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FrmConnexion());
         }
     }
 }

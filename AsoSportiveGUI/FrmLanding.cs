@@ -7,21 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace AsoSportiveGUI
 {
     public partial class FrmLanding : Form
     {
-        public FrmLanding()
+        private Thread thread;
+
+        public FrmLanding(Thread thread)
         {
             InitializeComponent();
+            this.thread = thread;
         }
 
         private void btnLanding_Click(object sender, EventArgs e)
         {
-            this.Hide(); // fermeture du formulaire actuel
-            FrmConnexion frmConnexion= new FrmConnexion();
-            frmConnexion.Show(); // ouverture du formulaire
+            FrmConnexion frmConnexion = new FrmConnexion();
+            this.thread.Start();
+            this.Close();
+        }
+
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            this.Close(); // fermeture du formulaire actuel
         }
     }
 }
