@@ -14,10 +14,8 @@ namespace AsoSportiveBO
         private char role;
 
         // variables de stockage de l'utilisateur connecté
-        private static int idLog;
-        private static string loginLog;
-        private static char roleLog;
-
+        private static Utilisateur utilisateurLog;
+        
         public Utilisateur() { }
         public Utilisateur(int id)
         {
@@ -69,21 +67,9 @@ namespace AsoSportiveBO
             set => role = value; 
         }
 
-        // méthode pour récupérer et assigner les données de l'utilisateur connecté
-        public static int IdLog
-        {
-            get => idLog;
-            set => idLog = value;
-        }
-        public static string LoginLog
-        {
-            get => loginLog;
-            set => loginLog = value;
-        }
-        public static char RoleLog
-        {
-            get => roleLog;
-            set => roleLog = value;
+        public static Utilisateur UtilisateurLog { 
+            get => utilisateurLog; 
+            set => utilisateurLog = value; 
         }
     }
 }

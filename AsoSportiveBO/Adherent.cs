@@ -8,8 +8,10 @@ namespace AsoSportiveBO
 {
     public class Adherent
     {
+        private const string REGEX_STRING_LOGIN = "^[a-z]{3,20}.[a-z]{3,20}$";
         private const string REGEX_STRING = "^[A-Za-z]{3,20}$";
         private const string REGEX_DIGIT = "^[0-9]{10}$";
+        private const string REGEX_PASSWORD = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[-+!*$@%_])([-+!*$@%_\\w]{8,25})$";
 
         private int id;
         private string nom;
@@ -64,6 +66,10 @@ namespace AsoSportiveBO
         public static string REGEX_STRING1 => REGEX_STRING;
 
         public static string REGEX_DIGIT1 => REGEX_DIGIT;
+
+        public static string REGEX_STRING_LOGIN1 => REGEX_STRING_LOGIN;
+
+        public static string REGEX_PASSWORD1 => REGEX_PASSWORD;
 
         public int Id
         {

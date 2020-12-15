@@ -26,14 +26,9 @@ namespace AsoSportiveGUI
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (GestionUtilisateurs.ConnexionUtilisateur(txtId.Text, txtPass.Text) == true) {
-                Utilisateur utilisateurLog;
-
-                utilisateurLog = GestionUtilisateurs.logUtilisateur(txtId.Text); //fonction qui récupère un objet utilisateur connecté
 
                 //sauvegarde des données de l'utilisateur connecté
-                Utilisateur.IdLog = utilisateurLog.Id;
-                Utilisateur.LoginLog = utilisateurLog.Login;
-                Utilisateur.RoleLog = utilisateurLog.Role;
+                Utilisateur.UtilisateurLog = GestionUtilisateurs.logUtilisateur(txtId.Text); //fonction qui récupère un objet utilisateur connecté
 
                 this.Hide();
                 FrmRedirection frmRedirection = new FrmRedirection();

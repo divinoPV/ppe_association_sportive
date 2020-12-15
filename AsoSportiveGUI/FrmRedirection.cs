@@ -18,10 +18,9 @@ namespace AsoSportiveGUI
         {
             InitializeComponent();
 
-            string role = Convert.ToString(Utilisateur.RoleLog);
             btnFrmDetailsEleve.Visible = false;
             // affiche les données de l'utilisateur connecté 
-            if(role == "a")
+            if(Utilisateur.UtilisateurLog.Role == 'a')
             {
                 btnFrmDetailsEleve.Visible = true;
             }

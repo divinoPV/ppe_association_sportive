@@ -33,6 +33,9 @@ namespace AsoSportiveGUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAjoutEleve));
             this.pnlAjoutEleve = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbConfirmMdp = new System.Windows.Forms.Label();
+            this.txtConfirmMdp = new System.Windows.Forms.TextBox();
+            this.comboBoxClasse = new System.Windows.Forms.ComboBox();
             this.lbClasse = new System.Windows.Forms.Label();
             this.lbMdp = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
@@ -40,6 +43,8 @@ namespace AsoSportiveGUI
             this.txtId = new System.Windows.Forms.TextBox();
             this.btnAjoutEleve = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.checkPrelevement = new System.Windows.Forms.CheckBox();
+            this.lbPrelevement = new System.Windows.Forms.Label();
             this.lbMail = new System.Windows.Forms.Label();
             this.lbTelParent = new System.Windows.Forms.Label();
             this.lbTel = new System.Windows.Forms.Label();
@@ -47,6 +52,7 @@ namespace AsoSportiveGUI
             this.txtTelParent = new System.Windows.Forms.TextBox();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dtpNaissance = new System.Windows.Forms.DateTimePicker();
             this.comboBoxSexe = new System.Windows.Forms.ComboBox();
             this.lbNaissance = new System.Windows.Forms.Label();
             this.lbSexe = new System.Windows.Forms.Label();
@@ -54,21 +60,17 @@ namespace AsoSportiveGUI
             this.lbNom = new System.Windows.Forms.Label();
             this.txtPrenom = new System.Windows.Forms.TextBox();
             this.txtNom = new System.Windows.Forms.TextBox();
-            this.checkPrelevement = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbAjoutEleve = new System.Windows.Forms.Label();
             this.btnAnnulerAjoutEleve = new System.Windows.Forms.Button();
-            this.lbPrelevement = new System.Windows.Forms.Label();
-            this.comboBoxClasse = new System.Windows.Forms.ComboBox();
             this.errorNom = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorPrenom = new System.Windows.Forms.ErrorProvider(this.components);
-            this.dtpNaissance = new System.Windows.Forms.DateTimePicker();
             this.errorTel = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorTelParent = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorMail = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorSexe = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorId = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorMdp = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorConfirmMdp = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlAjoutEleve.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -79,9 +81,9 @@ namespace AsoSportiveGUI
             ((System.ComponentModel.ISupportInitialize)(this.errorTel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTelParent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorSexe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMdp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorConfirmMdp)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAjoutEleve
@@ -97,6 +99,8 @@ namespace AsoSportiveGUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.lbConfirmMdp);
+            this.panel1.Controls.Add(this.txtConfirmMdp);
             this.panel1.Controls.Add(this.comboBoxClasse);
             this.panel1.Controls.Add(this.lbClasse);
             this.panel1.Controls.Add(this.lbMdp);
@@ -105,6 +109,23 @@ namespace AsoSportiveGUI
             this.panel1.Controls.Add(this.txtId);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // lbConfirmMdp
+            // 
+            resources.ApplyResources(this.lbConfirmMdp, "lbConfirmMdp");
+            this.lbConfirmMdp.Name = "lbConfirmMdp";
+            // 
+            // txtConfirmMdp
+            // 
+            resources.ApplyResources(this.txtConfirmMdp, "txtConfirmMdp");
+            this.txtConfirmMdp.Name = "txtConfirmMdp";
+            this.txtConfirmMdp.UseSystemPasswordChar = true;
+            // 
+            // comboBoxClasse
+            // 
+            this.comboBoxClasse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBoxClasse, "comboBoxClasse");
+            this.comboBoxClasse.Name = "comboBoxClasse";
             // 
             // lbClasse
             // 
@@ -158,6 +179,17 @@ namespace AsoSportiveGUI
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
+            // checkPrelevement
+            // 
+            resources.ApplyResources(this.checkPrelevement, "checkPrelevement");
+            this.checkPrelevement.Name = "checkPrelevement";
+            this.checkPrelevement.UseVisualStyleBackColor = true;
+            // 
+            // lbPrelevement
+            // 
+            resources.ApplyResources(this.lbPrelevement, "lbPrelevement");
+            this.lbPrelevement.Name = "lbPrelevement";
+            // 
             // lbMail
             // 
             resources.ApplyResources(this.lbMail, "lbMail");
@@ -202,13 +234,16 @@ namespace AsoSportiveGUI
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
+            // dtpNaissance
+            // 
+            resources.ApplyResources(this.dtpNaissance, "dtpNaissance");
+            this.dtpNaissance.Name = "dtpNaissance";
+            this.dtpNaissance.Value = new System.DateTime(2020, 12, 13, 0, 0, 0, 0);
+            // 
             // comboBoxSexe
             // 
             this.comboBoxSexe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSexe.FormattingEnabled = true;
-            this.comboBoxSexe.Items.AddRange(new object[] {
-            resources.GetString("comboBoxSexe.Items"),
-            resources.GetString("comboBoxSexe.Items1")});
             resources.ApplyResources(this.comboBoxSexe, "comboBoxSexe");
             this.comboBoxSexe.Name = "comboBoxSexe";
             // 
@@ -242,12 +277,6 @@ namespace AsoSportiveGUI
             resources.ApplyResources(this.txtNom, "txtNom");
             this.txtNom.Name = "txtNom";
             // 
-            // checkPrelevement
-            // 
-            resources.ApplyResources(this.checkPrelevement, "checkPrelevement");
-            this.checkPrelevement.Name = "checkPrelevement";
-            this.checkPrelevement.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
@@ -271,61 +300,37 @@ namespace AsoSportiveGUI
             this.btnAnnulerAjoutEleve.UseVisualStyleBackColor = false;
             this.btnAnnulerAjoutEleve.Click += new System.EventHandler(this.btnAnnulerAjoutEleve_Click);
             // 
-            // lbPrelevement
-            // 
-            resources.ApplyResources(this.lbPrelevement, "lbPrelevement");
-            this.lbPrelevement.Name = "lbPrelevement";
-            // 
-            // comboBoxClasse
-            // 
-            this.comboBoxClasse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBoxClasse, "comboBoxClasse");
-            this.comboBoxClasse.Name = "comboBoxClasse";
-            // 
             // errorNom
             // 
-            this.errorNom.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorNom.ContainerControl = this;
             // 
             // errorPrenom
             // 
-            this.errorPrenom.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorPrenom.ContainerControl = this;
-            // 
-            // dtpNaissance
-            // 
-            resources.ApplyResources(this.dtpNaissance, "dtpNaissance");
-            this.dtpNaissance.Name = "dtpNaissance";
-            this.dtpNaissance.Value = new System.DateTime(2020, 12, 13, 0, 0, 0, 0);
             // 
             // errorTel
             // 
-            this.errorTel.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorTel.ContainerControl = this;
             // 
             // errorTelParent
             // 
-            this.errorTelParent.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorTelParent.ContainerControl = this;
             // 
             // errorMail
             // 
-            this.errorMail.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorMail.ContainerControl = this;
-            // 
-            // errorSexe
-            // 
-            this.errorSexe.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorSexe.ContainerControl = this;
             // 
             // errorId
             // 
-            this.errorId.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorId.ContainerControl = this;
             // 
             // errorMdp
             // 
             this.errorMdp.ContainerControl = this;
+            // 
+            // errorConfirmMdp
+            // 
+            this.errorConfirmMdp.ContainerControl = this;
             // 
             // FrmAjoutEleve
             // 
@@ -351,9 +356,9 @@ namespace AsoSportiveGUI
             ((System.ComponentModel.ISupportInitialize)(this.errorTel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTelParent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorSexe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMdp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorConfirmMdp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,8 +401,10 @@ namespace AsoSportiveGUI
         private System.Windows.Forms.ErrorProvider errorTel;
         private System.Windows.Forms.ErrorProvider errorTelParent;
         private System.Windows.Forms.ErrorProvider errorMail;
-        private System.Windows.Forms.ErrorProvider errorSexe;
         private System.Windows.Forms.ErrorProvider errorId;
         private System.Windows.Forms.ErrorProvider errorMdp;
+        private System.Windows.Forms.Label lbConfirmMdp;
+        private System.Windows.Forms.TextBox txtConfirmMdp;
+        private System.Windows.Forms.ErrorProvider errorConfirmMdp;
     }
 }

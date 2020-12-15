@@ -27,18 +27,26 @@ namespace AsoSportiveBLL
         {
             return AdherentDAO.GetRegexString(value, regex);
         }
+
+        // Méthode qui renvoit une valeur booléen en faisant appel à
+        // la méthode VerifAdherent() de la DAL
+        public static bool VerifAdherent(string value)
+        {
+            return AdherentDAO.VerifAdherent(value);
+        }
+
         // Méthode qui renvoit une List d'objets Adherent en faisant appel à
-        // la méthode GetAdherent()() de la DAL
+        // la méthode GetAdherent() de la DAL
         public static List<Adherent> GetAdherent()
         {
             return AdherentDAO.GetAdherent();
         }
 
-        // Méthode qui renvoi l’objet Utilisateur en l'ajoutant à la
-        // BD avec la méthode AjoutUtilisateur de la DAL
-        public static int CreerUtilisateur(Utilisateur ut)
+        // Méthode qui renvoit une valeur booléen et ajoute un object adherent
+        // BD avec la méthode AjoutAdherent de la DAL
+        public static bool CreerAdherent(Adherent unAdherent)
         {
-            return AdherentDAO.AjoutAdherent(ut);
+            return AdherentDAO.AjoutAdherent(unAdherent);
         }
 
         // Méthode qui modifie un nouvel Utilisateur avec la méthode
