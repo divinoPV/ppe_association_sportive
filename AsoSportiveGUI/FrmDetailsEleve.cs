@@ -93,6 +93,7 @@ namespace AsoSportiveGUI
                 lblMaj.TextAlign = ContentAlignment.MiddleCenter;
 
                 Button btnUpdate = new Button();
+                btnUpdate.Tag = adherent;
                 btnUpdate.Text = "Modifier";
                 btnUpdate.AutoSize = true;
                 btnUpdate.Location = new Point(x, y);
@@ -123,7 +124,13 @@ namespace AsoSportiveGUI
         }
         public void btnUpdate_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("hello");
+            Button senderButton = sender as Button;
+            Adherent.AdherentSauvegarder = (Adherent)senderButton.Tag;
+
+            this.Hide(); // fermeture du formulaire actuel
+            FrmModifEleve frmModifEleve = new FrmModifEleve();
+            frmModifEleve.Show(); // ouverture du formulaire
+
         }
         public void btnDelete_Click(object sender, EventArgs e)
         {

@@ -29,6 +29,9 @@ namespace AsoSportiveBO
         private Utilisateur utilisateur;
         private Classe classe;
 
+        //Sauvegarde de l'adherent selectionné pour effectuer les modifications
+        private static Adherent adherentSauvegarder;
+
         public Adherent() { }
         public Adherent(int id,
                         string nom,
@@ -147,6 +150,10 @@ namespace AsoSportiveBO
         {
             get => this.classe;
             set => this.classe = value;
+        }
+        public static Adherent AdherentSauvegarder { 
+            get => adherentSauvegarder; 
+            set => adherentSauvegarder = value; 
         }
     }
 }

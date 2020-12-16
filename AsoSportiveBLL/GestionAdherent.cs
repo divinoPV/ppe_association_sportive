@@ -35,6 +35,13 @@ namespace AsoSportiveBLL
             return AdherentDAO.VerifAdherent(value);
         }
 
+        // Méthode qui renvoit une valeur booléen en faisant appel à
+        // la méthode VerifAdherentByIdAndLogin() de la DAL
+        public static bool VerifAdherentByLoginAndId(string value, int id)
+        {
+            return AdherentDAO.VerifAdherentByLoginAndId(value, id);
+        }
+
         // Méthode qui renvoit une List d'objets Adherent en faisant appel à
         // la méthode GetAdherent() de la DAL
         public static List<Adherent> GetAdherent()
@@ -49,16 +56,16 @@ namespace AsoSportiveBLL
             return AdherentDAO.AjoutAdherent(unAdherent);
         }
 
-        // Méthode qui modifie un nouvel Utilisateur avec la méthode
+        // Méthode qui modifie un nouvel Adherent avec la méthode
         // UpdateUtilisateur de la DAL
-        public static int ModifierUtilisateur(Utilisateur ut)
+        public static bool ModifierAdherent(Adherent ut)
         {
             return AdherentDAO.UpdateAdherent(ut);
         }
 
-        // Méthode qui supprime un Utilisateur avec la méthode
+        // Méthode qui supprime un Adherent avec la méthode
         // DeleteUtilisateur de la DAL
-        public static int SupprimerUtilisateur(int id)
+        public static int SupprimerAdherent(int id)
         {
             return AdherentDAO.DeleteAdherent(id);
         }

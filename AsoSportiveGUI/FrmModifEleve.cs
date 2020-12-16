@@ -15,9 +15,9 @@ using System.Net.Mail;
 
 namespace AsoSportiveGUI
 {
-    public partial class FrmAjoutEleve : Form
+    public partial class FrmModifEleve : Form
     {
-        public FrmAjoutEleve()
+        public FrmModifEleve()
         {
             //liste des sexes d'adhérent
             List<string> lesSexes = new List<string>();
@@ -33,25 +33,53 @@ namespace AsoSportiveGUI
             lesSexes.Add("Homme");
             comboBoxSexe.DataSource = lesSexes;
 
+            //récupération de l'adhérent sauvegarder via le button modife du FrmDetailsEleve
+            Adherent adherentSauvegarder = Adherent.AdherentSauvegarder;
+
+            //initialisation des données par default avec les données de l'adhérent récupérer
+            txtNom.Text = adherentSauvegarder.Nom.Trim();
+            txtPrenom.Text = adherentSauvegarder.Prenom.Trim();
+            if (adherentSauvegarder.Sexe == 'F')
+            {
+                comboBoxSexe.SelectedIndex = 0;
+            }
+            else
+            {
+                comboBoxSexe.SelectedIndex = 1;
+            }
+            dtpNaissance.Value = adherentSauvegarder.Ddn;
+            txtTel.Text = adherentSauvegarder.NumTel.Trim();
+            txtTelParent.Text = adherentSauvegarder.NumParnt.Trim();
+            txtMail.Text = adherentSauvegarder.Email.Trim();
+            checkPrelevement.Checked = adherentSauvegarder.AutPrelev;
+            checkArchivage.Checked = adherentSauvegarder.Archive;
+            txtId.Text = adherentSauvegarder.Login.Trim();
+            txtMdp.Text = adherentSauvegarder.Mdp.Trim();
+            txtConfirmMdp.Text = adherentSauvegarder.Mdp.Trim();
+            comboBoxClasse.SelectedIndex = adherentSauvegarder.Classe.Id - 1;
+
         }
 
-        private void btnAnnulerAjoutEleve_Click(object sender, EventArgs e)
+        private void btnAnnulerModifEleve_Click(object sender, EventArgs e)
         {
             this.Hide(); // fermeture du formulaire actuel
             FrmDetailsEleve frmDetailsEleve = new FrmDetailsEleve();
             frmDetailsEleve.Show(); // ouverture du formulaire
         }
 
-        private void btnAjoutEleve_Click(object sender, EventArgs e)
+        private void btnModifEleve_Click(object sender, EventArgs e)
         {
+           
             bool errorActive = false;
-            char sexeSelect = ' ';
+            char sexeSelect = Adherent.AdherentSauvegarder.Sexe;
+            int id = Adherent.AdherentSauvegarder.Id;
 
             DateTime dateMaj = new DateTime();
             dateMaj = DateTime.Now;
 
             // verification des champs du formulaire ajour d'un adhérent
-            if(!GestionAdherent.GetRegexString(txtNom.Text, Adherent.REGEX_STRING1))
+            // verification du champs nom
+            if (!GestionAdherent.GetRegexString(txtNom.Text, Adherent.REGEX_STRING1))
             {
                 errorNom.SetError(txtNom,"Nom saisi incorrect");
                 errorActive = true;
@@ -61,6 +89,7 @@ namespace AsoSportiveGUI
                 errorNom.SetError(txtNom, "");
             }
 
+            // verification du champs prenom
             if (!GestionAdherent.GetRegexString(txtPrenom.Text, Adherent.REGEX_STRING1))
             {
                 errorPrenom.SetError(txtPrenom, "Prenom saisi incorrect");
@@ -80,6 +109,7 @@ namespace AsoSportiveGUI
                 sexeSelect = 'H';
             }
 
+            // verification du champs telephone
             if (!GestionAdherent.GetRegexString(txtTel.Text, Adherent.REGEX_DIGIT1))
             {
                 errorTel.SetError(txtTel, "Numéro de téléphone incorrect << exemple : 0102030102 >>");
@@ -90,6 +120,7 @@ namespace AsoSportiveGUI
                 errorTel.SetError(txtTel, "");
             }
 
+            // verification du champs tel parent
             if (!GestionAdherent.GetRegexString(txtTelParent.Text, Adherent.REGEX_DIGIT1))
             {
                 errorTelParent.SetError(txtTelParent, "Numéro de téléphone incorrect << exemple : 0102030102 >>");
@@ -99,7 +130,8 @@ namespace AsoSportiveGUI
             {
                 errorTelParent.SetError(txtTelParent, "");
             }
-            
+
+            // verification du champs mail
             if (string.IsNullOrEmpty(txtMail.Text))
             {
                 errorMail.SetError(txtMail, "Veuillez saisir un mail");
@@ -119,6 +151,7 @@ namespace AsoSportiveGUI
                 }                       
             }
 
+            // verification du champs identifiant
             if (!GestionAdherent.GetRegexString(txtId.Text, Adherent.REGEX_STRING_LOGIN1))
             {
                 errorId.SetError(txtId, "Identifiant saisi incorrect << exemple : nom.prenom >>");
@@ -126,7 +159,7 @@ namespace AsoSportiveGUI
             }
             else
             {
-                if (GestionAdherent.VerifAdherent(txtId.Text))
+                if (GestionAdherent.VerifAdherentByLoginAndId(txtId.Text, Adherent.AdherentSauvegarder.Id))
                 {
                     errorId.SetError(txtId, "Identifiant déjà utilisé");
                     errorActive = true;
@@ -137,6 +170,7 @@ namespace AsoSportiveGUI
                 }               
             }
 
+            // verification du champs mot de passe
             if (!GestionAdherent.GetRegexString(txtMdp.Text, Adherent.REGEX_PASSWORD1))
             {
                 errorMdp.SetError(txtMdp, "Votre mot de passe doit comporter au minimum '1 miniscule, 1 majuscule, 1 chiffre, 1 charactère spécial");
@@ -147,34 +181,36 @@ namespace AsoSportiveGUI
                 errorMdp.SetError(txtMdp, "");
             }
 
+            // verification du champs confirmation mot de passe si il egale au champs mot de passe
             if (txtMdp.Text != txtConfirmMdp.Text)
             {
                 errorConfirmMdp.SetError(txtConfirmMdp, "Veuillez saisir le même mot de passe");
                 errorActive = true;
             }
 
+            // verification si aucune erreur n'a été déclencher
             if (errorActive)
             {
-                MessageBox.Show("Error : eleve non ajouté","Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error : eleve non modifié", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                Adherent unAdherent = new Adherent(0, txtNom.Text, txtPrenom.Text, dtpNaissance.Value, txtTel.Text, 
-                    txtMail.Text, txtTelParent.Text, checkPrelevement.Checked, sexeSelect, txtId.Text, txtMdp.Text, dateMaj, false, Utilisateur.UtilisateurLog, (Classe)comboBoxClasse.SelectedItem);
-                
-                
+                Adherent unAdherent = new Adherent(id, txtNom.Text, txtPrenom.Text, dtpNaissance.Value, txtTel.Text, 
+                    txtMail.Text, txtTelParent.Text, checkPrelevement.Checked, sexeSelect, txtId.Text, txtMdp.Text, dateMaj, 
+                    checkArchivage.Checked, Utilisateur.UtilisateurLog, (Classe)comboBoxClasse.SelectedItem);
 
-                if (GestionAdherent.CreerAdherent(unAdherent))
+                // modification de l'adherent
+                if (GestionAdherent.ModifierAdherent(unAdherent))
                 {
-                    MessageBox.Show("Valide : eleve ajouté", "Valide", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Valide : eleve modifié", "Valide", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                     this.Hide(); // fermeture du formulaire actuel
-                    FrmAjoutEleve frmAjoutEleve = new FrmAjoutEleve();
-                    frmAjoutEleve.Show(); // ouverture du formulaire
+                    FrmDetailsEleve frmDetailsEleve = new FrmDetailsEleve();
+                    frmDetailsEleve.Show(); // ouverture du formulaire
                 }
                 else
                 {
-                    MessageBox.Show("Error : error lors de l'insertion", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error : error lors de l'update", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

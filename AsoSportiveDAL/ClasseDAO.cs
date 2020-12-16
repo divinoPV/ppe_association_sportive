@@ -50,6 +50,8 @@ namespace AsoSportiveDAL
 
             return classe;
         }
+        // Cette méthode permet de recupère l'ensemble des classes
+        // retourne une liste de classe
         public static List<Classe> GetLesClasses()
         {
             int id;
