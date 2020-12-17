@@ -79,7 +79,7 @@
             this.pnl.Name = "pnl";
             this.pnl.RowCount = 1;
             this.pnl.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.pnl.Size = new System.Drawing.Size(872, 8);
+            this.pnl.Size = new System.Drawing.Size(872, 10);
             this.pnl.TabIndex = 2;
             // 
             // pbxLogo
@@ -99,6 +99,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(911, 450);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.pnl);

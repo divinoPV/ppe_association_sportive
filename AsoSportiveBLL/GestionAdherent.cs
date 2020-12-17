@@ -65,7 +65,7 @@ namespace AsoSportiveBLL
 
         // Méthode qui supprime un Adherent avec la méthode
         // DeleteUtilisateur de la DAL
-        public static int SupprimerAdherent(int id)
+        public static bool SupprimerAdherent(int id)
         {
             return AdherentDAO.DeleteAdherent(id);
         }

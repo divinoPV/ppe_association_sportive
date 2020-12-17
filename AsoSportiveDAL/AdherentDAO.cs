@@ -250,7 +250,7 @@ namespace AsoSportiveDAL
 
         // Cette méthode supprime de la BD un Adherent dont l'id est 
         // passé en paramètre
-        public static int DeleteAdherent(int id)
+        public static bool DeleteAdherent(int id)
         {
             int nbEnr;
 
@@ -259,14 +259,24 @@ namespace AsoSportiveDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "DELETE FROM adherent WHERE id = " + id;
+            cmd.CommandText = "DELETE FROM adherent WHERE id = @id ";
+
+            cmd.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
+            cmd.Parameters["@id"].Value = id;
 
             nbEnr = cmd.ExecuteNonQuery();
 
             // Fermeture de la connexion
             maConnexion.Close();
 
-            return nbEnr;
+            if (string.IsNullOrEmpty(Convert.ToString(nbEnr)) || Convert.ToString(nbEnr) == "0")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         // Cette méthode vérifie que le string passé en paramètre correspond

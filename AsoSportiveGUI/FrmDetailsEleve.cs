@@ -30,14 +30,14 @@ namespace AsoSportiveGUI
                 y += 20;
 
                 Label lblNom = new Label();
-                lblNom.Text = adherent.Nom;
+                lblNom.Text = adherent.Nom.Trim();
                 lblNom.AutoSize = true;
                 lblNom.Location = new Point(x, y);
                 lblNom.Dock = DockStyle.Fill;
                 lblNom.TextAlign = ContentAlignment.MiddleCenter;
 
                 Label lblPrenom = new Label();
-                lblPrenom.Text = adherent.Prenom;
+                lblPrenom.Text = adherent.Prenom.Trim();
                 lblPrenom.AutoSize = true;
                 lblPrenom.Location = new Point(x, y);
                 lblPrenom.Dock = DockStyle.Fill;
@@ -79,7 +79,7 @@ namespace AsoSportiveGUI
                 lblNumPrnt.TextAlign = ContentAlignment.MiddleCenter;
 
                 Label lblEmail = new Label();
-                lblEmail.Text = adherent.Email;
+                lblEmail.Text = adherent.Email.Trim();
                 lblEmail.AutoSize = true;
                 lblEmail.Location = new Point(x, y);
                 lblEmail.Dock = DockStyle.Fill;
@@ -102,6 +102,7 @@ namespace AsoSportiveGUI
                 btnUpdate.TextAlign = ContentAlignment.MiddleCenter;
 
                 Button btnDelete = new Button();
+                btnDelete.Tag = adherent.Id;
                 btnDelete.Text = "Supprimer";
                 btnDelete.AutoSize = true;
                 btnDelete.Location = new Point(x, y);
@@ -134,11 +135,20 @@ namespace AsoSportiveGUI
         }
         public void btnDelete_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("au revoir");
+            Button senderButton = sender as Button;
+            GestionAdherent.SupprimerAdherent(Convert.ToInt32(senderButton.Tag));
+
+            MessageBox.Show("Valide : eleve supprimé", "Valide", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            this.Hide(); // fermeture du formulaire actuel
+            FrmDetailsEleve frmDetailsEleve = new FrmDetailsEleve();
+            frmDetailsEleve.Show(); // ouverture du formulaire
         }
         private void btnRetour_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide(); // fermeture du formulaire actuel
+            FrmRedirection frmRedirection = new FrmRedirection();
+            frmRedirection.Show(); // ouverture du formulaire
         }
 
         private void picBoxStVincent_Click(object sender, EventArgs e)
