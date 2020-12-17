@@ -136,9 +136,13 @@ namespace AsoSportiveGUI
         public void btnDelete_Click(object sender, EventArgs e)
         {
             Button senderButton = sender as Button;
-            GestionAdherent.SupprimerAdherent(Convert.ToInt32(senderButton.Tag));
+           
+            DialogResult dialogResult = MessageBox.Show("Valide : ", "Voulez-vous vraiment supprimer l'élève ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            MessageBox.Show("Valide : eleve supprimé", "Valide", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            if ( dialogResult == DialogResult.Yes)
+            {
+                GestionAdherent.SupprimerAdherent(Convert.ToInt32(senderButton.Tag));
+            }
 
             this.Hide(); // fermeture du formulaire actuel
             FrmDetailsEleve frmDetailsEleve = new FrmDetailsEleve();

@@ -118,19 +118,81 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 89</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>306, 39</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Votre mot de passe doit être composer 
+&lt;&lt; 1 majuscule, 1 miniscule, 1 chiffre et un caractère spécial &gt;&gt;
+ (8 à 25 caractères)</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbIdRequire.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbIdRequire.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbIdRequire.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 47</value>
+  </data>
+  <data name="lbIdRequire.Size" type="System.Drawing.Size, System.Drawing">
+    <value>311, 13</value>
+  </data>
+  <data name="lbIdRequire.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lbIdRequire.Text" xml:space="preserve">
+    <value>Veuillez utiliser ce format : &lt;&lt; prenom.nom &gt;&gt; (3 à 20 caractères)</value>
+  </data>
+  <data name="&gt;&gt;lbIdRequire.Name" xml:space="preserve">
+    <value>lbIdRequire</value>
+  </data>
+  <data name="&gt;&gt;lbIdRequire.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbIdRequire.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lbIdRequire.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="lbConfirmMdp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbConfirmMdp.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lbConfirmMdp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbConfirmMdp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 103</value>
+    <value>23, 149</value>
   </data>
   <data name="lbConfirmMdp.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 40</value>
@@ -152,10 +214,10 @@ mot de passe</value>
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;lbConfirmMdp.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="txtConfirmMdp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 109</value>
+    <value>134, 160</value>
   </data>
   <data name="txtConfirmMdp.MaxLength" type="System.Int32, mscorlib">
     <value>40</value>
@@ -176,10 +238,10 @@ mot de passe</value>
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;txtConfirmMdp.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="comboBoxClasse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 158</value>
+    <value>134, 210</value>
   </data>
   <data name="comboBoxClasse.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 21</value>
@@ -197,7 +259,7 @@ mot de passe</value>
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;comboBoxClasse.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="lbClasse.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -209,7 +271,7 @@ mot de passe</value>
     <value>NoControl</value>
   </data>
   <data name="lbClasse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 158</value>
+    <value>25, 211</value>
   </data>
   <data name="lbClasse.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 20</value>
@@ -230,7 +292,7 @@ mot de passe</value>
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;lbClasse.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="lbMdp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -263,7 +325,7 @@ mot de passe</value>
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;lbMdp.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="lbId.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -296,7 +358,7 @@ mot de passe</value>
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;lbId.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="txtMdp.Location" type="System.Drawing.Point, System.Drawing">
     <value>134, 66</value>
@@ -320,7 +382,7 @@ mot de passe</value>
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;txtMdp.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="txtId.Location" type="System.Drawing.Point, System.Drawing">
     <value>134, 24</value>
@@ -344,13 +406,13 @@ mot de passe</value>
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;txtId.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>510, 32</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>359, 198</value>
+    <value>359, 255</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -712,6 +774,66 @@ mot de passe</value>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 87</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 13</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Majuscule et minuscule uniquement (3 à 20 caractères)</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 44</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 13</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Majuscule et minuscule uniquement (3 à 20 caractères)</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="dtpNaissance.Location" type="System.Drawing.Point, System.Drawing">
     <value>134, 146</value>
   </data>
@@ -731,7 +853,7 @@ mot de passe</value>
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;dtpNaissance.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="comboBoxSexe.Location" type="System.Drawing.Point, System.Drawing">
     <value>134, 106</value>
@@ -752,7 +874,7 @@ mot de passe</value>
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;comboBoxSexe.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="lbNaissance.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -785,7 +907,7 @@ mot de passe</value>
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;lbNaissance.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="lbSexe.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -818,7 +940,7 @@ mot de passe</value>
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;lbSexe.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="lbPrenom.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -851,7 +973,7 @@ mot de passe</value>
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;lbPrenom.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="lbNom.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -881,7 +1003,7 @@ mot de passe</value>
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;lbNom.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="txtPrenom.Location" type="System.Drawing.Point, System.Drawing">
     <value>134, 64</value>
@@ -905,7 +1027,7 @@ mot de passe</value>
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;txtPrenom.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="txtNom.Location" type="System.Drawing.Point, System.Drawing">
     <value>134, 24</value>
@@ -929,7 +1051,7 @@ mot de passe</value>
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;txtNom.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>37, 32</value>

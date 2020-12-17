@@ -53,7 +53,7 @@ namespace AsoSportiveGUI
             // verification des champs du formulaire ajour d'un adhérent
             if(!GestionAdherent.GetRegexString(txtNom.Text, Adherent.REGEX_STRING1))
             {
-                errorNom.SetError(txtNom,"Nom saisi incorrect");
+                errorNom.SetError(txtNom,"Nom saisi incorrect, aucun caratères spéciaux et aucun espace, 3 à 20 caractères");
                 errorActive = true;
             }
             else
@@ -63,7 +63,7 @@ namespace AsoSportiveGUI
 
             if (!GestionAdherent.GetRegexString(txtPrenom.Text, Adherent.REGEX_STRING1))
             {
-                errorPrenom.SetError(txtPrenom, "Prenom saisi incorrect");
+                errorPrenom.SetError(txtPrenom, "Prénom saisi incorrect, aucun caratères spéciaux et aucun espace, 3 à 20 caractères");
                 errorActive = true;
             }
             else

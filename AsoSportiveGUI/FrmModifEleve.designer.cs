@@ -73,6 +73,10 @@ namespace AsoSportiveGUI
             this.errorId = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorMdp = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorConfirmMdp = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbIdRequire = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlAjoutEleve.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -101,6 +105,8 @@ namespace AsoSportiveGUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbIdRequire);
             this.panel1.Controls.Add(this.lbConfirmMdp);
             this.panel1.Controls.Add(this.txtConfirmMdp);
             this.panel1.Controls.Add(this.comboBoxClasse);
@@ -238,6 +244,8 @@ namespace AsoSportiveGUI
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.dtpNaissance);
             this.panel3.Controls.Add(this.comboBoxSexe);
             this.panel3.Controls.Add(this.lbNaissance);
@@ -347,6 +355,26 @@ namespace AsoSportiveGUI
             // 
             this.errorConfirmMdp.ContainerControl = this;
             // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // lbIdRequire
+            // 
+            resources.ApplyResources(this.lbIdRequire, "lbIdRequire");
+            this.lbIdRequire.Name = "lbIdRequire";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
             // FrmModifEleve
             // 
             resources.ApplyResources(this, "$this");
@@ -423,5 +451,9 @@ namespace AsoSportiveGUI
         private System.Windows.Forms.ErrorProvider errorConfirmMdp;
         private System.Windows.Forms.CheckBox checkArchivage;
         private System.Windows.Forms.Label lbArchivage;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbIdRequire;
+        private System.Windows.Forms.Label label1;
     }
 }
