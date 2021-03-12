@@ -49,7 +49,6 @@ D:\BTS2\ppe\Nouveau dossier\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.Gener
 D:\BTS2\ppe\Nouveau dossier\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.CopyComplete
 D:\BTS2\ppe\Nouveau dossier\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.exe
 D:\BTS2\ppe\Nouveau dossier\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.pdb
-=======
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\bin\Debug\AsoSportiveGUI.exe.config
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\bin\Debug\AsoSportiveGUI.exe
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\bin\Debug\AsoSportiveGUI.pdb
@@ -67,35 +66,12 @@ C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiv
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.exe
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.pdb
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmLanding.resources
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveGUI.exe.config
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveGUI.exe
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveGUI.pdb
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveBLL.dll
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveBO.dll
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveDAL.dll
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveBLL.pdb
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveBO.pdb
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\bin\Debug\AsoSportiveDAL.pdb
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csprojAssemblyReference.cache
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmLanding.resources
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmRedirection.resources
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmConnexion.resources
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.GenerateResource.cache
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.CopyComplete
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.exe
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.pdb
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.csproj.CoreCompileInputs.cache
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmDetailsEleve.resources
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmDetailsEleve.resources
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmAjoutEleve.resources
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmAjoutEleve.aa-DJ.resources
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\bin\Debug\aa-DJ\AsoSportiveGUI.resources.dll
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\aa-DJ\AsoSportiveGUI.resources.dll
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmAjoutEleve.resources
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmAjoutEleve.aa-DJ.resources
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\bin\Debug\aa-DJ\AsoSportiveGUI.resources.dll
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\aa-DJ\AsoSportiveGUI.resources.dll
-D:\BTS2\ppe\AssoSportive\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.Properties.Resources.resources
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.Properties.Resources.resources
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmModifEleve.resources
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmModifEleve.aa-DJ.resources
