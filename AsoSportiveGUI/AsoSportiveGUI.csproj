@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAjoutFlux.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjoutFlux.Designer.cs">
+      <DependentUpon>FrmAjoutFlux.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmModifEleve.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAjoutFlux.resx">
+      <DependentUpon>FrmAjoutFlux.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmModifEleve.aa-DJ.resx">
       <DependentUpon>FrmModifEleve.cs</DependentUpon>
     </EmbeddedResource>

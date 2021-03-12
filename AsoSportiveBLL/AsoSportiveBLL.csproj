@@ -42,8 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionBudget.cs" />
     <Compile Include="GestionClasse.cs" />
     <Compile Include="GestionAdherent.cs" />
+    <Compile Include="GestionFlux.cs" />
+    <Compile Include="GestionTypeFlux.cs" />
     <Compile Include="GestionUtilisateurs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -74,6 +74,8 @@ namespace AsoSportiveBO
 
         public static string REGEX_PASSWORD1 => REGEX_PASSWORD;
 
+        public string FullName => $"{Nom} {Prenom} {Classe.Libelle}";
+
         public int Id
         {
             get => this.id;

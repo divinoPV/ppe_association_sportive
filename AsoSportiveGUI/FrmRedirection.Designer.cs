@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRedirection));
             this.btnFrmDetailsEleve = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnFrmDetailsBudget = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,11 +58,32 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pnlMenu.Controls.Add(this.btnFrmDetailsBudget);
             this.pnlMenu.Controls.Add(this.btnFrmDetailsEleve);
             this.pnlMenu.Location = new System.Drawing.Point(34, 12);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(294, 368);
             this.pnlMenu.TabIndex = 4;
+            // 
+            // btnFrmDetailsBudget
+            // 
+            this.btnFrmDetailsBudget.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFrmDetailsBudget.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnFrmDetailsBudget.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFrmDetailsBudget.FlatAppearance.BorderSize = 0;
+            this.btnFrmDetailsBudget.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnFrmDetailsBudget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFrmDetailsBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFrmDetailsBudget.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnFrmDetailsBudget.Location = new System.Drawing.Point(93, 64);
+            this.btnFrmDetailsBudget.Name = "btnFrmDetailsBudget";
+            this.btnFrmDetailsBudget.Size = new System.Drawing.Size(108, 23);
+            this.btnFrmDetailsBudget.TabIndex = 4;
+            this.btnFrmDetailsBudget.Text = "Détails budget";
+            this.btnFrmDetailsBudget.UseVisualStyleBackColor = false;
+            this.btnFrmDetailsBudget.Click += new System.EventHandler(this.btnFrmDetailsBudget_Click);
             // 
             // FrmRedirection
             // 
@@ -82,5 +104,6 @@
         #endregion
         private System.Windows.Forms.Button btnFrmDetailsEleve;
         private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.Button btnFrmDetailsBudget;
     }
 }
