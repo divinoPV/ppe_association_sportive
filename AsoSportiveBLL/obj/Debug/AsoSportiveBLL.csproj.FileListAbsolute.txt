@@ -39,6 +39,7 @@ C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\obj\Debug\AsoSportiv
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CopyComplete
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.dll
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CoreCompileInputs.cache
 D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\bin\Debug\AsoSportiveBLL.dll
 D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\bin\Debug\AsoSportiveBLL.pdb
 D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\bin\Debug\AsoSportiveBO.dll
@@ -49,4 +50,3 @@ D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csprojAssemblyR
 D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CopyComplete
 D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.dll
 D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.pdb
-C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CoreCompileInputs.cache

@@ -21,13 +21,13 @@ C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveDAL\bin\Debug\AsoSportiv
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csproj.CopyComplete
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.dll
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csproj.CoreCompileInputs.cache
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csprojAssemblyReference.cache
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\bin\Debug\AsoSportiveDAL.dll
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\bin\Debug\AsoSportiveDAL.pdb
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\bin\Debug\AsoSportiveBO.dll
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\bin\Debug\AsoSportiveBO.pdb
+D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csprojAssemblyReference.cache
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csproj.CopyComplete
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.dll
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.pdb
-C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csproj.CoreCompileInputs.cache
-D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csprojAssemblyReference.cache
-C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csprojAssemblyReference.cache
