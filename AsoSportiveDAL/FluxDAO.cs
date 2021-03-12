@@ -78,7 +78,7 @@ namespace AsoSportiveDAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
 
-            cmd.CommandText = "INSERT INTO flux (libelle,date,montant,prelevement,adherent,typeFlux,evenement,budget) VALUES (@libelle,@date,@montant,@prelevement,@adherent,@typeFlux,@evenement,@budget)";
+            cmd.CommandText = "INSERT INTO flux (libelle, date, montant, prelevement, adherent, typeFlux, budget) VALUES (@libelle, @date, @montant, @prelevement, @adherent, @typeFlux, @budget)";
 
             cmd.Parameters.Add(new SqlParameter("@libelle", SqlDbType.NVarChar));
             cmd.Parameters["@libelle"].Value = unFlux.Libelle;
@@ -97,9 +97,6 @@ namespace AsoSportiveDAL
 
             cmd.Parameters.Add(new SqlParameter("@typeFlux", SqlDbType.Int));
             cmd.Parameters["@typeFlux"].Value = unFlux.TypeFlux;
-
-            cmd.Parameters.Add(new SqlParameter("@evenement", SqlDbType.Int));
-            cmd.Parameters["@evenement"].Value = null;
 
             cmd.Parameters.Add(new SqlParameter("@budget", SqlDbType.Int));
             cmd.Parameters["@budget"].Value = unFlux.Budget;
@@ -129,7 +126,7 @@ namespace AsoSportiveDAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
 
-            cmd.CommandText = "UPDATE flux SET libelle = @libelle, date = @date, montant = @montant, prelevement = @prelevement, adherent = @adherent, typeFlux = @typeFlux, evenement = @evenement, budget = @budget WHERE id = @id";
+            cmd.CommandText = "UPDATE flux SET libelle = @libelle, date = @date, montant = @montant, prelevement = @prelevement, adherent = @adherent, typeFlux = @typeFlux, budget = @budget WHERE id = @id";
 
             cmd.Parameters.Add(new SqlParameter("@libelle", SqlDbType.NVarChar));
             cmd.Parameters["@libelle"].Value = unFlux.Libelle;
@@ -148,9 +145,6 @@ namespace AsoSportiveDAL
 
             cmd.Parameters.Add(new SqlParameter("@typeFlux", SqlDbType.Int));
             cmd.Parameters["@typeFlux"].Value = unFlux.TypeFlux;
-
-            cmd.Parameters.Add(new SqlParameter("@evenement", SqlDbType.Int));
-            cmd.Parameters["@evenement"].Value = null;
 
             cmd.Parameters.Add(new SqlParameter("@budget", SqlDbType.Int));
             cmd.Parameters["@budget"].Value = unFlux.Budget;
