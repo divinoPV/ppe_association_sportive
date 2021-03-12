@@ -46,6 +46,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Ajouter";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnRetour
             // 
@@ -78,7 +79,7 @@
             this.pnl.Name = "pnl";
             this.pnl.RowCount = 1;
             this.pnl.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.pnl.Size = new System.Drawing.Size(872, 8);
+            this.pnl.Size = new System.Drawing.Size(872, 10);
             this.pnl.TabIndex = 2;
             // 
             // pbxLogo
@@ -98,15 +99,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(911, 450);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.pnl);
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmDetailsEleve";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Détails Elève";
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);

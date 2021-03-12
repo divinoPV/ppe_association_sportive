@@ -20,27 +20,19 @@ namespace AsoSportiveGUI
         {
             InitializeComponent();
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
-            GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Local"]);
+            GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Utilisateur"]);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (GestionUtilisateurs.ConnexionUtilisateur(txtId.Text, txtPass.Text) == true) {
-                Utilisateur utilisateurLog;
-
-                utilisateurLog = GestionUtilisateurs.logUtilisateur(txtId.Text); //fonction qui récupère un objet utilisateur connecté
 
                 //sauvegarde des données de l'utilisateur connecté
-                Utilisateur.IdLog = utilisateurLog.Id;
-                Utilisateur.LoginLog = utilisateurLog.Login;
-                Utilisateur.RoleLog = utilisateurLog.Role;
+                Utilisateur.UtilisateurLog = GestionUtilisateurs.logUtilisateur(txtId.Text); //fonction qui récupère un objet utilisateur connecté
 
                 this.Hide();
-
-                FrmDetailsEleve frmDetailsEleve = new FrmDetailsEleve();
-                frmDetailsEleve.ShowDialog(); // ouverture du formulaire
-
-                this.Show();
+                FrmRedirection frmRedirection = new FrmRedirection();
+                frmRedirection.Show(); // ouverture du formulaire
 
             } else {
                 MessageBox.Show("Identifiants incorrects.");
