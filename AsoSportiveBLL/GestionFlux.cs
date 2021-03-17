@@ -22,6 +22,13 @@ namespace AsoSportiveBLL
             ConnexionBD.GetConnexionBD().SetChaineConnexion(chaine);
         }
 
+        // Méthode qui renvoit une valeur booléen en faisant appel à
+        // la méthode GetRegexString() de la DAL
+        public static bool GetRegexString(string value, string regex)
+        {
+            return FluxDAO.GetRegexString(value, regex);
+        }
+
         // Méthode qui renvoit une List d'objets Classe en faisant appel à
         // la méthode GetLesClasses() de la DAL
         public static List<Flux> GetLesFlux()

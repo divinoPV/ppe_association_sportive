@@ -8,16 +8,20 @@ namespace AsoSportiveBO
 {
     public class Flux
     {
+        private const string REGEX_STRING = "^[A-Za-z]{3,20}$";
+
         private int id;
         private string libelle;
         private DateTime date;
-        private float montant;
+        private decimal montant;
         private bool prelevement;
         private Adherent adherent;
         private Budget budget;
         private TypeFlux typeFlux;
 
-        public Flux(int id, string libelle, DateTime date, float montant, bool prelevement, Adherent adherent, Budget budget, TypeFlux typeFlux)
+        private static Flux fluxSauvegarder;
+
+        public Flux(int id, string libelle, DateTime date, decimal montant, bool prelevement, Adherent adherent, Budget budget, TypeFlux typeFlux)
         {
             this.id = id;
             this.libelle = libelle;
@@ -28,6 +32,8 @@ namespace AsoSportiveBO
             this.budget = budget;
             this.typeFlux = typeFlux;
         }
+
+        public static string REGEX_STRING1 => REGEX_STRING;
 
         public int Id { 
             get => id; 
@@ -44,7 +50,7 @@ namespace AsoSportiveBO
             set => date = value; 
         }
 
-        public float Montant { 
+        public decimal Montant { 
             get => montant; 
             set => montant = value; 
         }
@@ -67,6 +73,11 @@ namespace AsoSportiveBO
         public TypeFlux TypeFlux { 
             get => typeFlux; 
             set => typeFlux = value; 
+        }
+
+        public static Flux FluxSauvegarder { 
+            get => fluxSauvegarder; 
+            set => fluxSauvegarder = value; 
         }
     }
 }

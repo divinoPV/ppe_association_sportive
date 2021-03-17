@@ -76,3 +76,4 @@ C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiv
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmModifEleve.resources
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmModifEleve.aa-DJ.resources
 C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmAjoutFlux.resources
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmModifFlux.resources

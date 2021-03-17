@@ -92,6 +92,7 @@
             this.Controls.Add(this.btnConnecter);
             this.Controls.Add(this.picBoxAs);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLanding";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLanding";

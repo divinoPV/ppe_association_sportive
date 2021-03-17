@@ -17,7 +17,7 @@ namespace AsoSportiveDAL
             int id;
             string libelle;
             DateTime date;
-            float montant;
+            Decimal montant;
             bool prelevement;
             Adherent adherent;
             Budget budget;
@@ -41,7 +41,7 @@ namespace AsoSportiveDAL
                 {
                     libelle = default(string);
                     date = default(DateTime);
-                    montant = default(float);
+                    montant = default(Decimal);
                     prelevement = default(bool);
                     adherent = default(Adherent);
                     budget = default(Budget);
@@ -51,7 +51,7 @@ namespace AsoSportiveDAL
                 {
                     libelle = monReader["libelle"].ToString();
                     date = (DateTime)monReader["date"];
-                    montant = (float)monReader["montant"];
+                    montant = (Decimal)monReader["montant"];
                     prelevement = (bool)monReader["prelevement"];
                     adherent = (Adherent)monReader["adherent"];
                     budget = (Budget)monReader["budget"];
@@ -78,7 +78,7 @@ namespace AsoSportiveDAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
 
-            cmd.CommandText = "INSERT INTO flux (libelle,date,montant,prelevement,adherent,typeFlux,evenement,budget) VALUES (@libelle,@date,@montant,@prelevement,@adherent,@typeFlux,@evenement,@budget)";
+            cmd.CommandText = "INSERT INTO flux (libelle, date, montant, prelevement, adherent, type_flux, budget) VALUES (@libelle, @date, @montant, @prelevement, @adherent, @typeFlux, @budget)";
 
             cmd.Parameters.Add(new SqlParameter("@libelle", SqlDbType.NVarChar));
             cmd.Parameters["@libelle"].Value = unFlux.Libelle;
@@ -86,23 +86,20 @@ namespace AsoSportiveDAL
             cmd.Parameters.Add(new SqlParameter("@date", SqlDbType.DateTime));
             cmd.Parameters["@date"].Value = unFlux.Date;
 
-            cmd.Parameters.Add(new SqlParameter("@montant", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("@montant", SqlDbType.Decimal));
             cmd.Parameters["@montant"].Value = unFlux.Montant;
 
             cmd.Parameters.Add(new SqlParameter("@prelevement", SqlDbType.Bit));
             cmd.Parameters["@prelevement"].Value = unFlux.Prelevement;
 
             cmd.Parameters.Add(new SqlParameter("@adherent", SqlDbType.Int));
-            cmd.Parameters["@adherent"].Value = unFlux.Adherent;
+            cmd.Parameters["@adherent"].Value = unFlux.Adherent.Id;
 
             cmd.Parameters.Add(new SqlParameter("@typeFlux", SqlDbType.Int));
-            cmd.Parameters["@typeFlux"].Value = unFlux.TypeFlux;
-
-            cmd.Parameters.Add(new SqlParameter("@evenement", SqlDbType.Int));
-            cmd.Parameters["@evenement"].Value = null;
+            cmd.Parameters["@typeFlux"].Value = unFlux.TypeFlux.Id;
 
             cmd.Parameters.Add(new SqlParameter("@budget", SqlDbType.Int));
-            cmd.Parameters["@budget"].Value = unFlux.Budget;
+            cmd.Parameters["@budget"].Value = unFlux.Budget.Id;
 
             nbEnr = cmd.ExecuteNonQuery();
 
@@ -129,7 +126,7 @@ namespace AsoSportiveDAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
 
-            cmd.CommandText = "UPDATE flux SET libelle = @libelle, date = @date, montant = @montant, prelevement = @prelevement, adherent = @adherent, typeFlux = @typeFlux, evenement = @evenement, budget = @budget WHERE id = @id";
+            cmd.CommandText = "UPDATE flux SET libelle = @libelle, date = @date, montant = @montant, prelevement = @prelevement, adherent = @adherent, typeFlux = @typeFlux, budget = @budget WHERE id = @id";
 
             cmd.Parameters.Add(new SqlParameter("@libelle", SqlDbType.NVarChar));
             cmd.Parameters["@libelle"].Value = unFlux.Libelle;
@@ -137,23 +134,20 @@ namespace AsoSportiveDAL
             cmd.Parameters.Add(new SqlParameter("@date", SqlDbType.DateTime));
             cmd.Parameters["@date"].Value = unFlux.Date;
 
-            cmd.Parameters.Add(new SqlParameter("@montant", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("@montant", SqlDbType.Decimal));
             cmd.Parameters["@montant"].Value = unFlux.Montant;
 
             cmd.Parameters.Add(new SqlParameter("@prelevement", SqlDbType.Bit));
             cmd.Parameters["@prelevement"].Value = unFlux.Prelevement;
 
             cmd.Parameters.Add(new SqlParameter("@adherent", SqlDbType.Int));
-            cmd.Parameters["@adherent"].Value = unFlux.Adherent;
+            cmd.Parameters["@adherent"].Value = unFlux.Adherent.Id;
 
             cmd.Parameters.Add(new SqlParameter("@typeFlux", SqlDbType.Int));
-            cmd.Parameters["@typeFlux"].Value = unFlux.TypeFlux;
-
-            cmd.Parameters.Add(new SqlParameter("@evenement", SqlDbType.Int));
-            cmd.Parameters["@evenement"].Value = null;
+            cmd.Parameters["@typeFlux"].Value = unFlux.TypeFlux.Id;
 
             cmd.Parameters.Add(new SqlParameter("@budget", SqlDbType.Int));
-            cmd.Parameters["@budget"].Value = unFlux.Budget;
+            cmd.Parameters["@budget"].Value = unFlux.Budget.Id;
 
             nbEnr = cmd.ExecuteNonQuery();
 
@@ -199,6 +193,16 @@ namespace AsoSportiveDAL
             {
                 return true;
             }
+        }
+
+        // Cette méthode vérifie que le string passé en paramètre correspond
+        // au regex
+        // retourne une valeur booléenne
+        public static bool GetRegexString(string value, string regex)
+        {
+            Regex regexString = new Regex(regex);
+
+            return regexString.IsMatch(value);
         }
     }
 }
