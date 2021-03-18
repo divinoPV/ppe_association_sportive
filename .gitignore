@@ -1,9 +1,9 @@
 .vs
-AsoSportiveBLL/obj/debug/
-AsoSportiveGUI/obj/debug/
-AsoSportiveDAL/obj/debug/
-AsoSportiveBO/obj/debug/
-AsoSportiveBLL/bin/debug/
-AsoSportiveGUI/bin/debug/
-AsoSportiveDAL/bin/debug/
-AsoSportiveBO/bin/debug/
+AsoSportiveBLL/obj/Debug/
+AsoSportiveGUI/obj/Debug/
+AsoSportiveDAL/obj/Debug/
+AsoSportiveBO/obj/Debug/
+AsoSportiveBLL/bin/Debug/
+AsoSportiveGUI/bin/Debug/
+AsoSportiveDAL/bin/Debug/
+AsoSportiveBO/bin/Debug/
