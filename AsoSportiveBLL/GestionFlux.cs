@@ -52,5 +52,9 @@ namespace AsoSportiveBLL
         {
             return FluxDAO.DeleteFlux(id);
         }
+        public static bool SupprimerFluxBudget(int id)
+        {
+            return FluxDAO.DeleteFluxIfBudgetDelete(id);
+        }
     }
 }

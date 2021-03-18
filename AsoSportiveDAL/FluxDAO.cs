@@ -203,6 +203,35 @@ namespace AsoSportiveDAL
             }
         }
 
+        public static bool DeleteFluxIfBudgetDelete(int id)
+        {
+            int nbEnr;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "DELETE FROM flux WHERE budget = @id ";
+
+            cmd.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
+            cmd.Parameters["@id"].Value = id;
+
+            nbEnr = cmd.ExecuteNonQuery();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            if (string.IsNullOrEmpty(Convert.ToString(nbEnr)) || Convert.ToString(nbEnr) == "0")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         // Cette méthode vérifie que le string passé en paramètre correspond
         // au regex
         // retourne une valeur booléenne

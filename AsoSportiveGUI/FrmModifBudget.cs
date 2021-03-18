@@ -29,7 +29,7 @@ namespace AsoSportiveGUI
         private void btnModifBudget_Click(object sender, EventArgs e)
         {
             bool errorActive = false;
-            int id = Flux.FluxSauvegarder.Id;
+            int id = Budget.BudgetSauvegarder.Id;
 
 
             // verification des champs du formulaire ajour d'un adhérent

@@ -95,7 +95,10 @@ namespace AsoSportiveDAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
 
-            cmd.CommandText = "UPDATE flux SET libelle = @libelle, montantInitial = @montantInitial WHERE id = @id";
+            cmd.CommandText = "UPDATE budget SET libelle = @libelle, montantInitial = @montantInitial WHERE id = @id";
+
+            cmd.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
+            cmd.Parameters["@id"].Value = unBudget.Id;
 
             cmd.Parameters.Add(new SqlParameter("@libelle", SqlDbType.NVarChar));
             cmd.Parameters["@libelle"].Value = unBudget.Libelle;

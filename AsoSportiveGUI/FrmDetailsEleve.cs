@@ -93,7 +93,7 @@ namespace AsoSportiveGUI
                 lblMaj.TextAlign = ContentAlignment.MiddleCenter;
 
                 Button btnUpdate = new Button();
-                btnUpdate.Tag = adherent.Id;
+                btnUpdate.Tag = adherent;
                 btnUpdate.Text = "Modifier";
                 btnUpdate.AutoSize = true;
                 btnUpdate.Location = new Point(x, y);

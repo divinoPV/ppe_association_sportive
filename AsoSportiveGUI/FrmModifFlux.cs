@@ -35,9 +35,9 @@ namespace AsoSportiveGUI
             numUpMontant.Value = fluxSauvegarder.Montant;
             dtpDate.Value = fluxSauvegarder.Date;
             checkPrelevement.Checked = fluxSauvegarder.Prelevement;
-            comboBoxBudget.SelectedValue = fluxSauvegarder.Budget;
-            comboBoxEleve.SelectedValue = fluxSauvegarder.Adherent;
-            comboBoxTypeTransac.SelectedValue = fluxSauvegarder.TypeFlux;
+            comboBoxBudget.SelectedItem = fluxSauvegarder.Budget;
+            comboBoxEleve.SelectedItem = fluxSauvegarder.Adherent;
+            comboBoxTypeTransac.SelectedItem = fluxSauvegarder.TypeFlux;
 
         }
 

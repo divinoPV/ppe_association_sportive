@@ -93,7 +93,7 @@ namespace AsoSportiveGUI
                 btnUpdate.TextAlign = ContentAlignment.MiddleCenter;
 
                 Button btnDelete = new Button();
-                btnDelete.Tag = budget.Id;
+                btnDelete.Tag = budget;
                 btnDelete.Text = "Supprimer";
                 btnDelete.AutoSize = true;
                 btnDelete.Location = new Point(x, y);
@@ -287,7 +287,7 @@ namespace AsoSportiveGUI
                         lblDate.TextAlign = ContentAlignment.MiddleCenter;
 
                         Button btnDelete = new Button();
-                        btnDelete.Tag = flux.Id;
+                        btnDelete.Tag = flux;
                         btnDelete.Text = "Supprimer";
                         btnDelete.AutoSize = true;
                         btnDelete.Location = new Point(x, y);
@@ -310,11 +310,54 @@ namespace AsoSportiveGUI
         public void btnUpdate_Click(object sender, EventArgs e)
         {
             Button senderButton = sender as Button;
+            if (senderButton.Tag is Flux)
+            {
+                Flux.FluxSauvegarder = (Flux)senderButton.Tag;
+
+                this.Hide(); // fermeture du formulaire actuel
+                FrmModifFlux frmModifFlux = new FrmModifFlux();
+                frmModifFlux.Show(); // ouverture du formulaire
+            } else
+            {
+                Budget.BudgetSauvegarder = (Budget)senderButton.Tag;
+
+                this.Hide(); // fermeture du formulaire actuel
+                FrmModifBudget frmModifBudget = new FrmModifBudget();
+                frmModifBudget.Show(); // ouverture du formulaire
+            } 
         }
 
         public void btnDelete_Click(object sender, EventArgs e)
         {
             Button senderButton = sender as Button;
+            DialogResult dialogResult;
+
+            if (senderButton.Tag is Flux)
+            {
+                dialogResult = MessageBox.Show("Voulez-vous vraiment supprimer le flux ?", "Validation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    GestionFlux.SupprimerFlux(Convert.ToInt32(((Flux)senderButton.Tag).Id));
+
+                    this.Hide(); // fermeture du formulaire actuel
+                    FrmDetailsBudget frmDetailsBudget = new FrmDetailsBudget();
+                    frmDetailsBudget.Show(); // ouverture du formulaire
+                }
+
+            }
+            else
+            {
+                dialogResult = MessageBox.Show("Voulez-vous vraiment supprimer le budget ? Cela entrainera la suppréssion des flux liés", "Validation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    GestionFlux.SupprimerFluxBudget(Convert.ToInt32(((Budget)senderButton.Tag).Id));
+                    GestionBudget.SupprimerBudget(Convert.ToInt32(((Budget)senderButton.Tag).Id));
+
+                    this.Hide(); // fermeture du formulaire actuel
+                    FrmDetailsBudget frmDetailsBudget = new FrmDetailsBudget();
+                    frmDetailsBudget.Show(); // ouverture du formulaire
+                }
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
