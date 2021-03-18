@@ -1,2 +1,9 @@
 .vs
-**/obj/debug
+AsoSportiveBLL/obj/debug/
+AsoSportiveGUI/obj/debug/
+AsoSportiveDAL/obj/debug/
+AsoSportiveBO/obj/debug/
+AsoSportiveBLL/bin/debug/
+AsoSportiveGUI/bin/debug/
+AsoSportiveDAL/bin/debug/
+AsoSportiveBO/bin/debug/
