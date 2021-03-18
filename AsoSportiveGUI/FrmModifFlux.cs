@@ -83,8 +83,8 @@ namespace AsoSportiveGUI
                     MessageBox.Show("Valide : flux ajouté", "Valide", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                     this.Hide(); // fermeture du formulaire actuel
-                    FrmModifFlux frmModifFlux = new FrmModifFlux();
-                    frmModifFlux.Show(); // ouverture du formulaire
+                    FrmDetailsBudget frmDetailsBudget = new FrmDetailsBudget();
+                    frmDetailsBudget.Show(); // ouverture du formulaire
                 }
                 else
                 {
@@ -96,8 +96,8 @@ namespace AsoSportiveGUI
         private void btnAnnulerModifFlux_Click(object sender, EventArgs e)
         {
             this.Hide(); // fermeture du formulaire actuel
-            FrmRedirection frmRedirection = new FrmRedirection();
-            frmRedirection.Show(); // ouverture du formulaire
+            FrmDetailsBudget frmDetailsBudget = new FrmDetailsBudget();
+            frmDetailsBudget.Show(); // ouverture du formulaire
         }
     }
 }

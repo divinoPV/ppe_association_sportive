@@ -18,7 +18,7 @@ namespace AsoSportiveDAL
         {
             int id;
             string libelle;
-            float montantInitial;
+            decimal montantInitial;
 
             List<Budget> lesBudgets = new List<Budget>();
 
@@ -37,12 +37,12 @@ namespace AsoSportiveDAL
                 if (monReader["id"] == DBNull.Value)
                 {
                     libelle = default(string);
-                    montantInitial = default(float);
+                    montantInitial = default(decimal);
                 }
                 else
                 {
                     libelle = monReader["libelle"].ToString();
-                    montantInitial = float.Parse(monReader["montantInitial"].ToString());
+                    montantInitial = decimal.Parse(monReader["montantInitial"].ToString());
                 }
                 Budget budget = new Budget(id, libelle, montantInitial);
                 lesBudgets.Add(budget);
@@ -68,7 +68,7 @@ namespace AsoSportiveDAL
             cmd.Parameters.Add(new SqlParameter("@libelle", SqlDbType.NVarChar));
             cmd.Parameters["@libelle"].Value = unBudget.Libelle;
 
-            cmd.Parameters.Add(new SqlParameter("@montantInitial", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("@montantInitial", SqlDbType.Decimal));
             cmd.Parameters["@montantInitial"].Value = unBudget.MontantInitial;
 
             nbEnr = cmd.ExecuteNonQuery();
@@ -85,6 +85,67 @@ namespace AsoSportiveDAL
                 return true;
             }
         }
+        public static bool UpdateBudget(Budget unBudget)
+        {
+            int nbEnr;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+
+            cmd.CommandText = "UPDATE flux SET libelle = @libelle, montantInitial = @montantInitial WHERE id = @id";
+
+            cmd.Parameters.Add(new SqlParameter("@libelle", SqlDbType.NVarChar));
+            cmd.Parameters["@libelle"].Value = unBudget.Libelle;
+
+            cmd.Parameters.Add(new SqlParameter("@montantInitial", SqlDbType.Decimal));
+            cmd.Parameters["@montantInitial"].Value = unBudget.MontantInitial;
+
+            nbEnr = cmd.ExecuteNonQuery();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            if (string.IsNullOrEmpty(Convert.ToString(nbEnr)) || Convert.ToString(nbEnr) == "0")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        public static bool DeleteBudget(int id)
+        {
+            int nbEnr;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "DELETE FROM budget WHERE id = @id ";
+
+            cmd.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
+            cmd.Parameters["@id"].Value = id;
+
+            nbEnr = cmd.ExecuteNonQuery();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            if (string.IsNullOrEmpty(Convert.ToString(nbEnr)) || Convert.ToString(nbEnr) == "0")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         public static bool GetRegexString(string value, string regex)
         {
             Regex regexString = new Regex(regex);

@@ -1,0 +1,25 @@
+D:\BTS2\ppe\AsoSportive\AsoSportiveBO\bin\Debug\AsoSportiveBO.dll
+D:\BTS2\ppe\AsoSportive\AsoSportiveBO\bin\Debug\AsoSportiveBO.pdb
+D:\BTS2\ppe\AsoSportive\AsoSportiveBO\obj\Debug\AsoSportiveBO.dll
+D:\BTS2\ppe\AsoSportive\AsoSportiveBO\obj\Debug\AsoSportiveBO.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveBO\bin\Debug\AsoSportiveBO.dll
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveBO\bin\Debug\AsoSportiveBO.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveBO\obj\Debug\AsoSportiveBO.dll
+C:\Users\yannick boganin\Desktop\PEE\ppe c#\AsoSportiveBO\obj\Debug\AsoSportiveBO.pdb
+D:\BTS2\ppe\AsoSportive\AsoSportiveBO\obj\Debug\AsoSportiveBO.csprojAssemblyReference.cache
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBO\bin\Debug\AsoSportiveBO.dll
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBO\bin\Debug\AsoSportiveBO.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBO\obj\Debug\AsoSportiveBO.dll
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBO\obj\Debug\AsoSportiveBO.pdb
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBO\obj\Debug\AsoSportiveBO.csproj.CoreCompileInputs.cache
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBO\obj\Debug\AsoSportiveBO.csprojAssemblyReference.cache
+D:\BTS2\ppe\AssoSportive\AsoSportiveBO\bin\Debug\AsoSportiveBO.dll
+D:\BTS2\ppe\AssoSportive\AsoSportiveBO\bin\Debug\AsoSportiveBO.pdb
+D:\BTS2\ppe\AssoSportive\AsoSportiveBO\obj\Debug\AsoSportiveBO.dll
+D:\BTS2\ppe\AssoSportive\AsoSportiveBO\obj\Debug\AsoSportiveBO.pdb
+D:\BTS2\ppe\AssoSportive\AsoSportiveBO\obj\Debug\AsoSportiveBO.csprojAssemblyReference.cache
+C:\wamp64\www\PPE_C#\AsoSportiveBO\bin\Debug\AsoSportiveBO.dll
+C:\wamp64\www\PPE_C#\AsoSportiveBO\bin\Debug\AsoSportiveBO.pdb
+C:\wamp64\www\PPE_C#\AsoSportiveBO\obj\Debug\AsoSportiveBO.csproj.CoreCompileInputs.cache
+C:\wamp64\www\PPE_C#\AsoSportiveBO\obj\Debug\AsoSportiveBO.dll
+C:\wamp64\www\PPE_C#\AsoSportiveBO\obj\Debug\AsoSportiveBO.pdb

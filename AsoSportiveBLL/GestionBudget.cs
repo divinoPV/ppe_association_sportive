@@ -37,5 +37,14 @@ namespace AsoSportiveBLL
         {
             return BudgetDAO.GetRegexString(value, regex);
         }
+        public static bool ModifierBudget(Budget unBudget)
+        {
+            return BudgetDAO.UpdateBudget(unBudget);
+        }
+
+        public static bool SupprimerBudget(int id)
+        {
+            return BudgetDAO.DeleteBudget(id);
+        }
     }
 }

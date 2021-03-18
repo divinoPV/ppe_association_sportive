@@ -14,16 +14,23 @@ using System.Globalization;
 
 namespace AsoSportiveGUI
 {
-    public partial class FrmAjoutBudget : Form
+    public partial class FrmModifBudget : Form
     {
-        public FrmAjoutBudget()
+        public FrmModifBudget()
         {
             InitializeComponent();
+            Budget budgetSauvegarder = Budget.BudgetSauvegarder;
+
+            /*Initialisation*/
+            txtBudgetNom.Text = budgetSauvegarder.Libelle.Trim();
+            numericUpBudget.Value = budgetSauvegarder.MontantInitial;
         }
 
-        private void btnAjoutBudget_Click(object sender, EventArgs e)
+        private void btnModifBudget_Click(object sender, EventArgs e)
         {
             bool errorActive = false;
+            int id = Flux.FluxSauvegarder.Id;
+
 
             // verification des champs du formulaire ajour d'un adhérent
             if (!GestionBudget.GetRegexString(txtBudgetNom.Text, Budget.REGEX_STRING1))
@@ -48,15 +55,15 @@ namespace AsoSportiveGUI
 
             if (errorActive)
             {
-                MessageBox.Show("Error : Budget non ajouté", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error : Budget non modifié", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                Budget unBudget = new Budget(0,txtBudgetNom.Text, numericUpBudget.Value);
+                Budget unBudget = new Budget(id,txtBudgetNom.Text, numericUpBudget.Value);
 
-                if (GestionBudget.CreerBudget(unBudget))
+                if (GestionBudget.ModifierBudget(unBudget))
                 {
-                    MessageBox.Show("Valide : budget ajouté", "Valide", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Valide : budget modifié", "Valide", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                     this.Hide(); // fermeture du formulaire actuel
                     FrmDetailsBudget frmDetailsBudget = new FrmDetailsBudget();
@@ -69,7 +76,7 @@ namespace AsoSportiveGUI
             }
         }
 
-        private void btnAnnulerAjoutBudget_Click(object sender, EventArgs e)
+        private void btnAnnulerModifBudget_Click(object sender, EventArgs e)
         {
             this.Hide(); // fermeture du formulaire actuel
             FrmDetailsBudget frmDetailsBudget = new FrmDetailsBudget();

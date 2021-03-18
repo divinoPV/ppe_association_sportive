@@ -9,14 +9,15 @@ namespace AsoSportiveBO
     public class Budget
     {
         private const string REGEX_STRING = "^[A-Za-z]{3,20}$";
-        private const string REGEX_DIGIT = "^-?[0-9][0-9.]*$";
 
         private int id;
         private string libelle;
-        private float montantInitial;
+        private decimal montantInitial;
+
+        private static Budget budgetSauvegarder;
 
         public Budget() { }
-        public Budget(int id, string libelle, float montantInitial)
+        public Budget(int id, string libelle, decimal montantInitial)
         {
             this.Id = id;
             this.libelle = libelle;
@@ -24,8 +25,6 @@ namespace AsoSportiveBO
         }
 
         public static string REGEX_STRING1 => REGEX_STRING;
-
-        public static string REGEX_DIGIT1 => REGEX_DIGIT;
 
         public int Id { 
             get => id; 
@@ -37,9 +36,14 @@ namespace AsoSportiveBO
             set => libelle = value; 
         }
 
-        public float MontantInitial { 
+        public decimal MontantInitial { 
             get => montantInitial; 
             set => montantInitial = value; 
+        }
+
+        public static Budget BudgetSauvegarder { 
+            get => budgetSauvegarder; 
+            set => budgetSauvegarder = value; 
         }
     }
 }

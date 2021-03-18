@@ -1,7 +1,7 @@
 ﻿
 namespace AsoSportiveGUI
 {
-    partial class FrmAjoutBudget
+    partial class FrmModifBudget
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace AsoSportiveGUI
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAjoutBudget = new System.Windows.Forms.Button();
+            this.btnModifBudget = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.numericUpBudget = new System.Windows.Forms.NumericUpDown();
             this.lbBudgetMontant = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@ namespace AsoSportiveGUI
             this.lbBudgetTitre = new System.Windows.Forms.Label();
             this.errorBudgetNom = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorBudgetMontant = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnAnnulerAjoutBudget = new System.Windows.Forms.Button();
+            this.btnAnnulerModifBudget = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpBudget)).BeginInit();
@@ -51,28 +51,28 @@ namespace AsoSportiveGUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel1.Controls.Add(this.btnAjoutBudget);
+            this.panel1.Controls.Add(this.btnModifBudget);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(38, 61);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(481, 324);
             this.panel1.TabIndex = 0;
             // 
-            // btnAjoutBudget
+            // btnModifBudget
             // 
-            this.btnAjoutBudget.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnAjoutBudget.FlatAppearance.BorderSize = 0;
-            this.btnAjoutBudget.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btnAjoutBudget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjoutBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAjoutBudget.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAjoutBudget.Location = new System.Drawing.Point(350, 261);
-            this.btnAjoutBudget.Name = "btnAjoutBudget";
-            this.btnAjoutBudget.Size = new System.Drawing.Size(106, 30);
-            this.btnAjoutBudget.TabIndex = 1;
-            this.btnAjoutBudget.Text = "Ajouter";
-            this.btnAjoutBudget.UseVisualStyleBackColor = false;
-            this.btnAjoutBudget.Click += new System.EventHandler(this.btnAjoutBudget_Click);
+            this.btnModifBudget.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnModifBudget.FlatAppearance.BorderSize = 0;
+            this.btnModifBudget.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnModifBudget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModifBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifBudget.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnModifBudget.Location = new System.Drawing.Point(350, 261);
+            this.btnModifBudget.Name = "btnModifBudget";
+            this.btnModifBudget.Size = new System.Drawing.Size(106, 30);
+            this.btnModifBudget.TabIndex = 1;
+            this.btnModifBudget.Text = "Ajouter";
+            this.btnModifBudget.UseVisualStyleBackColor = false;
+            this.btnModifBudget.Click += new System.EventHandler(this.btnModifBudget_Click);
             // 
             // panel2
             // 
@@ -130,11 +130,11 @@ namespace AsoSportiveGUI
             // 
             this.lbBudgetTitre.AutoSize = true;
             this.lbBudgetTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBudgetTitre.Location = new System.Drawing.Point(32, 18);
+            this.lbBudgetTitre.Location = new System.Drawing.Point(78, 18);
             this.lbBudgetTitre.Name = "lbBudgetTitre";
-            this.lbBudgetTitre.Size = new System.Drawing.Size(240, 31);
+            this.lbBudgetTitre.Size = new System.Drawing.Size(277, 31);
             this.lbBudgetTitre.TabIndex = 4;
-            this.lbBudgetTitre.Text = "Ajout d\'un budget";
+            this.lbBudgetTitre.Text = "Modifier d\'un budget";
             // 
             // errorBudgetNom
             // 
@@ -144,36 +144,36 @@ namespace AsoSportiveGUI
             // 
             this.errorBudgetMontant.ContainerControl = this;
             // 
-            // btnAnnulerAjoutBudget
+            // btnAnnulerModifBudget
             // 
-            this.btnAnnulerAjoutBudget.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnAnnulerAjoutBudget.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAnnulerAjoutBudget.FlatAppearance.BorderSize = 0;
-            this.btnAnnulerAjoutBudget.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btnAnnulerAjoutBudget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnnulerAjoutBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAnnulerAjoutBudget.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAnnulerAjoutBudget.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAnnulerAjoutBudget.Location = new System.Drawing.Point(420, 18);
-            this.btnAnnulerAjoutBudget.Name = "btnAnnulerAjoutBudget";
-            this.btnAnnulerAjoutBudget.Size = new System.Drawing.Size(99, 31);
-            this.btnAnnulerAjoutBudget.TabIndex = 13;
-            this.btnAnnulerAjoutBudget.Text = "Annuler";
-            this.btnAnnulerAjoutBudget.UseVisualStyleBackColor = false;
-            this.btnAnnulerAjoutBudget.Click += new System.EventHandler(this.btnAnnulerAjoutBudget_Click);
+            this.btnAnnulerModifBudget.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAnnulerModifBudget.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAnnulerModifBudget.FlatAppearance.BorderSize = 0;
+            this.btnAnnulerModifBudget.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAnnulerModifBudget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnnulerModifBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAnnulerModifBudget.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAnnulerModifBudget.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnAnnulerModifBudget.Location = new System.Drawing.Point(420, 18);
+            this.btnAnnulerModifBudget.Name = "btnAnnulerModifBudget";
+            this.btnAnnulerModifBudget.Size = new System.Drawing.Size(99, 31);
+            this.btnAnnulerModifBudget.TabIndex = 12;
+            this.btnAnnulerModifBudget.Text = "Annuler";
+            this.btnAnnulerModifBudget.UseVisualStyleBackColor = false;
+            this.btnAnnulerModifBudget.Click += new System.EventHandler(this.btnAnnulerModifBudget_Click);
             // 
-            // FrmAjoutBudget
+            // FrmModifBudget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(571, 463);
-            this.Controls.Add(this.btnAnnulerAjoutBudget);
+            this.Controls.Add(this.btnAnnulerModifBudget);
             this.Controls.Add(this.lbBudgetTitre);
             this.Controls.Add(this.panel1);
-            this.Name = "FrmAjoutBudget";
+            this.Name = "FrmModifBudget";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAjoutBudget";
+            this.Text = "FrmModifBudget";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -190,13 +190,13 @@ namespace AsoSportiveGUI
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtBudgetNom;
-        private System.Windows.Forms.Button btnAjoutBudget;
+        private System.Windows.Forms.Button btnModifBudget;
         private System.Windows.Forms.Label lbBudgetMontant;
         private System.Windows.Forms.Label lblBudgetNom;
         private System.Windows.Forms.Label lbBudgetTitre;
         private System.Windows.Forms.ErrorProvider errorBudgetNom;
         private System.Windows.Forms.ErrorProvider errorBudgetMontant;
         private System.Windows.Forms.NumericUpDown numericUpBudget;
-        private System.Windows.Forms.Button btnAnnulerAjoutBudget;
+        private System.Windows.Forms.Button btnAnnulerModifBudget;
     }
 }
