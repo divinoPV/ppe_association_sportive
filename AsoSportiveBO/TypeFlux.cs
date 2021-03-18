@@ -11,7 +11,11 @@ namespace AsoSportiveBO
         private int id;
         private string libelle;
 
-        public TypeFlux(int id, string libelle = null)
+        public TypeFlux(int id)
+        {
+            this.id = id;
+        }
+        public TypeFlux(int id, string libelle)
         {
             this.id = id;
             this.libelle = libelle;

@@ -108,3 +108,6 @@ C:\wamp64\www\PPE_C#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmAjoutBudget.reso
 C:\wamp64\www\PPE_C#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmModifFlux.resources
 C:\wamp64\www\PPE_C#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmDetailsBudget.resources
 C:\wamp64\www\PPE_C#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmModifBudget.resources
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmAjoutBudget.resources
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmDetailsBudget.resources
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveGUI\obj\Debug\AsoSportiveGUI.FrmModifBudget.resources

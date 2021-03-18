@@ -33,6 +33,10 @@ namespace AsoSportiveBO
         private static Adherent adherentSauvegarder;
 
         public Adherent() { }
+        public Adherent(int id) 
+        {
+            this.id = id;
+        }
         public Adherent(int id,
                         string nom,
                         string prenom,

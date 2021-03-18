@@ -17,6 +17,10 @@ namespace AsoSportiveBO
         private static Budget budgetSauvegarder;
 
         public Budget() { }
+        public Budget(int id) 
+        {
+            Id = id;
+        }
         public Budget(int id, string libelle, decimal montantInitial)
         {
             this.Id = id;

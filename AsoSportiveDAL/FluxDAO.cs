@@ -29,7 +29,7 @@ namespace AsoSportiveDAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "SELECT * FROM type_flux";
+            cmd.CommandText = "SELECT * FROM flux";
 
             SqlDataReader monReader = cmd.ExecuteReader();
 
@@ -53,9 +53,9 @@ namespace AsoSportiveDAL
                     date = (DateTime)monReader["date"];
                     montant = (Decimal)monReader["montant"];
                     prelevement = (bool)monReader["prelevement"];
-                    adherent = (Adherent)monReader["adherent"];
-                    budget = (Budget)monReader["budget"];
-                    typeFlux = (TypeFlux)monReader["typeFlux"];
+                    adherent = new Adherent((int)monReader["adherent"]);
+                    budget = new Budget((int)monReader["budget"]);
+                    typeFlux = new TypeFlux((int)monReader["type_flux"]);
                 }
                 Flux flux = new Flux(id, libelle, date, montant, prelevement, adherent, budget, typeFlux);
                 lesFlux.Add(flux);
