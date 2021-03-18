@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRedirection));
             this.btnFrmDetailsEleve = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnAjoutBudget = new System.Windows.Forms.Button();
             this.btnFrmDetailsBudget = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
@@ -58,12 +59,33 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pnlMenu.Controls.Add(this.btnAjoutBudget);
             this.pnlMenu.Controls.Add(this.btnFrmDetailsBudget);
             this.pnlMenu.Controls.Add(this.btnFrmDetailsEleve);
             this.pnlMenu.Location = new System.Drawing.Point(34, 12);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(294, 368);
             this.pnlMenu.TabIndex = 4;
+            // 
+            // btnAjoutBudget
+            // 
+            this.btnAjoutBudget.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAjoutBudget.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAjoutBudget.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAjoutBudget.FlatAppearance.BorderSize = 0;
+            this.btnAjoutBudget.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAjoutBudget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjoutBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjoutBudget.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnAjoutBudget.Location = new System.Drawing.Point(93, 106);
+            this.btnAjoutBudget.Name = "btnAjoutBudget";
+            this.btnAjoutBudget.Size = new System.Drawing.Size(108, 23);
+            this.btnAjoutBudget.TabIndex = 5;
+            this.btnAjoutBudget.Text = "Ajout Budget";
+            this.btnAjoutBudget.UseVisualStyleBackColor = false;
+            this.btnAjoutBudget.Click += new System.EventHandler(this.btnAjoutBudget_Click);
             // 
             // btnFrmDetailsBudget
             // 
@@ -105,5 +127,6 @@
         private System.Windows.Forms.Button btnFrmDetailsEleve;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnFrmDetailsBudget;
+        private System.Windows.Forms.Button btnAjoutBudget;
     }
 }

@@ -31,3 +31,15 @@ D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csprojAssemblyR
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csproj.CopyComplete
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.dll
 D:\BTS2\ppe\AssoSportive\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.pdb
+<<<<<<< Updated upstream
+=======
+C:\wamp64\www\PPE_C#\AsoSportiveDAL\bin\Debug\AsoSportiveDAL.dll
+C:\wamp64\www\PPE_C#\AsoSportiveDAL\bin\Debug\AsoSportiveDAL.pdb
+C:\wamp64\www\PPE_C#\AsoSportiveDAL\bin\Debug\AsoSportiveBO.dll
+C:\wamp64\www\PPE_C#\AsoSportiveDAL\bin\Debug\AsoSportiveBO.pdb
+C:\wamp64\www\PPE_C#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csprojAssemblyReference.cache
+C:\wamp64\www\PPE_C#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csproj.CoreCompileInputs.cache
+C:\wamp64\www\PPE_C#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.csproj.CopyComplete
+C:\wamp64\www\PPE_C#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.dll
+C:\wamp64\www\PPE_C#\AsoSportiveDAL\obj\Debug\AsoSportiveDAL.pdb
+>>>>>>> Stashed changes

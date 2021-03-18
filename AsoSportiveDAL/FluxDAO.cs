@@ -78,7 +78,11 @@ namespace AsoSportiveDAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
 
+<<<<<<< Updated upstream
             cmd.CommandText = "INSERT INTO flux (libelle, date, montant, prelevement, adherent, type_flux, budget) VALUES (@libelle, @date, @montant, @prelevement, @adherent, @typeFlux, @budget)";
+=======
+            cmd.CommandText = "INSERT INTO flux (libelle,date,montant,prelevement,adherent,typeFlux,budget) VALUES (@libelle,@date,@montant,@prelevement,@adherent,@typeFlux,@budget)";
+>>>>>>> Stashed changes
 
             cmd.Parameters.Add(new SqlParameter("@libelle", SqlDbType.NVarChar));
             cmd.Parameters["@libelle"].Value = unFlux.Libelle;
@@ -96,7 +100,11 @@ namespace AsoSportiveDAL
             cmd.Parameters["@adherent"].Value = unFlux.Adherent.Id;
 
             cmd.Parameters.Add(new SqlParameter("@typeFlux", SqlDbType.Int));
+<<<<<<< Updated upstream
             cmd.Parameters["@typeFlux"].Value = unFlux.TypeFlux.Id;
+=======
+            cmd.Parameters["@typeFlux"].Value = unFlux.TypeFlux;
+>>>>>>> Stashed changes
 
             cmd.Parameters.Add(new SqlParameter("@budget", SqlDbType.Int));
             cmd.Parameters["@budget"].Value = unFlux.Budget.Id;
@@ -144,7 +152,11 @@ namespace AsoSportiveDAL
             cmd.Parameters["@adherent"].Value = unFlux.Adherent.Id;
 
             cmd.Parameters.Add(new SqlParameter("@typeFlux", SqlDbType.Int));
+<<<<<<< Updated upstream
             cmd.Parameters["@typeFlux"].Value = unFlux.TypeFlux.Id;
+=======
+            cmd.Parameters["@typeFlux"].Value = unFlux.TypeFlux;
+>>>>>>> Stashed changes
 
             cmd.Parameters.Add(new SqlParameter("@budget", SqlDbType.Int));
             cmd.Parameters["@budget"].Value = unFlux.Budget.Id;

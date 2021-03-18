@@ -50,3 +50,18 @@ D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csprojAssemblyR
 D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CopyComplete
 D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.dll
 D:\BTS2\ppe\AssoSportive\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.pdb
+<<<<<<< Updated upstream
+=======
+C:\Users\yannick boganin\Desktop\PEE\ppe _c#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CoreCompileInputs.cache
+C:\wamp64\www\PPE_C#\AsoSportiveBLL\bin\Debug\AsoSportiveBLL.dll
+C:\wamp64\www\PPE_C#\AsoSportiveBLL\bin\Debug\AsoSportiveBLL.pdb
+C:\wamp64\www\PPE_C#\AsoSportiveBLL\bin\Debug\AsoSportiveBO.dll
+C:\wamp64\www\PPE_C#\AsoSportiveBLL\bin\Debug\AsoSportiveDAL.dll
+C:\wamp64\www\PPE_C#\AsoSportiveBLL\bin\Debug\AsoSportiveBO.pdb
+C:\wamp64\www\PPE_C#\AsoSportiveBLL\bin\Debug\AsoSportiveDAL.pdb
+C:\wamp64\www\PPE_C#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csprojAssemblyReference.cache
+C:\wamp64\www\PPE_C#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CoreCompileInputs.cache
+C:\wamp64\www\PPE_C#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.csproj.CopyComplete
+C:\wamp64\www\PPE_C#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.dll
+C:\wamp64\www\PPE_C#\AsoSportiveBLL\obj\Debug\AsoSportiveBLL.pdb
+>>>>>>> Stashed changes

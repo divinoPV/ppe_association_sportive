@@ -40,5 +40,12 @@ namespace AsoSportiveGUI
             FrmAjoutFlux frmAjoutFlux = new FrmAjoutFlux();
             frmAjoutFlux.Show(); // ouverture du formulaire  
         }
+
+        private void btnAjoutBudget_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // fermeture du formulaire actuel
+            FrmAjoutBudget frmAjoutBudget = new FrmAjoutBudget();
+            frmAjoutBudget.Show(); // ouverture du formulaire 
+        }
     }
 }

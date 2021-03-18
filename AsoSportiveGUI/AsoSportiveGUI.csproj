@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAjoutBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjoutBudget.Designer.cs">
+      <DependentUpon>FrmAjoutBudget.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAjoutFlux.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAjoutBudget.resx">
+      <DependentUpon>FrmAjoutBudget.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAjoutFlux.resx">
       <DependentUpon>FrmAjoutFlux.cs</DependentUpon>
     </EmbeddedResource>
