@@ -1,2 +1,2 @@
 .vs
-*.csproj.FileListAbsolute.txt
+obj/debug

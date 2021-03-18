@@ -96,6 +96,7 @@ namespace AsoSportiveDAL
             cmd.Parameters["@adherent"].Value = unFlux.Adherent.Id;
 
             cmd.Parameters.Add(new SqlParameter("@typeFlux", SqlDbType.Int));
+
             cmd.Parameters["@typeFlux"].Value = unFlux.TypeFlux.Id;
 
             cmd.Parameters.Add(new SqlParameter("@budget", SqlDbType.Int));
@@ -144,6 +145,7 @@ namespace AsoSportiveDAL
             cmd.Parameters["@adherent"].Value = unFlux.Adherent.Id;
 
             cmd.Parameters.Add(new SqlParameter("@typeFlux", SqlDbType.Int));
+
             cmd.Parameters["@typeFlux"].Value = unFlux.TypeFlux.Id;
 
             cmd.Parameters.Add(new SqlParameter("@budget", SqlDbType.Int));

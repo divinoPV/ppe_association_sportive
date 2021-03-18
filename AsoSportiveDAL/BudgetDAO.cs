@@ -52,5 +52,44 @@ namespace AsoSportiveDAL
 
             return lesBudgets;
         }
+
+        public static bool AjoutBudget(Budget unBudget)
+        {
+            int nbEnr;
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+
+            cmd.CommandText = "INSERT INTO budget (libelle, montantInitial) VALUES (@libelle, @montantInitial)";
+
+            cmd.Parameters.Add(new SqlParameter("@libelle", SqlDbType.NVarChar));
+            cmd.Parameters["@libelle"].Value = unBudget.Libelle;
+
+            cmd.Parameters.Add(new SqlParameter("@montantInitial", SqlDbType.Float));
+            cmd.Parameters["@montantInitial"].Value = unBudget.MontantInitial;
+
+            nbEnr = cmd.ExecuteNonQuery();
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            if (string.IsNullOrEmpty(Convert.ToString(nbEnr)) || Convert.ToString(nbEnr) == "0")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        public static bool GetRegexString(string value, string regex)
+        {
+            Regex regexString = new Regex(regex);
+
+            return regexString.IsMatch(value);
+        }
     }
 }

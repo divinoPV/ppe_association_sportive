@@ -28,5 +28,14 @@ namespace AsoSportiveBLL
         {
             return BudgetDAO.GetLesBudget();
         }
+
+        public static bool CreerBudget(Budget unBudget)
+        {
+            return BudgetDAO.AjoutBudget(unBudget);
+        }
+        public static bool GetRegexString(string value, string regex)
+        {
+            return BudgetDAO.GetRegexString(value, regex);
+        }
     }
 }
