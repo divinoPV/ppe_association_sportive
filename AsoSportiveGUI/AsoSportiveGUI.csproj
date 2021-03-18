@@ -53,6 +53,12 @@
     <Compile Include="FrmAjoutFlux.Designer.cs">
       <DependentUpon>FrmAjoutFlux.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDetailsBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetailsBudget.Designer.cs">
+      <DependentUpon>FrmDetailsBudget.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmModifEleve.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAjoutFlux.resx">
       <DependentUpon>FrmAjoutFlux.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetailsBudget.resx">
+      <DependentUpon>FrmDetailsBudget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModifEleve.aa-DJ.resx">
       <DependentUpon>FrmModifEleve.cs</DependentUpon>
