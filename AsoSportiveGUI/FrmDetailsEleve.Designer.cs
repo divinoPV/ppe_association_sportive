@@ -40,7 +40,7 @@
             // 
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAdd.Location = new System.Drawing.Point(816, 16);
+            this.btnAdd.Location = new System.Drawing.Point(712, 24);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             // btnRetour
             // 
-            this.btnRetour.Location = new System.Drawing.Point(712, 16);
+            this.btnRetour.Location = new System.Drawing.Point(816, 24);
             this.btnRetour.Name = "btnRetour";
             this.btnRetour.Size = new System.Drawing.Size(75, 23);
             this.btnRetour.TabIndex = 1;
@@ -79,7 +79,7 @@
             this.pnl.Name = "pnl";
             this.pnl.RowCount = 1;
             this.pnl.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.pnl.Size = new System.Drawing.Size(872, 10);
+            this.pnl.Size = new System.Drawing.Size(880, 10);
             this.pnl.TabIndex = 2;
             // 
             // pbxLogo

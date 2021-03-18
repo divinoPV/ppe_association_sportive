@@ -37,8 +37,8 @@ namespace AsoSportiveGUI
         private void btnFrmDetailsBudget_Click(object sender, EventArgs e)
         {
             this.Hide(); // fermeture du formulaire actuel
-            FrmAjoutFlux frmAjoutFlux = new FrmAjoutFlux();
-            frmAjoutFlux.Show(); // ouverture du formulaire  
+            FrmDetailsBudget frmDetailsBudget = new FrmDetailsBudget();
+            frmDetailsBudget.Show(); // ouverture du formulaire  
         }
     }
 }

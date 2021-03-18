@@ -47,7 +47,7 @@
             this.btnFrmDetailsEleve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFrmDetailsEleve.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFrmDetailsEleve.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnFrmDetailsEleve.Location = new System.Drawing.Point(93, 24);
+            this.btnFrmDetailsEleve.Location = new System.Drawing.Point(96, 32);
             this.btnFrmDetailsEleve.Name = "btnFrmDetailsEleve";
             this.btnFrmDetailsEleve.Size = new System.Drawing.Size(108, 23);
             this.btnFrmDetailsEleve.TabIndex = 3;
@@ -77,10 +77,10 @@
             this.btnFrmDetailsBudget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFrmDetailsBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFrmDetailsBudget.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnFrmDetailsBudget.Location = new System.Drawing.Point(93, 64);
+            this.btnFrmDetailsBudget.Location = new System.Drawing.Point(96, 80);
             this.btnFrmDetailsBudget.Name = "btnFrmDetailsBudget";
             this.btnFrmDetailsBudget.Size = new System.Drawing.Size(108, 23);
-            this.btnFrmDetailsBudget.TabIndex = 4;
+            this.btnFrmDetailsBudget.TabIndex = 5;
             this.btnFrmDetailsBudget.Text = "Détails budget";
             this.btnFrmDetailsBudget.UseVisualStyleBackColor = false;
             this.btnFrmDetailsBudget.Click += new System.EventHandler(this.btnFrmDetailsBudget_Click);
