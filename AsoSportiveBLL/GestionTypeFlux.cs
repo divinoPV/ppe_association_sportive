@@ -28,5 +28,12 @@ namespace AsoSportiveBLL
         {
             return TypeFluxDAO.GetLesTypeFlux();
         }
+
+        // Méthode qui retourne un object de type TypeFlux en
+        // fonction de l'id
+        public static TypeFlux GetTypeFlux(int id)
+        {
+            return TypeFluxDAO.GetTypeFlux(id);
+        }
     }
 }

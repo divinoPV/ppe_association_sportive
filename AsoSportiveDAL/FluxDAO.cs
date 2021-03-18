@@ -63,6 +63,13 @@ namespace AsoSportiveDAL
             // Fermeture de la connexion
             maConnexion.Close();
 
+            foreach (Flux flux in lesFlux)
+            {
+                flux.Adherent = AdherentDAO.GetOnceAdherent(flux.Adherent.Id);
+                flux.Budget = BudgetDAO.GetBudget(flux.Budget.Id);
+                flux.TypeFlux = TypeFluxDAO.GetTypeFlux(flux.TypeFlux.Id);
+            }
+
             return lesFlux;
         }
 

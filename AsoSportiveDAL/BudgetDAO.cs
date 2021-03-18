@@ -152,5 +152,46 @@ namespace AsoSportiveDAL
 
             return regexString.IsMatch(value);
         }
+
+        public static Budget GetBudget(int idS)
+        {
+            int id;
+            string libelle;
+            decimal montantInitial;
+
+            Budget budget = new Budget();
+
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM budget WHERE id = @id";
+
+            cmd.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
+            cmd.Parameters["@id"].Value = idS;
+
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            while (monReader.Read())
+            {
+                id = Int32.Parse(monReader["id"].ToString());
+
+                if (monReader["id"] == DBNull.Value)
+                {
+                    libelle = default(string);
+                    montantInitial = default(decimal);
+                }
+                else
+                {
+                    libelle = monReader["libelle"].ToString();
+                    montantInitial = decimal.Parse(monReader["montantInitial"].ToString());
+                }
+                budget = new Budget(id, libelle, montantInitial);
+            }
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            return budget;
+        }
     }
 }

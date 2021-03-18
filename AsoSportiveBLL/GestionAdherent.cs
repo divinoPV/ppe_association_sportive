@@ -69,5 +69,11 @@ namespace AsoSportiveBLL
         {
             return AdherentDAO.DeleteAdherent(id);
         }
+
+        // Méthode qui retourne un Adherent en fonction de son ID
+        public static Adherent GetOnceAdherent(int id)
+        {
+            return AdherentDAO.GetOnceAdherent(id);
+        }
     }
 }

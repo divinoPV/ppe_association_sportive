@@ -32,6 +32,39 @@ namespace AsoSportiveGUI
         {
             List<Budget> budgets = GestionBudget.GetLesBudget();
 
+            Label lblHeadLibelle = new Label();
+            lblHeadLibelle.Text = "Libelle";
+            lblHeadLibelle.AutoSize = true;
+            lblHeadLibelle.Location = new Point(x, y);
+            lblHeadLibelle.Dock = DockStyle.Fill;
+            lblHeadLibelle.TextAlign = ContentAlignment.MiddleCenter;
+
+            Label lblHeadMontant = new Label();
+            lblHeadMontant.Text = "Montant";
+            lblHeadMontant.AutoSize = true;
+            lblHeadMontant.Location = new Point(x, y);
+            lblHeadMontant.Dock = DockStyle.Fill;
+            lblHeadMontant.TextAlign = ContentAlignment.MiddleCenter;
+
+            Label lblHeadModifier = new Label();
+            lblHeadModifier.Text = "Modifier";
+            lblHeadModifier.AutoSize = true;
+            lblHeadModifier.Location = new Point(x, y);
+            lblHeadModifier.Dock = DockStyle.Fill;
+            lblHeadModifier.TextAlign = ContentAlignment.MiddleCenter;
+
+            Label lblHeadDelete = new Label();
+            lblHeadDelete.Text = "Supprimer";
+            lblHeadDelete.AutoSize = true;
+            lblHeadDelete.Location = new Point(x, y);
+            lblHeadDelete.Dock = DockStyle.Fill;
+            lblHeadDelete.TextAlign = ContentAlignment.MiddleCenter;
+
+            this.Controls.Find("pnl", true)[0].Controls.Add(lblHeadLibelle);
+            this.Controls.Find("pnl", true)[0].Controls.Add(lblHeadMontant);
+            this.Controls.Find("pnl", true)[0].Controls.Add(lblHeadModifier);
+            this.Controls.Find("pnl", true)[0].Controls.Add(lblHeadDelete);
+
             foreach (Budget budget in budgets)
             {
                 y += 20;
@@ -79,6 +112,63 @@ namespace AsoSportiveGUI
         {
             List<Flux> fluxs = GestionFlux.GetLesFlux();
 
+            Label lblHeadLibelle = new Label();
+            lblHeadLibelle.Text = "Libelle";
+            lblHeadLibelle.AutoSize = true;
+            lblHeadLibelle.Location = new Point(x, y);
+            lblHeadLibelle.Dock = DockStyle.Fill;
+            lblHeadLibelle.TextAlign = ContentAlignment.MiddleCenter;
+
+            Label lblHeadAdherent = new Label();
+            lblHeadAdherent.Text = "Adherent";
+            lblHeadAdherent.AutoSize = true;
+            lblHeadAdherent.Location = new Point(x, y);
+            lblHeadAdherent.Dock = DockStyle.Fill;
+            lblHeadAdherent.TextAlign = ContentAlignment.MiddleCenter;
+
+            Label lblHeadMontant = new Label();
+            lblHeadMontant.Text = "Montant";
+            lblHeadMontant.AutoSize = true;
+            lblHeadMontant.Location = new Point(x, y);
+            lblHeadMontant.Dock = DockStyle.Fill;
+            lblHeadMontant.TextAlign = ContentAlignment.MiddleCenter;
+
+            Label lblHeadPrelevement = new Label();
+            lblHeadPrelevement.Text = "Prelevement";
+            lblHeadPrelevement.AutoSize = true;
+            lblHeadPrelevement.Location = new Point(x, y);
+            lblHeadPrelevement.Dock = DockStyle.Fill;
+            lblHeadPrelevement.TextAlign = ContentAlignment.MiddleCenter;
+
+            Label lblHeadDate = new Label();
+            lblHeadDate.Text = "Date";
+            lblHeadDate.AutoSize = true;
+            lblHeadDate.Location = new Point(x, y);
+            lblHeadDate.Dock = DockStyle.Fill;
+            lblHeadDate.TextAlign = ContentAlignment.MiddleCenter;
+
+            Label btnHeadUpdate = new Label();
+            btnHeadUpdate.Text = "Modifier";
+            btnHeadUpdate.AutoSize = true;
+            btnHeadUpdate.Location = new Point(x, y);
+            btnHeadUpdate.Dock = DockStyle.Fill;
+            btnHeadUpdate.TextAlign = ContentAlignment.MiddleCenter;
+
+            Label btnHeadDelete = new Label();
+            btnHeadDelete.Text = "Supprimer";
+            btnHeadDelete.AutoSize = true;
+            btnHeadDelete.Location = new Point(x, y);
+            btnHeadDelete.Dock = DockStyle.Fill;
+            btnHeadDelete.TextAlign = ContentAlignment.MiddleCenter;
+
+            this.Controls.Find("pnl2", true)[0].Controls.Add(lblHeadLibelle);
+            this.Controls.Find("pnl2", true)[0].Controls.Add(lblHeadAdherent);
+            this.Controls.Find("pnl2", true)[0].Controls.Add(lblHeadMontant);
+            this.Controls.Find("pnl2", true)[0].Controls.Add(lblHeadPrelevement);
+            this.Controls.Find("pnl2", true)[0].Controls.Add(lblHeadDate);
+            this.Controls.Find("pnl2", true)[0].Controls.Add(btnHeadUpdate);
+            this.Controls.Find("pnl2", true)[0].Controls.Add(btnHeadDelete);
+
             foreach (Flux flux in fluxs)
             {
                 y += 20;
@@ -120,6 +210,13 @@ namespace AsoSportiveGUI
                 btnUpdate.Click += new EventHandler(btnUpdate_Click);
                 btnUpdate.TextAlign = ContentAlignment.MiddleCenter;
 
+                Label lblDate = new Label();
+                lblDate.Text = flux.Date.ToString();
+                lblDate.AutoSize = true;
+                lblDate.Location = new Point(x, y);
+                lblDate.Dock = DockStyle.Fill;
+                lblDate.TextAlign = ContentAlignment.MiddleCenter;
+
                 Button btnDelete = new Button();
                 btnDelete.Tag = flux.Id;
                 btnDelete.Text = "Supprimer";
@@ -129,12 +226,13 @@ namespace AsoSportiveGUI
                 btnDelete.Click += new EventHandler(btnDelete_Click);
                 btnDelete.TextAlign = ContentAlignment.MiddleCenter;
 
-                this.Controls.Find("pnl", true)[0].Controls.Add(lblLibelle);
-                this.Controls.Find("pnl", true)[0].Controls.Add(lblAdherent);
-                this.Controls.Find("pnl", true)[0].Controls.Add(lblMontant);
-                this.Controls.Find("pnl", true)[0].Controls.Add(lblPrelevement);
-                this.Controls.Find("pnl", true)[0].Controls.Add(btnUpdate);
-                this.Controls.Find("pnl", true)[0].Controls.Add(btnDelete);
+                this.Controls.Find("pnl2", true)[0].Controls.Add(lblLibelle);
+                this.Controls.Find("pnl2", true)[0].Controls.Add(lblAdherent);
+                this.Controls.Find("pnl2", true)[0].Controls.Add(lblMontant);
+                this.Controls.Find("pnl2", true)[0].Controls.Add(lblPrelevement);
+                this.Controls.Find("pnl2", true)[0].Controls.Add(lblDate);
+                this.Controls.Find("pnl2", true)[0].Controls.Add(btnUpdate);
+                this.Controls.Find("pnl2", true)[0].Controls.Add(btnDelete);
             }
         }
 

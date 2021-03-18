@@ -367,5 +367,89 @@ namespace AsoSportiveDAL
 
             return resultat;
         }
+
+        public static Adherent GetOnceAdherent(int idS)
+        {
+            int id;
+            string nom;
+            string prenom;
+            DateTime ddn;
+            string numtel;
+            string email;
+            string numparnt;
+            bool autprelev;
+            char sexe;
+            string login;
+            string mdp;
+            DateTime datemaj;
+            bool archive;
+            Utilisateur utilisateur;
+            Classe classe;
+
+            Adherent unAdherent = new Adherent();
+
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM adherent WHERE id = @id";
+
+            cmd.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
+            cmd.Parameters["@id"].Value = idS;
+
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            // Remplissage de la liste
+            while (monReader.Read())
+            {
+                id = Int32.Parse(monReader["id"].ToString());
+
+                if (monReader["id"] == DBNull.Value)
+                {
+                    id = default(int);
+                    nom = default(string);
+                    prenom = default(string);
+                    ddn = default(DateTime);
+                    numtel = default(string);
+                    email = default(string);
+                    numparnt = default(string);
+                    autprelev = default(bool);
+                    sexe = default(char);
+                    login = default(string);
+                    mdp = default(string);
+                    datemaj = default(DateTime);
+                    archive = default(bool);
+                    utilisateur = default(Utilisateur);
+                    classe = default(Classe);
+                }
+                else
+                {
+                    nom = monReader["nom"].ToString();
+                    prenom = monReader["prenom"].ToString();
+                    ddn = (DateTime)monReader["ddn"];
+                    numtel = monReader["numtel"].ToString();
+                    email = monReader["email"].ToString();
+                    numparnt = monReader["numparent"].ToString();
+                    autprelev = (bool)monReader["autprelev"];
+                    sexe = monReader["sexe"].ToString()[0];
+                    login = monReader["login"].ToString();
+                    mdp = monReader["mdp"].ToString();
+                    datemaj = (DateTime)monReader["datemaj"];
+                    archive = (bool)monReader["archive"];
+                    utilisateur = new Utilisateur((int)monReader["utilisateur"]);
+                    classe = new Classe((int)monReader["classe"]);
+                }
+                unAdherent = new Adherent(id, nom, prenom, ddn, numtel, email, numparnt, autprelev, sexe, login,
+                                        mdp, datemaj, archive, utilisateur, classe);
+            }
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            unAdherent.Utilisateur = UtilisateurDAO.GetUtilisateur(unAdherent.Utilisateur.Id);
+            unAdherent.Classe = ClasseDAO.GetClasse(unAdherent.Classe.Id);
+
+            return unAdherent;
+        }
     }
 }

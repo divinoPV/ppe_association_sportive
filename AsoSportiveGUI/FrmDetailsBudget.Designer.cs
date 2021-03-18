@@ -37,6 +37,7 @@
             this.pnl = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl2 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -121,17 +122,40 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(24, 80);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(190, 48);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(193, 58);
             this.flowLayoutPanel1.TabIndex = 11;
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.pnl2);
             this.panel1.Controls.Add(this.lblFlux);
             this.panel1.Controls.Add(this.btnAddFlux);
             this.panel1.Location = new System.Drawing.Point(3, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(184, 32);
+            this.panel1.Size = new System.Drawing.Size(187, 42);
             this.panel1.TabIndex = 12;
+            // 
+            // pnl2
+            // 
+            this.pnl2.AutoScroll = true;
+            this.pnl2.AutoSize = true;
+            this.pnl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnl2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.pnl2.ColumnCount = 7;
+            this.pnl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnl2.Location = new System.Drawing.Point(5, 35);
+            this.pnl2.Name = "pnl2";
+            this.pnl2.RowCount = 1;
+            this.pnl2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.pnl2.Size = new System.Drawing.Size(10, 4);
+            this.pnl2.TabIndex = 12;
             // 
             // FrmDetailsBudget
             // 
@@ -169,5 +193,6 @@
         private System.Windows.Forms.TableLayoutPanel pnl;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel pnl2;
     }
 }

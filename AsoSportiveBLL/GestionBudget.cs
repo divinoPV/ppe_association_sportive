@@ -46,5 +46,12 @@ namespace AsoSportiveBLL
         {
             return BudgetDAO.DeleteBudget(id);
         }
+
+        // Méthode qui retourne un object de type Budget en
+        // fonction de l'id
+        public static Budget GetBudget(int id)
+        {
+            return BudgetDAO.GetBudget(id);
+        }
     }
 }

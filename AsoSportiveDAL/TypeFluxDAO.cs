@@ -49,5 +49,43 @@ namespace AsoSportiveDAL
 
             return lesTypeFlux;
         }
+
+        public static TypeFlux GetTypeFlux(int idS)
+        {
+            int id;
+            string libelle;
+
+            TypeFlux TypeFlux = new TypeFlux();
+
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM type_flux WHERE id = @id";
+
+            cmd.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
+            cmd.Parameters["@id"].Value = idS;
+
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            while (monReader.Read())
+            {
+                id = Int32.Parse(monReader["id"].ToString());
+
+                if (monReader["id"] == DBNull.Value)
+                {
+                    libelle = default(string);
+                }
+                else
+                {
+                    libelle = monReader["libelle"].ToString();
+                }
+                TypeFlux typeFlux = new TypeFlux(id, libelle);
+            }
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            return TypeFlux;
+        }
     }
 }
