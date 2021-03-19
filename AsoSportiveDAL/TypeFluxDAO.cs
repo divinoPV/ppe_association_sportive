@@ -55,7 +55,7 @@ namespace AsoSportiveDAL
             int id;
             string libelle;
 
-            TypeFlux TypeFlux = new TypeFlux();
+            TypeFlux typeFlux = new TypeFlux();
 
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
 
@@ -80,12 +80,12 @@ namespace AsoSportiveDAL
                 {
                     libelle = monReader["libelle"].ToString();
                 }
-                TypeFlux typeFlux = new TypeFlux(id, libelle);
+                typeFlux = new TypeFlux(id, libelle);
             }
             // Fermeture de la connexion
             maConnexion.Close();
 
-            return TypeFlux;
+            return typeFlux;
         }
     }
 }
