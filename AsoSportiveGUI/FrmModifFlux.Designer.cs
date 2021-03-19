@@ -33,12 +33,10 @@ namespace AsoSportiveGUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModifFlux));
             this.pnlAjoutFlux = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBoxBudget = new System.Windows.Forms.ComboBox();
             this.comboBoxTypeTransac = new System.Windows.Forms.ComboBox();
             this.btnModifFlux = new System.Windows.Forms.Button();
             this.checkPrelevement = new System.Windows.Forms.CheckBox();
             this.lbPrelevement = new System.Windows.Forms.Label();
-            this.lbBudget = new System.Windows.Forms.Label();
             this.lbTypeTransac = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.numUpMontant = new System.Windows.Forms.NumericUpDown();
@@ -68,32 +66,21 @@ namespace AsoSportiveGUI
             this.pnlAjoutFlux.Controls.Add(this.panel3);
             this.pnlAjoutFlux.Location = new System.Drawing.Point(18, 55);
             this.pnlAjoutFlux.Name = "pnlAjoutFlux";
-            this.pnlAjoutFlux.Size = new System.Drawing.Size(513, 487);
+            this.pnlAjoutFlux.Size = new System.Drawing.Size(513, 438);
             this.pnlAjoutFlux.TabIndex = 1;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Silver;
-            this.panel4.Controls.Add(this.comboBoxBudget);
             this.panel4.Controls.Add(this.comboBoxTypeTransac);
             this.panel4.Controls.Add(this.btnModifFlux);
             this.panel4.Controls.Add(this.checkPrelevement);
             this.panel4.Controls.Add(this.lbPrelevement);
-            this.panel4.Controls.Add(this.lbBudget);
             this.panel4.Controls.Add(this.lbTypeTransac);
             this.panel4.Location = new System.Drawing.Point(37, 243);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(442, 212);
+            this.panel4.Size = new System.Drawing.Size(442, 160);
             this.panel4.TabIndex = 8;
-            // 
-            // comboBoxBudget
-            // 
-            this.comboBoxBudget.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxBudget.FormattingEnabled = true;
-            this.comboBoxBudget.Location = new System.Drawing.Point(134, 66);
-            this.comboBoxBudget.Name = "comboBoxBudget";
-            this.comboBoxBudget.Size = new System.Drawing.Size(235, 21);
-            this.comboBoxBudget.TabIndex = 14;
             // 
             // comboBoxTypeTransac
             // 
@@ -114,7 +101,7 @@ namespace AsoSportiveGUI
             this.btnModifFlux.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnModifFlux.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnModifFlux.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnModifFlux.Location = new System.Drawing.Point(303, 145);
+            this.btnModifFlux.Location = new System.Drawing.Point(299, 91);
             this.btnModifFlux.Name = "btnModifFlux";
             this.btnModifFlux.Size = new System.Drawing.Size(127, 48);
             this.btnModifFlux.TabIndex = 4;
@@ -126,7 +113,7 @@ namespace AsoSportiveGUI
             // 
             this.checkPrelevement.AutoSize = true;
             this.checkPrelevement.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkPrelevement.Location = new System.Drawing.Point(150, 119);
+            this.checkPrelevement.Location = new System.Drawing.Point(138, 70);
             this.checkPrelevement.Name = "checkPrelevement";
             this.checkPrelevement.Size = new System.Drawing.Size(15, 14);
             this.checkPrelevement.TabIndex = 10;
@@ -137,22 +124,11 @@ namespace AsoSportiveGUI
             this.lbPrelevement.AutoSize = true;
             this.lbPrelevement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbPrelevement.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbPrelevement.Location = new System.Drawing.Point(34, 114);
+            this.lbPrelevement.Location = new System.Drawing.Point(35, 65);
             this.lbPrelevement.Name = "lbPrelevement";
             this.lbPrelevement.Size = new System.Drawing.Size(97, 20);
             this.lbPrelevement.TabIndex = 11;
             this.lbPrelevement.Text = "Prélèvement";
-            // 
-            // lbBudget
-            // 
-            this.lbBudget.AutoSize = true;
-            this.lbBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbBudget.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbBudget.Location = new System.Drawing.Point(34, 67);
-            this.lbBudget.Name = "lbBudget";
-            this.lbBudget.Size = new System.Drawing.Size(61, 20);
-            this.lbBudget.TabIndex = 6;
-            this.lbBudget.Text = "Budget";
             // 
             // lbTypeTransac
             // 
@@ -271,9 +247,9 @@ namespace AsoSportiveGUI
             this.lbAjoutFlux.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lbAjoutFlux.Location = new System.Drawing.Point(22, 9);
             this.lbAjoutFlux.Name = "lbAjoutFlux";
-            this.lbAjoutFlux.Size = new System.Drawing.Size(301, 31);
+            this.lbAjoutFlux.Size = new System.Drawing.Size(312, 31);
             this.lbAjoutFlux.TabIndex = 10;
-            this.lbAjoutFlux.Text = "Ajouter un débit/crédit";
+            this.lbAjoutFlux.Text = "Modifier un débit/crédit";
             this.lbAjoutFlux.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // errorNom
@@ -307,14 +283,14 @@ namespace AsoSportiveGUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(564, 562);
+            this.ClientSize = new System.Drawing.Size(564, 522);
             this.Controls.Add(this.btnAnnulerModifFlux);
             this.Controls.Add(this.lbAjoutFlux);
             this.Controls.Add(this.pnlAjoutFlux);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmModifFlux";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAjoutFlux";
+            this.Text = "FrmModifFlux";
             this.pnlAjoutFlux.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -335,7 +311,6 @@ namespace AsoSportiveGUI
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.CheckBox checkPrelevement;
         private System.Windows.Forms.Label lbPrelevement;
-        private System.Windows.Forms.Label lbBudget;
         private System.Windows.Forms.Label lbTypeTransac;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DateTimePicker dtpDate;
@@ -346,7 +321,6 @@ namespace AsoSportiveGUI
         private System.Windows.Forms.Label lbNom;
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label lbAjoutFlux;
-        private System.Windows.Forms.ComboBox comboBoxBudget;
         private System.Windows.Forms.ComboBox comboBoxTypeTransac;
         private System.Windows.Forms.ErrorProvider errorNom;
         private System.Windows.Forms.ErrorProvider errorMontant;

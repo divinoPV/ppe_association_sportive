@@ -134,7 +134,7 @@ namespace AsoSportiveDAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
 
-            cmd.CommandText = "UPDATE flux SET libelle = @libelle, date = @date, montant = @montant, prelevement = @prelevement, adherent = @adherent, typeFlux = @typeFlux, budget = @budget WHERE id = @id";
+            cmd.CommandText = "UPDATE flux SET libelle = @libelle, date = @date, montant = @montant, prelevement = @prelevement, adherent = @adherent, type_flux = @typeFlux, budget = @budget WHERE id = @id";
 
             cmd.Parameters.Add(new SqlParameter("@libelle", SqlDbType.NVarChar));
             cmd.Parameters["@libelle"].Value = unFlux.Libelle;
@@ -156,6 +156,9 @@ namespace AsoSportiveDAL
 
             cmd.Parameters.Add(new SqlParameter("@budget", SqlDbType.Int));
             cmd.Parameters["@budget"].Value = unFlux.Budget.Id;
+
+            cmd.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
+            cmd.Parameters["@id"].Value = unFlux.Id;
 
             nbEnr = cmd.ExecuteNonQuery();
 

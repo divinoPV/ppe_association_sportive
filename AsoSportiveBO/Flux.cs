@@ -33,6 +33,17 @@ namespace AsoSportiveBO
             this.typeFlux = typeFlux;
         }
 
+        public Flux(int id, string libelle, DateTime date, decimal montant, bool prelevement, Adherent adherent, TypeFlux typeFlux)
+        {
+            this.id = id;
+            this.libelle = libelle;
+            this.date = date;
+            this.montant = montant;
+            this.prelevement = prelevement;
+            this.adherent = adherent;
+            this.typeFlux = typeFlux;
+        }
+
         public static string REGEX_STRING1 => REGEX_STRING;
 
         public int Id { 

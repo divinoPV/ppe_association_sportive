@@ -22,8 +22,6 @@ namespace AsoSportiveGUI
             GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Utilisateur"]);
             comboBoxEleve.DataSource = GestionAdherent.GetAdherent();
             comboBoxEleve.DisplayMember = "FullName";
-            comboBoxBudget.DataSource = GestionBudget.GetLesBudget();
-            comboBoxBudget.DisplayMember = "libelle";
             comboBoxTypeTransac.DataSource = GestionTypeFlux.GetLesTypeFlux();
             comboBoxTypeTransac.DisplayMember = "libelle";
 
@@ -35,7 +33,6 @@ namespace AsoSportiveGUI
             numUpMontant.Value = fluxSauvegarder.Montant;
             dtpDate.Value = fluxSauvegarder.Date;
             checkPrelevement.Checked = fluxSauvegarder.Prelevement;
-            comboBoxBudget.SelectedItem = fluxSauvegarder.Budget;
             comboBoxEleve.SelectedItem = fluxSauvegarder.Adherent;
             comboBoxTypeTransac.SelectedItem = fluxSauvegarder.TypeFlux;
 
@@ -69,18 +66,18 @@ namespace AsoSportiveGUI
 
             if (errorActive)
             {
-                MessageBox.Show("Error : flux non ajouté", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error : flux non modifié", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
 
                 Flux unFlux = new Flux(id, txtNom.Text, dtpDate.Value, numUpMontant.Value, checkPrelevement.Checked,
-                    (Adherent)comboBoxEleve.SelectedItem, (Budget)comboBoxBudget.SelectedItem, (TypeFlux)comboBoxTypeTransac.SelectedItem);
+                    (Adherent)comboBoxEleve.SelectedItem, Flux.FluxSauvegarder.Budget, (TypeFlux)comboBoxTypeTransac.SelectedItem);
 
 
-                if (GestionFlux.CreerFlux(unFlux))
+                if (GestionFlux.ModifierFlux(unFlux))
                 {
-                    MessageBox.Show("Valide : flux ajouté", "Valide", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Valide : flux modifié", "Valide", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                     this.Hide(); // fermeture du formulaire actuel
                     FrmDetailsBudget frmDetailsBudget = new FrmDetailsBudget();
@@ -88,7 +85,7 @@ namespace AsoSportiveGUI
                 }
                 else
                 {
-                    MessageBox.Show("Error : error lors de l'insertion", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error : error lors de la modification", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

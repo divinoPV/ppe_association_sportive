@@ -71,7 +71,7 @@ namespace AsoSportiveGUI
                 }
                 else
                 {
-                    MessageBox.Show("Error : error lors de l'insertion", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error : error lors de la modification", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

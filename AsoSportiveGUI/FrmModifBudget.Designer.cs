@@ -70,7 +70,7 @@ namespace AsoSportiveGUI
             this.btnModifBudget.Name = "btnModifBudget";
             this.btnModifBudget.Size = new System.Drawing.Size(106, 30);
             this.btnModifBudget.TabIndex = 1;
-            this.btnModifBudget.Text = "Ajouter";
+            this.btnModifBudget.Text = "Modifier";
             this.btnModifBudget.UseVisualStyleBackColor = false;
             this.btnModifBudget.Click += new System.EventHandler(this.btnModifBudget_Click);
             // 
@@ -91,12 +91,10 @@ namespace AsoSportiveGUI
             this.numericUpBudget.DecimalPlaces = 2;
             this.numericUpBudget.Location = new System.Drawing.Point(163, 117);
             this.numericUpBudget.Maximum = new decimal(new int[] {
-                    2147483647,
-                    0,
-                    0,
-                    0
-                }
-            );
+            2147483647,
+            0,
+            0,
+            0});
             this.numericUpBudget.Name = "numericUpBudget";
             this.numericUpBudget.Size = new System.Drawing.Size(199, 20);
             this.numericUpBudget.TabIndex = 4;
