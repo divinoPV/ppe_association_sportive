@@ -148,6 +148,13 @@ namespace AsoSportiveGUI
             lblHeadPrelevement.Dock = DockStyle.Fill;
             lblHeadPrelevement.TextAlign = ContentAlignment.MiddleCenter;
 
+            Label lblHeadTypeFlux = new Label();
+            lblHeadTypeFlux.Text = "Type flux";
+            lblHeadTypeFlux.AutoSize = true;
+            lblHeadTypeFlux.Location = new Point(x, y);
+            lblHeadTypeFlux.Dock = DockStyle.Fill;
+            lblHeadTypeFlux.TextAlign = ContentAlignment.MiddleCenter;
+
             Label lblHeadDate = new Label();
             lblHeadDate.Text = "Date";
             lblHeadDate.AutoSize = true;
@@ -172,6 +179,7 @@ namespace AsoSportiveGUI
             this.Controls.Find("pnl2", true)[0].Controls.Add(lblHeadLibelle);
             this.Controls.Find("pnl2", true)[0].Controls.Add(lblHeadAdherent);
             this.Controls.Find("pnl2", true)[0].Controls.Add(lblHeadMontant);
+            this.Controls.Find("pnl2", true)[0].Controls.Add(lblHeadTypeFlux);
             this.Controls.Find("pnl2", true)[0].Controls.Add(lblHeadPrelevement);
             this.Controls.Find("pnl2", true)[0].Controls.Add(lblHeadDate);
             this.Controls.Find("pnl2", true)[0].Controls.Add(btnHeadUpdate);
@@ -185,6 +193,8 @@ namespace AsoSportiveGUI
                 lblBudget.Location = new Point(x, y);
                 lblBudget.Dock = DockStyle.Fill;
                 lblBudget.TextAlign = ContentAlignment.MiddleCenter;
+                lblBudget.Margin = new Padding(5);
+                lblBudget.Font = new Font("Arial", 16, FontStyle.Bold);
 
                 Label lblSpace = new Label();
                 lblSpace.Text = "";
@@ -228,6 +238,13 @@ namespace AsoSportiveGUI
                 lblSpace6.Dock = DockStyle.Fill;
                 lblSpace6.TextAlign = ContentAlignment.MiddleCenter;
 
+                Label lblSpace7 = new Label();
+                lblSpace7.Text = "";
+                lblSpace7.AutoSize = true;
+                lblSpace7.Location = new Point(x, y);
+                lblSpace7.Dock = DockStyle.Fill;
+                lblSpace7.TextAlign = ContentAlignment.MiddleCenter;
+
                 this.Controls.Find("pnl2", true)[0].Controls.Add(lblBudget);
                 this.Controls.Find("pnl2", true)[0].Controls.Add(lblSpace);
                 this.Controls.Find("pnl2", true)[0].Controls.Add(lblSpace2);
@@ -235,6 +252,7 @@ namespace AsoSportiveGUI
                 this.Controls.Find("pnl2", true)[0].Controls.Add(lblSpace4);
                 this.Controls.Find("pnl2", true)[0].Controls.Add(lblSpace5);
                 this.Controls.Find("pnl2", true)[0].Controls.Add(lblSpace6);
+                this.Controls.Find("pnl2", true)[0].Controls.Add(lblSpace7);
 
                 foreach (Flux flux in fluxs)
                 {
@@ -263,12 +281,28 @@ namespace AsoSportiveGUI
                         lblMontant.Dock = DockStyle.Fill;
                         lblMontant.TextAlign = ContentAlignment.MiddleCenter;
 
+                        Label lblTypeFlux = new Label();
+                        lblTypeFlux.Text = flux.TypeFlux.Libelle;
+                        lblTypeFlux.AutoSize = true;
+                        lblTypeFlux.Location = new Point(x, y);
+                        lblTypeFlux.Dock = DockStyle.Fill;
+                        lblTypeFlux.TextAlign = ContentAlignment.MiddleCenter;
+
+                        string pre = flux.Prelevement == false ? "Non" : "Oui";
+
                         Label lblPrelevement = new Label();
-                        lblPrelevement.Text = flux.Prelevement.ToString();
+                        lblPrelevement.Text = pre;
                         lblPrelevement.AutoSize = true;
                         lblPrelevement.Location = new Point(x, y);
                         lblPrelevement.Dock = DockStyle.Fill;
                         lblPrelevement.TextAlign = ContentAlignment.MiddleCenter;
+
+                        Label lblDate = new Label();
+                        lblDate.Text = flux.Date.ToString();
+                        lblDate.AutoSize = true;
+                        lblDate.Location = new Point(x, y);
+                        lblDate.Dock = DockStyle.Fill;
+                        lblDate.TextAlign = ContentAlignment.MiddleCenter;
 
                         Button btnUpdate = new Button();
                         btnUpdate.Tag = flux;
@@ -278,13 +312,6 @@ namespace AsoSportiveGUI
                         btnUpdate.Dock = DockStyle.Fill;
                         btnUpdate.Click += new EventHandler(btnUpdate_Click);
                         btnUpdate.TextAlign = ContentAlignment.MiddleCenter;
-
-                        Label lblDate = new Label();
-                        lblDate.Text = flux.Date.ToString();
-                        lblDate.AutoSize = true;
-                        lblDate.Location = new Point(x, y);
-                        lblDate.Dock = DockStyle.Fill;
-                        lblDate.TextAlign = ContentAlignment.MiddleCenter;
 
                         Button btnDelete = new Button();
                         btnDelete.Tag = flux;
@@ -298,6 +325,7 @@ namespace AsoSportiveGUI
                         this.Controls.Find("pnl2", true)[0].Controls.Add(lblLibelle);
                         this.Controls.Find("pnl2", true)[0].Controls.Add(lblAdherent);
                         this.Controls.Find("pnl2", true)[0].Controls.Add(lblMontant);
+                        this.Controls.Find("pnl2", true)[0].Controls.Add(lblTypeFlux);
                         this.Controls.Find("pnl2", true)[0].Controls.Add(lblPrelevement);
                         this.Controls.Find("pnl2", true)[0].Controls.Add(lblDate);
                         this.Controls.Find("pnl2", true)[0].Controls.Add(btnUpdate);
