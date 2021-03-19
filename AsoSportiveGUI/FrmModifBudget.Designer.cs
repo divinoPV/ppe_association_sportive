@@ -91,10 +91,12 @@ namespace AsoSportiveGUI
             this.numericUpBudget.DecimalPlaces = 2;
             this.numericUpBudget.Location = new System.Drawing.Point(163, 117);
             this.numericUpBudget.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
+                    2147483647,
+                    0,
+                    0,
+                    0
+                }
+            );
             this.numericUpBudget.Name = "numericUpBudget";
             this.numericUpBudget.Size = new System.Drawing.Size(199, 20);
             this.numericUpBudget.TabIndex = 4;

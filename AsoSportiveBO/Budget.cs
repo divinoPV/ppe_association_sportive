@@ -13,6 +13,7 @@ namespace AsoSportiveBO
         private int id;
         private string libelle;
         private decimal montantInitial;
+        private decimal montantTotal;
 
         private static Budget budgetSauvegarder;
 
@@ -26,6 +27,7 @@ namespace AsoSportiveBO
             this.Id = id;
             this.libelle = libelle;
             this.montantInitial = montantInitial;
+            this.montantTotal = montantInitial;
         }
 
         public static string REGEX_STRING1 => REGEX_STRING;
@@ -37,12 +39,19 @@ namespace AsoSportiveBO
 
         public string Libelle { 
             get => libelle; 
-            set => libelle = value; 
+            set => libelle = value;
         }
 
-        public decimal MontantInitial { 
-            get => montantInitial; 
-            set => montantInitial = value; 
+        public decimal MontantInitial
+        {
+            get => montantInitial;
+            set => montantInitial = value;
+        }
+
+        public decimal MontantTotal
+        {
+            get => montantTotal;
+            set => montantTotal = value;
         }
 
         public static Budget BudgetSauvegarder { 

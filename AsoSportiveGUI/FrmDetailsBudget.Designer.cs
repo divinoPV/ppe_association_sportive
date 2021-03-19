@@ -102,7 +102,8 @@
             this.pnl.AutoSize = true;
             this.pnl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnl.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
-            this.pnl.ColumnCount = 4;
+            this.pnl.ColumnCount = 5;
+            this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());

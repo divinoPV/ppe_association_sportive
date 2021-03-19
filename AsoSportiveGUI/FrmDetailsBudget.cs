@@ -30,7 +30,7 @@ namespace AsoSportiveGUI
 
         public void budget(int x, int y)
         {
-            List<Budget> budgets = GestionBudget.GetLesBudget();
+            List<Budget> budgets = this.calcBudgetMontant();
 
             Label lblHeadLibelle = new Label();
             lblHeadLibelle.Text = "Libelle";
@@ -40,11 +40,18 @@ namespace AsoSportiveGUI
             lblHeadLibelle.TextAlign = ContentAlignment.MiddleCenter;
 
             Label lblHeadMontant = new Label();
-            lblHeadMontant.Text = "Montant";
+            lblHeadMontant.Text = "Montant Initial";
             lblHeadMontant.AutoSize = true;
             lblHeadMontant.Location = new Point(x, y);
             lblHeadMontant.Dock = DockStyle.Fill;
             lblHeadMontant.TextAlign = ContentAlignment.MiddleCenter;
+
+            Label lblHeadMontantTotal = new Label();
+            lblHeadMontantTotal.Text = "Montant Total";
+            lblHeadMontantTotal.AutoSize = true;
+            lblHeadMontantTotal.Location = new Point(x, y);
+            lblHeadMontantTotal.Dock = DockStyle.Fill;
+            lblHeadMontantTotal.TextAlign = ContentAlignment.MiddleCenter;
 
             Label lblHeadModifier = new Label();
             lblHeadModifier.Text = "Modifier";
@@ -62,6 +69,7 @@ namespace AsoSportiveGUI
 
             this.Controls.Find("pnl", true)[0].Controls.Add(lblHeadLibelle);
             this.Controls.Find("pnl", true)[0].Controls.Add(lblHeadMontant);
+            this.Controls.Find("pnl", true)[0].Controls.Add(lblHeadMontantTotal);
             this.Controls.Find("pnl", true)[0].Controls.Add(lblHeadModifier);
             this.Controls.Find("pnl", true)[0].Controls.Add(lblHeadDelete);
 
@@ -83,8 +91,15 @@ namespace AsoSportiveGUI
                 lblMontantInitial.Dock = DockStyle.Fill;
                 lblMontantInitial.TextAlign = ContentAlignment.MiddleCenter;
 
+                Label lblMontantTotal = new Label();
+                lblMontantTotal.Text = budget.MontantTotal.ToString();
+                lblMontantTotal.AutoSize = true;
+                lblMontantTotal.Location = new Point(x, y);
+                lblMontantTotal.Dock = DockStyle.Fill;
+                lblMontantTotal.TextAlign = ContentAlignment.MiddleCenter;
+
                 Button btnUpdate = new Button();
-                btnUpdate.Tag = budget;
+                btnUpdate.Tag = GestionBudget.GetBudget(budget.Id);
                 btnUpdate.Text = "Modifier";
                 btnUpdate.AutoSize = true;
                 btnUpdate.Location = new Point(x, y);
@@ -103,6 +118,7 @@ namespace AsoSportiveGUI
 
                 this.Controls.Find("pnl", true)[0].Controls.Add(lblLibelle);
                 this.Controls.Find("pnl", true)[0].Controls.Add(lblMontantInitial);
+                this.Controls.Find("pnl", true)[0].Controls.Add(lblMontantTotal);
                 this.Controls.Find("pnl", true)[0].Controls.Add(btnUpdate);
                 this.Controls.Find("pnl", true)[0].Controls.Add(btnDelete);
             }
@@ -333,6 +349,31 @@ namespace AsoSportiveGUI
                     }
                 }
             }   
+        }
+
+        private const string Debit = "debit";
+
+        public List<Budget> calcBudgetMontant()
+        {
+            List<Flux> fluxs = GestionFlux.GetLesFlux();
+            List<Budget> budgets = GestionBudget.GetLesBudget();
+
+            foreach (Budget budget in budgets)
+            {
+                foreach (Flux flux in fluxs)
+                {
+                    if (budget.Libelle == flux.Budget.Libelle)
+                    {
+                        budget.MontantTotal = flux.TypeFlux.Libelle.Trim() == FrmDetailsBudget.Debit
+                            ? budget.MontantTotal - flux.Montant 
+                            : budget.MontantTotal + flux.Montant
+                        ;
+                        
+                    }
+                }
+            }
+
+            return budgets;
         }
 
         public void btnUpdate_Click(object sender, EventArgs e)
