@@ -65,6 +65,12 @@
     <Compile Include="FrmDetailsBudget.Designer.cs">
       <DependentUpon>FrmDetailsBudget.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGestionCompta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionCompta.Designer.cs">
+      <DependentUpon>FrmGestionCompta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmModifBudget.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDetailsBudget.resx">
       <DependentUpon>FrmDetailsBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionCompta.resx">
+      <DependentUpon>FrmGestionCompta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModifBudget.resx">
       <DependentUpon>FrmModifBudget.cs</DependentUpon>

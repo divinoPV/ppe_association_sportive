@@ -40,5 +40,12 @@ namespace AsoSportiveGUI
             FrmDetailsBudget frmDetailsBudget = new FrmDetailsBudget();
             frmDetailsBudget.Show(); // ouverture du formulaire  
         }
+
+        private void btnGestionCompta_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // fermeture du formulaire actuel
+            FrmGestionCompta frmGestionCompta = new FrmGestionCompta();
+            frmGestionCompta.Show(); // ouverture du formulaire 
+        }
     }
 }

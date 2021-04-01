@@ -32,6 +32,7 @@
             this.btnFrmDetailsEleve = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnFrmDetailsBudget = new System.Windows.Forms.Button();
+            this.btnGestionCompta = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pnlMenu.Controls.Add(this.btnGestionCompta);
             this.pnlMenu.Controls.Add(this.btnFrmDetailsBudget);
             this.pnlMenu.Controls.Add(this.btnFrmDetailsEleve);
             this.pnlMenu.Location = new System.Drawing.Point(34, 12);
@@ -85,6 +87,26 @@
             this.btnFrmDetailsBudget.UseVisualStyleBackColor = false;
             this.btnFrmDetailsBudget.Click += new System.EventHandler(this.btnFrmDetailsBudget_Click);
             // 
+            // btnGestionCompta
+            // 
+            this.btnGestionCompta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGestionCompta.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnGestionCompta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGestionCompta.FlatAppearance.BorderSize = 0;
+            this.btnGestionCompta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnGestionCompta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionCompta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionCompta.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnGestionCompta.Location = new System.Drawing.Point(96, 121);
+            this.btnGestionCompta.Name = "btnGestionCompta";
+            this.btnGestionCompta.Size = new System.Drawing.Size(108, 43);
+            this.btnGestionCompta.TabIndex = 6;
+            this.btnGestionCompta.Text = "Gestion comptabilité";
+            this.btnGestionCompta.UseVisualStyleBackColor = false;
+            this.btnGestionCompta.Click += new System.EventHandler(this.btnGestionCompta_Click);
+            // 
             // FrmRedirection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,5 +127,6 @@
         private System.Windows.Forms.Button btnFrmDetailsEleve;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnFrmDetailsBudget;
+        private System.Windows.Forms.Button btnGestionCompta;
     }
 }
