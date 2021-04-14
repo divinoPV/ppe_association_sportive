@@ -21,8 +21,7 @@ namespace AsoSportiveGUI
 
             GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Utilisateur"]);
 
-            int x = 20;
-            int y = 20;
+            int x, y = x = 20;
 
             this.budget(x, y);
             this.flux(x, y);
