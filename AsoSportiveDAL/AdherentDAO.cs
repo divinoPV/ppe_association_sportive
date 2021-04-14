@@ -105,7 +105,7 @@ namespace AsoSportiveDAL
         // Cette méthode retourne une List contenant les objets Utilisateurs
         // Issue d'une recherche filtré
         public static List<Adherent> GetAdherentRecherche(string fullName)
-        {
+        { 
             int id;
             string nom;
             string prenom;

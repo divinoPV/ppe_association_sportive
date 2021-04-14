@@ -34,9 +34,10 @@ namespace AsoSportiveGUI
             this.lbGestionComptabilite = new System.Windows.Forms.Label();
             this.txtRecherche = new System.Windows.Forms.TextBox();
             this.lbRecherche = new System.Windows.Forms.Label();
-            this.dgvRecherche = new System.Windows.Forms.DataGridView();
+            this.lblResultat = new System.Windows.Forms.Label();
+            this.pnlResultat = new System.Windows.Forms.TableLayoutPanel();
+            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecherche)).BeginInit();
             this.SuspendLayout();
             // 
             // pbxLogo
@@ -44,7 +45,7 @@ namespace AsoSportiveGUI
             this.pbxLogo.BackColor = System.Drawing.Color.Transparent;
             this.pbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbxLogo.Image")));
-            this.pbxLogo.Location = new System.Drawing.Point(12, -14);
+            this.pbxLogo.Location = new System.Drawing.Point(24, -16);
             this.pbxLogo.Name = "pbxLogo";
             this.pbxLogo.Size = new System.Drawing.Size(104, 88);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -56,7 +57,7 @@ namespace AsoSportiveGUI
             this.lbGestionComptabilite.AutoSize = true;
             this.lbGestionComptabilite.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.lbGestionComptabilite.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbGestionComptabilite.Location = new System.Drawing.Point(260, 9);
+            this.lbGestionComptabilite.Location = new System.Drawing.Point(256, 16);
             this.lbGestionComptabilite.Name = "lbGestionComptabilite";
             this.lbGestionComptabilite.Size = new System.Drawing.Size(280, 31);
             this.lbGestionComptabilite.TabIndex = 11;
@@ -65,7 +66,7 @@ namespace AsoSportiveGUI
             // 
             // txtRecherche
             // 
-            this.txtRecherche.Location = new System.Drawing.Point(560, 54);
+            this.txtRecherche.Location = new System.Drawing.Point(544, 64);
             this.txtRecherche.Name = "txtRecherche";
             this.txtRecherche.Size = new System.Drawing.Size(228, 20);
             this.txtRecherche.TabIndex = 12;
@@ -76,36 +77,76 @@ namespace AsoSportiveGUI
             this.lbRecherche.AutoSize = true;
             this.lbRecherche.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbRecherche.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbRecherche.Location = new System.Drawing.Point(385, 54);
+            this.lbRecherche.Location = new System.Drawing.Point(368, 64);
             this.lbRecherche.Name = "lbRecherche";
             this.lbRecherche.Size = new System.Drawing.Size(163, 20);
             this.lbRecherche.TabIndex = 13;
             this.lbRecherche.Text = "Rechercher un élève :";
             // 
-            // dgvRecherche
+            // lblResultat
             // 
-            this.dgvRecherche.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvRecherche.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecherche.Location = new System.Drawing.Point(73, 109);
-            this.dgvRecherche.Name = "dgvRecherche";
-            this.dgvRecherche.Size = new System.Drawing.Size(645, 150);
-            this.dgvRecherche.TabIndex = 14;
+            this.lblResultat.AutoSize = true;
+            this.lblResultat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultat.Location = new System.Drawing.Point(24, 104);
+            this.lblResultat.Name = "lblResultat";
+            this.lblResultat.Size = new System.Drawing.Size(152, 18);
+            this.lblResultat.TabIndex = 0;
+            this.lblResultat.Text = "Résultat de recherche";
+            // 
+            // pnlResultat
+            // 
+            this.pnlResultat.AutoScroll = true;
+            this.pnlResultat.AutoSize = true;
+            this.pnlResultat.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.pnlResultat.ColumnCount = 13;
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlResultat.Location = new System.Drawing.Point(24, 128);
+            this.pnlResultat.Name = "pnlResultat";
+            this.pnlResultat.RowCount = 1;
+            this.pnlResultat.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.pnlResultat.Size = new System.Drawing.Size(744, 8);
+            this.pnlResultat.TabIndex = 15;
+            // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(696, 16);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(75, 23);
+            this.btnRetour.TabIndex = 1;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = false;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
             // FrmGestionCompta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgvRecherche);
+            this.Controls.Add(this.pnlResultat);
+            this.Controls.Add(this.lblResultat);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.lbRecherche);
             this.Controls.Add(this.txtRecherche);
             this.Controls.Add(this.lbGestionComptabilite);
             this.Controls.Add(this.pbxLogo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmGestionCompta";
-            this.Text = "FrmGestionCompta";
+            this.Text = "Gestion comptabilité";
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecherche)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,6 +158,8 @@ namespace AsoSportiveGUI
         private System.Windows.Forms.Label lbGestionComptabilite;
         private System.Windows.Forms.TextBox txtRecherche;
         private System.Windows.Forms.Label lbRecherche;
-        private System.Windows.Forms.DataGridView dgvRecherche;
+        private System.Windows.Forms.Label lblResultat;
+        private System.Windows.Forms.Button btnRetour;
+        private System.Windows.Forms.TableLayoutPanel pnlResultat;
     }
 }
