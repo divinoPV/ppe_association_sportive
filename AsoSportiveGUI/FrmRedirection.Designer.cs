@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRedirection));
             this.btnFrmDetailsEleve = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.lblRedirection = new System.Windows.Forms.Label();
+            this.btnStatistique = new System.Windows.Forms.Button();
             this.btnGestionCompta = new System.Windows.Forms.Button();
             this.btnFrmDetailsBudget = new System.Windows.Forms.Button();
-            this.btnStatistique = new System.Windows.Forms.Button();
-            this.lblRedirection = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +70,37 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(294, 368);
             this.pnlMenu.TabIndex = 4;
+            // 
+            // lblRedirection
+            // 
+            this.lblRedirection.AutoSize = true;
+            this.lblRedirection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRedirection.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblRedirection.Location = new System.Drawing.Point(104, 22);
+            this.lblRedirection.Name = "lblRedirection";
+            this.lblRedirection.Size = new System.Drawing.Size(90, 20);
+            this.lblRedirection.TabIndex = 9;
+            this.lblRedirection.Text = "Redirection";
+            // 
+            // btnStatistique
+            // 
+            this.btnStatistique.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStatistique.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnStatistique.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStatistique.FlatAppearance.BorderSize = 0;
+            this.btnStatistique.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnStatistique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistique.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistique.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnStatistique.Location = new System.Drawing.Point(96, 243);
+            this.btnStatistique.Name = "btnStatistique";
+            this.btnStatistique.Size = new System.Drawing.Size(108, 43);
+            this.btnStatistique.TabIndex = 8;
+            this.btnStatistique.Text = "Statistique";
+            this.btnStatistique.UseVisualStyleBackColor = false;
+            this.btnStatistique.Click += new System.EventHandler(this.btnStatistique_Click);
             // 
             // btnGestionCompta
             // 
@@ -110,36 +141,6 @@
             this.btnFrmDetailsBudget.Text = "Détails budget";
             this.btnFrmDetailsBudget.UseVisualStyleBackColor = false;
             this.btnFrmDetailsBudget.Click += new System.EventHandler(this.btnFrmDetailsBudget_Click);
-            // 
-            // btnStatistique
-            // 
-            this.btnStatistique.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStatistique.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnStatistique.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStatistique.FlatAppearance.BorderSize = 0;
-            this.btnStatistique.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btnStatistique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatistique.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatistique.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnStatistique.Location = new System.Drawing.Point(96, 243);
-            this.btnStatistique.Name = "btnStatistique";
-            this.btnStatistique.Size = new System.Drawing.Size(108, 43);
-            this.btnStatistique.TabIndex = 8;
-            this.btnStatistique.Text = "Statistique";
-            this.btnStatistique.UseVisualStyleBackColor = false;
-            // 
-            // lblRedirection
-            // 
-            this.lblRedirection.AutoSize = true;
-            this.lblRedirection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRedirection.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblRedirection.Location = new System.Drawing.Point(104, 22);
-            this.lblRedirection.Name = "lblRedirection";
-            this.lblRedirection.Size = new System.Drawing.Size(90, 20);
-            this.lblRedirection.TabIndex = 9;
-            this.lblRedirection.Text = "Redirection";
             // 
             // FrmRedirection
             // 
