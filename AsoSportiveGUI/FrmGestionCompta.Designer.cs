@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace AsoSportiveGUI
 {
     partial class FrmGestionCompta
@@ -70,7 +72,7 @@ namespace AsoSportiveGUI
             this.txtRecherche.Name = "txtRecherche";
             this.txtRecherche.Size = new System.Drawing.Size(228, 20);
             this.txtRecherche.TabIndex = 12;
-            this.txtRecherche.TextChanged += new System.EventHandler(this.txtRecherche_TextChanged);
+            this.txtRecherche.KeyDown += new KeyEventHandler(this.txtRecherche_KeyDown);
             // 
             // lbRecherche
             // 

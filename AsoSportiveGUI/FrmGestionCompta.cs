@@ -27,14 +27,17 @@ namespace AsoSportiveGUI
             this.setPnlResultatLabel();
         }
 
-        private void txtRecherche_TextChanged(object sender, EventArgs e)
+        private void txtRecherche_KeyDown(object sender, KeyEventArgs e)
         {
-            while (pnlResultat.Controls.Count > 13)
+            if (e.KeyCode == Keys.Enter)
             {
-                pnlResultat.Controls.RemoveAt(pnlResultat.Controls.Count - 1);
+                while (pnlResultat.Controls.Count > 13)
+                {
+                    pnlResultat.Controls.RemoveAt(pnlResultat.Controls.Count - 1);
+                }
+
+                this.resultat();
             }
-            
-            this.resultat();
         }
 
         private void resultat()
