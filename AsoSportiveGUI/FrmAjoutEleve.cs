@@ -17,6 +17,9 @@ namespace AsoSportiveGUI
 {
     public partial class FrmAjoutEleve : Form
     {
+        public const string GenreFemme = "Femme";
+        public const string GenreHomme = "Homme";
+
         public FrmAjoutEleve()
         {
             //liste des sexes d'adhérent
@@ -29,8 +32,8 @@ namespace AsoSportiveGUI
             comboBoxClasse.DataSource = GestionClasse.GetLesClasses();
             comboBoxClasse.DisplayMember = "libelle";
 
-            lesSexes.Add("Femme");
-            lesSexes.Add("Homme");
+            lesSexes.Add(GenreFemme);
+            lesSexes.Add(GenreHomme);
             comboBoxSexe.DataSource = lesSexes;
 
         }
@@ -71,7 +74,7 @@ namespace AsoSportiveGUI
                 errorPrenom.SetError(txtPrenom, "");
             }
 
-            if (Convert.ToString(comboBoxSexe.SelectedValue) == "Femme")
+            if (Convert.ToString(comboBoxSexe.SelectedValue) == GenreFemme)
             {
                 sexeSelect = 'F';
             }
