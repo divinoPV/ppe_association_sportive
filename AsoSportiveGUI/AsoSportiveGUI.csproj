@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmStatistique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStatistique.Designer.cs">
+      <DependentUpon>FrmStatistique.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAjoutBudget.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,12 @@
     <Compile Include="FrmRedirection.Designer.cs">
       <DependentUpon>FrmRedirection.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUtilitaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUtilitaire.Designer.cs">
+      <DependentUpon>FrmUtilitaire.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAjoutBudget.resx">
@@ -162,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRedirection.resx">
       <DependentUpon>FrmRedirection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStatistique.resx">
+      <DependentUpon>FrmStatistique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

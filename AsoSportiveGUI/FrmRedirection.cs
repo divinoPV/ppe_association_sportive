@@ -47,5 +47,12 @@ namespace AsoSportiveGUI
             FrmGestionCompta frmGestionCompta = new FrmGestionCompta();
             frmGestionCompta.Show(); // ouverture du formulaire 
         }
+
+        private void btnStatistique_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // fermeture du formulaire actuel
+            FrmStatistique frmStatistique = new FrmStatistique();
+            frmStatistique.Show(); // ouverture du formulaire 
+        }
     }
 }
