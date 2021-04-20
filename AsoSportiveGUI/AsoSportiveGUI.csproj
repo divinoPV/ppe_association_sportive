@@ -125,6 +125,12 @@
     <Compile Include="FrmRedirection.Designer.cs">
       <DependentUpon>FrmRedirection.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUtilitaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUtilitaire.Designer.cs">
+      <DependentUpon>FrmUtilitaire.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAjoutBudget.resx">
