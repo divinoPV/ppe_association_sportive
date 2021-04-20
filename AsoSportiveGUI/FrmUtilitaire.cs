@@ -35,5 +35,14 @@ namespace AsoSportiveGUI
         {
             foreach (Label label in labels) { control[0].Controls.Add(label); }
         }
+
+        public static int rand(int nb = -1)
+        {
+            Random rand = new Random();
+
+            return nb != -1
+                ? rand.Next(nb)
+                : rand.Next();
+        }
     }
 }
