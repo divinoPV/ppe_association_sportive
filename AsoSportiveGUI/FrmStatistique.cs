@@ -17,6 +17,7 @@ namespace AsoSportiveGUI
     {
         public const string PnlStatistiqueParEleve = "pnlStatistiqueParEleve";
         public const string PnlStatistiqueGenre = "pnlStatistiqueGenre";
+        public const string BudgetSport = "budget sport";
 
         public FrmStatistique()
         {
@@ -44,15 +45,27 @@ namespace AsoSportiveGUI
         private void setPnlStatistiqueParEleveResultat()
         {
             List<Adherent> adherents = GestionAdherent.GetAdherent();
+            List<Flux> fluxs = GestionFlux.GetLesFlux();
 
             int y = FrmUtilitaire.Coord;
 
             foreach (Adherent adherent in adherents)
             {
+                int nbFlux = 0;
+
                 List<Label> labels = new List<Label>();
                 labels.Add(FrmUtilitaire.setLabel(adherent.Nom.Trim(), y: y));
                 labels.Add(FrmUtilitaire.setLabel(adherent.Prenom.Trim(), y: y));
-                labels.Add(FrmUtilitaire.setLabel(FrmUtilitaire.rand(32).ToString(), y: y));
+
+                foreach (Flux flux in fluxs)
+                {
+                    if (flux.Budget.Libelle == BudgetSport && flux.Adherent.Id == adherent.Id)
+                    {
+                        nbFlux += 1;
+                    }
+                }
+
+                labels.Add(FrmUtilitaire.setLabel(nbFlux.ToString(), y: y));
 
                 y += 20;
 
