@@ -49,6 +49,11 @@ namespace AsoSportiveBLL
             return AdherentDAO.GetAdherent();
         }
 
+        public static List<Adherent> GetLesAdherentByNaissance()
+        {
+            return AdherentDAO.GetLesAdherentByNaissance();
+        }
+
         // Méthode qui renvoit une List d'objets Adherent en faisant appel à
         // la méthode GetAdherentRecherche() de la DAL
         public static List<Adherent> GetAdherentRecherche(string fullName)
