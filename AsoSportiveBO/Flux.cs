@@ -20,7 +20,7 @@ namespace AsoSportiveBO
         private TypeFlux typeFlux;
 
         private static Flux fluxSauvegarder;
-
+        public Flux() { }
         public Flux(int id, string libelle, DateTime date, decimal montant, bool prelevement, Adherent adherent, Budget budget, TypeFlux typeFlux)
         {
             this.id = id;

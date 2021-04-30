@@ -38,6 +38,13 @@ namespace AsoSportiveBLL
 
         // Méthode qui renvoit une List d'objets Classe en faisant appel à
         // la méthode GetLesClasses() de la DAL
+        public static List<Flux> GetLesFluxById(int id)
+        {
+            return FluxDAO.GetLesFluxById(id);
+        }
+
+        // Méthode qui renvoit une List d'objets Classe en faisant appel à
+        // la méthode GetLesClasses() de la DAL
         public static bool CreerFlux(Flux unFlux)
         {
             return FluxDAO.AjoutFlux(unFlux);

@@ -244,5 +244,69 @@ namespace AsoSportiveDAL
 
             return regexString.IsMatch(value);
         }
+
+        public static List<Flux> GetLesFluxById(int idFlux)
+        {
+            int id;
+            string libelle;
+            DateTime date;
+            Decimal montant;
+            bool prelevement;
+            Adherent adherent;
+            Budget budget;
+            TypeFlux typeFlux;
+
+            List<Flux> lesFlux = new List<Flux>();
+
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM flux WHERE adherent = @id";
+
+            cmd.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
+            cmd.Parameters["@id"].Value = idFlux;
+
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            while (monReader.Read())
+            {
+                id = Int32.Parse(monReader["id"].ToString());
+
+                if (monReader["id"] == DBNull.Value)
+                {
+                    libelle = default(string);
+                    date = default(DateTime);
+                    montant = default(Decimal);
+                    prelevement = default(bool);
+                    adherent = default(Adherent);
+                    budget = default(Budget);
+                    typeFlux = default(TypeFlux);
+                }
+                else
+                {
+                    libelle = monReader["libelle"].ToString();
+                    date = (DateTime)monReader["date"];
+                    montant = (Decimal)monReader["montant"];
+                    prelevement = (bool)monReader["prelevement"];
+                    adherent = new Adherent((int)monReader["adherent"]);
+                    budget = new Budget((int)monReader["budget"]);
+                    typeFlux = new TypeFlux((int)monReader["type_flux"]);
+                }
+                Flux flux = new Flux(id,libelle, date, montant, prelevement, adherent, budget, typeFlux);
+                lesFlux.Add(flux);
+            }
+            // Fermeture de la connexion
+            maConnexion.Close();
+
+            foreach (Flux flux in lesFlux)
+            {
+                flux.Adherent = AdherentDAO.GetOnceAdherent(flux.Adherent.Id);
+                flux.Budget = BudgetDAO.GetBudget(flux.Budget.Id);
+                flux.TypeFlux = TypeFluxDAO.GetTypeFlux(flux.TypeFlux.Id);
+            }
+
+            return lesFlux;
+        }
     }
 }

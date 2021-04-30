@@ -82,9 +82,30 @@ namespace AsoSportiveGUI
                 labels.Add(FrmUtilitaire.setLabel(adherent.Utilisateur.Login.ToString(), y: y));
                 labels.Add(FrmUtilitaire.setLabel(adherent.Classe.Libelle.Trim(), y: y));
 
-                y += 20;
+                FrmUtilitaire Frm = FrmUtilitaire.init();
+                Frm.putLabelInPnl(labels, this.findControl(PnlResultat));
+            }
 
-                FrmUtilitaire.init().putLabelInPnl(labels, this.findControl(PnlResultat));
+            if (adherents.Count == 1)
+            {
+
+
+                List<Flux> lesFlux = afficheFlux(adherents[0]);
+                var _bind = from a in lesFlux
+                            select new
+                            {
+                                libelle = a.Libelle,
+                                date = a.Date,
+                                montant = a.Montant,
+                                prelevement = a.Prelevement,
+                                budget = a.Budget.Libelle,
+                                typeFlux = a.TypeFlux.Libelle,
+                            };
+
+                dgvFlux.DataSource = _bind.ToList();
+            }else
+            {
+                dgvFlux.DataSource = new Flux();
             }
         }
 
@@ -98,6 +119,11 @@ namespace AsoSportiveGUI
         public Control[] findControl(string key, bool boolean = true)
         {
             return this.Controls.Find(key, boolean);
+        }
+
+        public List<Flux> afficheFlux(Adherent adherent)
+        {
+            return GestionFlux.GetLesFluxById(adherent.Id); ;
         }
     }
 }
