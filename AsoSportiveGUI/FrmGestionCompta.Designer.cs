@@ -46,7 +46,7 @@ namespace AsoSportiveGUI
             this.prelevement = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.budget = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.type_flux = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblFlux = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFlux)).BeginInit();
             this.SuspendLayout();
@@ -151,7 +151,7 @@ namespace AsoSportiveGUI
             this.prelevement,
             this.budget,
             this.type_flux});
-            this.dgvFlux.Location = new System.Drawing.Point(71, 230);
+            this.dgvFlux.Location = new System.Drawing.Point(72, 223);
             this.dgvFlux.Name = "dgvFlux";
             this.dgvFlux.Size = new System.Drawing.Size(643, 150);
             this.dgvFlux.TabIndex = 16;
@@ -192,15 +192,15 @@ namespace AsoSportiveGUI
             this.type_flux.HeaderText = "Type de flux";
             this.type_flux.Name = "type_flux";
             // 
-            // label1
+            // lblFlux
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 200);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 20);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Liste des flux";
+            this.lblFlux.AutoSize = true;
+            this.lblFlux.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFlux.Location = new System.Drawing.Point(68, 190);
+            this.lblFlux.Name = "lblFlux";
+            this.lblFlux.Size = new System.Drawing.Size(101, 20);
+            this.lblFlux.TabIndex = 17;
+            this.lblFlux.Text = "Liste des flux";
             // 
             // FrmGestionCompta
             // 
@@ -208,7 +208,7 @@ namespace AsoSportiveGUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblFlux);
             this.Controls.Add(this.dgvFlux);
             this.Controls.Add(this.pnlResultat);
             this.Controls.Add(this.lblResultat);
@@ -243,6 +243,6 @@ namespace AsoSportiveGUI
         private DataGridViewTextBoxColumn prelevement;
         private DataGridViewTextBoxColumn budget;
         private DataGridViewTextBoxColumn type_flux;
-        private Label label1;
+        private Label lblFlux;
     }
 }

@@ -22,7 +22,8 @@ namespace AsoSportiveGUI
             InitializeComponent();
 
             GestionUtilisateurs.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Utilisateur"]);
-
+            dgvFlux.Visible = false;
+            lblFlux.Visible = false;
             this.setPnlResultatLabel();
         }
 
@@ -101,10 +102,13 @@ namespace AsoSportiveGUI
                                 budget = a.Budget.Libelle,
                                 typeFlux = a.TypeFlux.Libelle,
                             };
-
+                dgvFlux.Visible = true;
+                lblFlux.Visible = true;
                 dgvFlux.DataSource = _bind.ToList();
             }else
             {
+                dgvFlux.Visible = false;
+                lblFlux.Visible = false;
                 dgvFlux.DataSource = new Flux();
             }
         }
